@@ -49,7 +49,7 @@
 
 <h3 align="center">🐍 My Contribution Snake</h3>
 <div align="center">
-  <img src="https://github-readme-snake.vercel.app/api?username=SeMinKong&palette=github-dark&bg_color=0d1117" width="100%">
+  <img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong/output/github-contribution-grid-snake.svg" width="100%"/>
 </div>
 
 <br/><br/>
