@@ -11,7 +11,7 @@
 <div align="center">
   <p>
     안녕하세요! 저는 <strong>공세민</strong>입니다.<br>
-    로보틱스, AI를 공부하는 것을 좋아하는 <strong>학생</strong> 입니다. 🚀<br>
+    로보틱스, AI를 공부하는 것을 좋아하는 <strong>학생</strong> 입니다.<br>
     새로운 기술 스택을 탐구하는 것을 좋아합니다.
   </p>
 </div>
