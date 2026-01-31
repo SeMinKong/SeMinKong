@@ -36,7 +36,8 @@
 <br/><br/>
 
 <h3 align="center">📊 GitHub Stats</h3>
-![Stats](./profile/stats.svg)
+![SeMinKong's GitHub stats](https://github-readme-stats-two-chi-41.vercel.app/api?username=SeMinKong)
+
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong/output/github-contribution-grid-snake.svg" width="100%"/>
