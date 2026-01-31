@@ -37,7 +37,7 @@
 
 <h3 align="center">📊 GitHub Stats</h3>
 <div align="center">
- ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=SeMinKong)
+ ![SeMinKong's GitHub stats](https://github-readme-stats.vercel.app/api?username=SeMinKong)
 </div>
 
 <div align="center">
