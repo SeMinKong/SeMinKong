@@ -47,7 +47,6 @@
 
 <br/><br/>
 
-<h3 align="center">🐍 My Contribution Snake</h3>
 <div align="center">
   <img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong/output/github-contribution-grid-snake.svg" width="100%"/>
 </div>
