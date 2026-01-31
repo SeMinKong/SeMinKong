@@ -37,11 +37,7 @@
 
 <h3 align="center">📊 GitHub Stats</h3>
 <div align="center">
-  <img src="https://streak-stats.demolab.com?user=SeMinKong&theme=tokyonight&hide_border=true" height="180" alt="streak stats" />
-  
-  <a href="https://github.com/SeMinKong">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SeMinKong&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117" height="180" />
-  </a>
+[![SeMinKong's GitHub stats](https://github-readme-stats.vercel.app/api?username=SeMinKong)](https://github.com/SeMinKong/github-readme-stats)
 </div>
 
 <br/><br/>
