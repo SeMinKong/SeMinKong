@@ -36,9 +36,7 @@
 <br/><br/>
 
 <h3 align="center">📊 GitHub Stats</h3>
-<div align="center">
 ![Stats](./profile/stats.svg)
-</div>
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong/output/github-contribution-grid-snake.svg" width="100%"/>
