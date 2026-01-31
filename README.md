@@ -51,15 +51,3 @@
 </div>
 
 <br/><br/>
-
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0D1117&height=100&section=footer" width="100%">
-  <br/>
-
-  <a href="mailto:semin1224@gmail.com">
-    <img src="https://img.shields.io/badge/Email-151A23?style=flat-square&logo=gmail&logoColor=white"/>
-  </a>
-  <a href="https://www.instagram.com/0_tpals/">
-    <img src="https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white"/>
-  </a>
-</div>
