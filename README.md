@@ -2,14 +2,14 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0D1117&height=180&section=header&text=Welcome&fontSize=50&fontColor=ffffff&fontAlign=50" width="100%">
   
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=25&pause=1000&color=50E3C2&center=true&vCenter=true&width=435&lines=Artifical Intelligence;Always+Learning;Building+the+Future" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=25&pause=1000&color=50E3C2&center=true&vCenter=true&width=435&lines=Artificial+Intelligence;Always+Learning;Building+the+Future" alt="Typing SVG" />
   </a>
 </div>
 
 <br/><br/>
 
 <div align="center">
-  <p fontSize="20px">
+  <p>
     안녕하세요! 저는 <strong>공세민</strong>입니다.<br>
     로보틱스, AI를 공부하는 것을 좋아하는 <strong>학생</strong> 입니다. 🚀<br>
     새로운 기술 스택을 탐구하는 것을 좋아합니다.
