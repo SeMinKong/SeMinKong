@@ -10,9 +10,9 @@
 
 <div align="center">
   <p fontSize="20px">
-    안녕하세요! 저는 <strong>[본인 이름]</strong>입니다.<br>
-    사용자 경험을 중요시하는 <strong>[직무, 예: 프론트엔드 개발자]</strong> 입니다. 🚀<br>
-    새로운 기술 스택을 탐구하고 정리하는 것을 좋아합니다.
+    안녕하세요! 저는 <strong>공세민</strong>입니다.<br>
+    로보틱스, AI를 공부하는 것을 좋아하는 <strong>학생</strong> 입니다. 🚀<br>
+    새로운 기술 스택을 탐구하는 것을 좋아합니다.
   </p>
 </div>
 
