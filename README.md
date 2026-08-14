@@ -13,9 +13,9 @@
     안녕하세요! 공세민입니다.<br>
     비전기술, Physical AI에 깊은 관심을 가지고 있습니다.<br>
     <br>
-<a href="https://seminkong.github.io/SeMinKong_Web">
-  <img src="https://img.shields.io/badge/Profile_Web-22314E?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Profile Website"/>
-</a>
+    <a href="https://seminkong.github.io/SeMinKong_Web">
+      <img src="https://img.shields.io/badge/Profile_Web-22314E?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Profile Website"/>
+    </a>
   </p>
 </div>
 
@@ -51,6 +51,14 @@
   </a>
   <a href="https://github.com/SeMinKong/github-readme-stats">
     <img src="https://github-readme-stats-two-chi-41.vercel.app/api/top-langs/?username=SeMinKong&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117" height="180">
+  </a>
+</div>
+
+<br/>
+
+<div align="center">
+  <a href="https://github.com/TOKENPHAGE">
+    <img src="https://api.tokenphage.com/badge/SeMinKong" alt="TokenPhage" />
   </a>
 </div>
 
