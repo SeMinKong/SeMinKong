@@ -74,7 +74,7 @@
     <text x="18" y="131" class="model-label">PRIMARY MODEL</text>
     <rect x="112" y="120" width="192" height="13" rx="6.5" fill="#142b42" stroke="#274b65"/>
     <circle cx="124" cy="126.5" r="3" fill="#8cf3ff" filter="url(#softGlow)"/>
-    <text x="133" y="131" class="model-value">codex-auto-review</text>
+    <text x="133" y="131" class="model-value">gpt-5.6-luna</text>
   </g>
 
   <g transform="translate(368 18)">

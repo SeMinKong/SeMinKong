@@ -77,6 +77,25 @@ class CodexCardTests(unittest.TestCase):
         self.assertIn("today-cell", svg)
         self.assertIn("<svg", svg)
 
+    def test_primary_model_excludes_internal_codex_automation(self):
+        state = card.load_state(Path("missing-for-test.json"))
+        state["days"] = {
+            "2026-08-19": {
+                "turns": 65,
+                "models": {
+                    "codex-auto-review": 34,
+                    "gpt-5.6-luna": 21,
+                    "gpt-5.6-sol": 10,
+                },
+                **{key: 0 for key in card.TOKEN_KEYS},
+            }
+        }
+
+        svg = card.render_svg(state, date(2026, 8, 19))
+
+        self.assertIn("gpt-5.6-luna", svg)
+        self.assertNotIn("codex-auto-review", svg)
+
     def test_baseline_is_preserved_and_new_usage_is_added(self):
         state = card.load_state(Path("missing-for-test.json"))
         state["baseline"] = {

@@ -337,6 +337,19 @@ def color_level(value: int, maximum: int) -> int:
     return 4
 
 
+def primary_model(models: Counter[str]) -> str:
+    user_models = Counter(
+        {
+            model: count
+            for model, count in models.items()
+            if model
+            and model.lower() not in {"unknown", "none"}
+            and not model.lower().startswith("codex-auto-")
+        }
+    )
+    return user_models.most_common(1)[0][0] if user_models else "No user model yet"
+
+
 def render_svg(state: dict[str, Any], today: date) -> str:
     day_values = {
         date.fromisoformat(key): int(value.get("total_tokens", 0))
@@ -356,7 +369,7 @@ def render_svg(state: dict[str, Any], today: date) -> str:
     models: Counter[str] = Counter()
     for values in state["days"].values():
         models.update({key: int(value) for key, value in values.get("models", {}).items()})
-    top_model = models.most_common(1)[0][0] if models else "No activity yet"
+    top_model = primary_model(models)
 
     weeks = 52
     cell = 10
