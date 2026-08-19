@@ -44,6 +44,13 @@
 
 <br/><br/>
 
+<h3 align="center">🤖 Codex Activity</h3>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong/main/profile/codex-card.svg" width="100%" alt="Codex activity card">
+</div>
+
+<br/><br/>
+
 <h3 align="center">📊 GitHub Stats</h3>
 <div align="center">
   <a href="https://github.com/SeMinKong/github-readme-stats">
