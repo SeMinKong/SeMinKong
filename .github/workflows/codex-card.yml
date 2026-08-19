@@ -48,5 +48,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add profile/codex-stats.json profile/codex-card.svg
           git commit -m "Update Codex activity card"
-          git pull --rebase origin main
-          git push
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
