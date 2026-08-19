@@ -69,6 +69,12 @@ class CodexCardTests(unittest.TestCase):
         svg = card.render_svg(state, date(2026, 8, 19))
         self.assertIn("9.3K", svg)
         self.assertIn("gpt-5.6-luna", svg)
+        self.assertIn("PRIMARY MODEL", svg)
+        self.assertIn('width="322"', svg)
+        self.assertIn('width="522"', svg)
+        self.assertIn("@keyframes botFloat", svg)
+        self.assertIn("prefers-reduced-motion", svg)
+        self.assertIn("today-cell", svg)
         self.assertIn("<svg", svg)
 
     def test_baseline_is_preserved_and_new_usage_is_added(self):
