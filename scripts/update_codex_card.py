@@ -337,6 +337,19 @@ def color_level(value: int, maximum: int) -> int:
     return 4
 
 
+def primary_model(models: Counter[str]) -> str:
+    user_models = Counter(
+        {
+            model: count
+            for model, count in models.items()
+            if model
+            and model.lower() not in {"unknown", "none"}
+            and not model.lower().startswith("codex-auto-")
+        }
+    )
+    return user_models.most_common(1)[0][0] if user_models else "No user model yet"
+
+
 def render_svg(state: dict[str, Any], today: date) -> str:
     day_values = {
         date.fromisoformat(key): int(value.get("total_tokens", 0))
@@ -356,7 +369,7 @@ def render_svg(state: dict[str, Any], today: date) -> str:
     models: Counter[str] = Counter()
     for values in state["days"].values():
         models.update({key: int(value) for key, value in values.get("models", {}).items()})
-    top_model = models.most_common(1)[0][0] if models else "No activity yet"
+    top_model = primary_model(models)
 
     weeks = 52
     cell = 10
@@ -384,17 +397,19 @@ def render_svg(state: dict[str, Any], today: date) -> str:
             opacity = "0.35" if current > today else "1"
             x = grid_x + week * (cell + gap)
             y = grid_y + weekday * (cell + gap)
+            cell_class = "activity-cell today-cell" if current == today else "activity-cell"
             cells.append(
-                f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="2.5" '
+                f'<rect class="{cell_class}" x="{x}" y="{y}" width="{cell}" height="{cell}" rx="2.5" '
                 f'fill="{colors[level]}" opacity="{opacity}"><title>'
                 f'{escape(current.isoformat())}: {value:,} tokens</title></rect>'
             )
 
+    today_tokens = day_values.get(today, 0)
     stats = (
         (compact_number(max_daily), "최다 사용일"),
         (f"{current_streak}일", "현재 연속"),
         (f"{longest_streak}일", "최장 연속"),
-        (top_model, "주 사용 모델"),
+        (compact_number(today_tokens), "오늘 토큰"),
     )
     stat_nodes: list[str] = []
     for index, (value, label) in enumerate(stats):
@@ -414,70 +429,115 @@ def render_svg(state: dict[str, Any], today: date) -> str:
     updated = escape(str(state.get("last_updated") or ""))
     return f'''<svg width="920" height="375" viewBox="0 0 920 375" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Se Min Kong Codex activity</title>
-  <desc id="desc">Automatically updated Codex token usage and activity streaks.</desc>
+  <desc id="desc">Animated AI-themed Codex token usage, model, and activity streaks.</desc>
   <style>
-    .handle {{ font: 700 20px 'Segoe UI', Arial, sans-serif; fill: #f0f6fc; }}
-    .streak {{ font: 600 13px 'Segoe UI', Arial, sans-serif; fill: #80e1ff; }}
-    .total {{ font: 800 50px 'Segoe UI', Arial, sans-serif; fill: #7ee7ff; letter-spacing: -2px; }}
-    .total-label {{ font: 600 14px 'Noto Sans KR', 'Segoe UI', sans-serif; fill: #9fb4c9; }}
-    .scene-label {{ font: 700 14px 'Segoe UI', Arial, sans-serif; fill: #d9f3ff; }}
+    .handle {{ font: 700 19px 'Segoe UI', Arial, sans-serif; fill: #f4fbff; }}
+    .streak {{ font: 600 12px 'Segoe UI', Arial, sans-serif; fill: #8be9ff; }}
+    .total {{ font: 800 48px 'Segoe UI', Arial, sans-serif; fill: #8cecff; letter-spacing: -2px; }}
+    .total-label {{ font: 600 12px 'Noto Sans KR', 'Segoe UI', sans-serif; fill: #91aac1; }}
+    .model-label {{ font: 700 9px 'Segoe UI', Arial, sans-serif; fill: #6385a3; letter-spacing: 1px; }}
+    .model-value {{ font: 700 12px 'Segoe UI', Arial, sans-serif; fill: #d7f7ff; }}
+    .scene-label {{ font: 700 12px 'Segoe UI', Arial, sans-serif; fill: #d9f7ff; letter-spacing: 1.4px; }}
+    .scene-sub {{ font: 500 9px 'Segoe UI', Arial, sans-serif; fill: #6f9bb8; letter-spacing: .8px; }}
     .month {{ font: 600 11px 'Segoe UI', Arial, sans-serif; fill: #8298ad; }}
     .weekday {{ font: 500 10px 'Segoe UI', Arial, sans-serif; fill: #6f8498; }}
     .stat-value {{ font: 700 17px 'Noto Sans KR', 'Segoe UI', sans-serif; fill: #e7f5ff; }}
     .stat-label {{ font: 500 10px 'Noto Sans KR', 'Segoe UI', sans-serif; fill: #7890a6; }}
     .updated {{ font: 500 9px 'Segoe UI', Arial, sans-serif; fill: #587087; }}
+    .neural-flow {{ stroke-dasharray: 3 8; animation: dataFlow 3s linear infinite; }}
+    .node-core {{ animation: nodePulse 2.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }}
+    .node-delay {{ animation-delay: -1.2s; }}
+    .bot-float {{ animation: botFloat 3.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }}
+    .bot-eyes {{ animation: blink 4.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }}
+    .coin-a {{ animation: coinFloat 2.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }}
+    .coin-b {{ animation: coinFloat 2.8s ease-in-out -1.4s infinite; transform-box: fill-box; transform-origin: center; }}
+    .scan-line {{ animation: scan 4s ease-in-out infinite; }}
+    .energy-bar {{ animation: energy 3.2s ease-in-out infinite; }}
+    .today-cell {{ animation: grassPulse 2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }}
+    @keyframes dataFlow {{ to {{ stroke-dashoffset: -44; }} }}
+    @keyframes nodePulse {{ 0%,100% {{ opacity:.45; transform:scale(.82); }} 50% {{ opacity:1; transform:scale(1.22); }} }}
+    @keyframes botFloat {{ 0%,100% {{ transform:translateY(0); }} 50% {{ transform:translateY(-6px); }} }}
+    @keyframes blink {{ 0%,46%,50%,100% {{ transform:scaleY(1); }} 48% {{ transform:scaleY(.12); }} }}
+    @keyframes coinFloat {{ 0%,100% {{ transform:translateY(0) rotate(0deg); }} 50% {{ transform:translateY(-5px) rotate(8deg); }} }}
+    @keyframes scan {{ 0%,100% {{ transform:translateX(0); opacity:0; }} 15% {{ opacity:.75; }} 85% {{ opacity:.75; }} 100% {{ transform:translateX(462px); opacity:0; }} }}
+    @keyframes energy {{ 0%,100% {{ opacity:.55; }} 50% {{ opacity:1; }} }}
+    @keyframes grassPulse {{ 0%,100% {{ opacity:.75; transform:scale(.9); }} 50% {{ opacity:1; transform:scale(1.18); }} }}
+    @media (prefers-reduced-motion: reduce) {{
+      .neural-flow,.node-core,.bot-float,.bot-eyes,.coin-a,.coin-b,.scan-line,.energy-bar,.today-cell {{ animation:none; }}
+    }}
   </style>
   <defs>
     <linearGradient id="cardBg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#101a28"/><stop offset="1" stop-color="#0b111b"/>
+      <stop offset="0" stop-color="#0f1b2b"/><stop offset=".55" stop-color="#0a1422"/><stop offset="1" stop-color="#080e17"/>
     </linearGradient>
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#173b61"/><stop offset="1" stop-color="#235b78"/>
+    <linearGradient id="aiPanel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#102d4b"/><stop offset=".55" stop-color="#122841"/><stop offset="1" stop-color="#112135"/>
     </linearGradient>
+    <linearGradient id="cyanLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#36d7ff" stop-opacity="0"/><stop offset=".5" stop-color="#82f4ff"/><stop offset="1" stop-color="#7b61ff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="orb"><stop offset="0" stop-color="#a8f6ff"/><stop offset=".35" stop-color="#36d7ff"/><stop offset="1" stop-color="#16719d"/></radialGradient>
+    <pattern id="circuitGrid" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M22 0H0V22" fill="none" stroke="#4ecff2" stroke-opacity=".08" stroke-width="1"/>
+      <circle cx="0" cy="0" r="1.3" fill="#71e6ff" fill-opacity=".18"/>
+    </pattern>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
-  <rect x="2" y="2" width="916" height="371" rx="20" fill="url(#cardBg)" stroke="#273b50" stroke-width="2"/>
+  <rect x="2" y="2" width="916" height="371" rx="20" fill="url(#cardBg)" stroke="#29435a" stroke-width="2"/>
+  <path d="M22 2H898A20 20 0 0 1 918 22" fill="none" stroke="#5ce1ff" stroke-opacity=".28"/>
 
-  <g transform="translate(30 24)">
-    <text x="0" y="20" class="handle">@SeMinKong</text>
-    <rect x="145" y="2" width="104" height="26" rx="13" fill="#143349" stroke="#285b76"/>
-    <circle cx="161" cy="15" r="5" fill="#55d6ff"/>
-    <text x="174" y="20" class="streak">{current_streak}-day streak</text>
-    <text x="0" y="85" class="total">{escape(compact_number(total_tokens))}</text>
-    <text x="3" y="110" class="total-label">누적 토큰 · 계속 성장 중</text>
-    <rect x="0" y="123" width="278" height="5" rx="2.5" fill="#172a3d"/>
-    <rect x="0" y="123" width="194" height="5" rx="2.5" fill="#36b9e8"/>
+  <!-- Golden-ratio summary region: 322px / 522px -->
+  <g transform="translate(30 18)">
+    <rect width="322" height="137" rx="16" fill="#0e2033" fill-opacity=".86" stroke="#28465f"/>
+    <path d="M16 1H306" stroke="url(#cyanLine)" stroke-width="2"/>
+    <text x="18" y="29" class="handle">@SeMinKong</text>
+    <rect x="190" y="11" width="113" height="27" rx="13.5" fill="#123a52" stroke="#2a718f"/>
+    <circle class="node-core" cx="207" cy="24.5" r="5" fill="url(#orb)" filter="url(#softGlow)"/>
+    <text x="220" y="29" class="streak">{current_streak}-day streak</text>
+    <text x="18" y="87" class="total">{escape(compact_number(total_tokens))}</text>
+    <text x="20" y="108" class="total-label">누적 토큰 · 실시간 통합</text>
+    <rect x="18" y="117" width="286" height="1" fill="#28425a"/>
+    <text x="18" y="131" class="model-label">PRIMARY MODEL</text>
+    <rect x="112" y="120" width="192" height="13" rx="6.5" fill="#142b42" stroke="#274b65"/>
+    <circle cx="124" cy="126.5" r="3" fill="#8cf3ff" filter="url(#softGlow)"/>
+    <text x="133" y="131" class="model-value">{escape(top_model)}</text>
   </g>
 
-  <g transform="translate(330 18)">
-    <rect width="560" height="137" rx="16" fill="url(#sky)" stroke="#315f7b"/>
-    <text x="20" y="25" class="scene-label">CODEX TOKEN TRAIL</text>
-    <rect x="0" y="108" width="560" height="29" rx="0" fill="#173c38"/>
-    <path d="M0 125h560v-4 0a16 16 0 0 1-16 16H16A16 16 0 0 1 0 121z" fill="#102d2b"/>
-    <!-- stars and moon -->
-    <rect x="383" y="19" width="4" height="4" fill="#9ee8ff"/><rect x="455" y="34" width="3" height="3" fill="#9ee8ff"/>
-    <rect x="315" y="45" width="3" height="3" fill="#9ee8ff"/><circle cx="510" cy="30" r="14" fill="#ffe28a"/>
-    <circle cx="516" cy="25" r="14" fill="#173b61"/>
-    <!-- pixel trees -->
-    <g fill="#45a86b"><rect x="42" y="65" width="34" height="14"/><rect x="50" y="51" width="18" height="14"/><rect x="34" y="78" width="50" height="14"/></g>
-    <rect x="55" y="91" width="9" height="28" fill="#795536"/>
-    <g fill="#3f9763"><rect x="455" y="69" width="38" height="14"/><rect x="464" y="54" width="20" height="15"/><rect x="448" y="82" width="52" height="14"/></g>
-    <rect x="470" y="95" width="9" height="26" fill="#795536"/>
-    <!-- token coins -->
-    <g><circle cx="133" cy="93" r="11" fill="#f7c843" stroke="#9c6d00" stroke-width="4"/><rect x="129" y="87" width="8" height="12" rx="2" fill="#fff0a1"/></g>
-    <g><circle cx="414" cy="99" r="11" fill="#f7c843" stroke="#9c6d00" stroke-width="4"/><rect x="410" y="93" width="8" height="12" rx="2" fill="#fff0a1"/></g>
-    <!-- pixel Codex bot -->
-    <g transform="translate(245 43)">
-      <rect x="19" y="0" width="26" height="9" rx="3" fill="#78ddff"/>
-      <rect x="10" y="9" width="44" height="38" rx="8" fill="#dff7ff"/>
-      <rect x="16" y="17" width="32" height="20" rx="5" fill="#193b56"/>
-      <rect x="22" y="23" width="6" height="6" fill="#75e5ff"/><rect x="37" y="23" width="6" height="6" fill="#75e5ff"/>
-      <rect x="0" y="20" width="10" height="18" rx="4" fill="#7bdcf7"/><rect x="54" y="20" width="10" height="18" rx="4" fill="#7bdcf7"/>
-      <rect x="17" y="47" width="30" height="31" rx="7" fill="#bceeff"/>
-      <path d="M25 57l8 7-8 7M37 57l-8 7 8 7" fill="none" stroke="#22628a" stroke-width="4" stroke-linecap="round"/>
-      <rect x="18" y="78" width="10" height="8" fill="#75cbe8"/><rect x="36" y="78" width="10" height="8" fill="#75cbe8"/>
+  <g transform="translate(368 18)">
+    <rect width="522" height="137" rx="16" fill="url(#aiPanel)" stroke="#315c79"/>
+    <rect width="522" height="137" rx="16" fill="url(#circuitGrid)"/>
+    <text x="20" y="25" class="scene-label">NEURAL TOKEN MATRIX</text>
+    <text x="20" y="40" class="scene-sub">LIVE CODEX TELEMETRY</text>
+    <!-- animated neural graph -->
+    <g fill="none" stroke="#48d9ff" stroke-opacity=".38" stroke-width="1.5">
+      <path class="neural-flow" d="M32 91C92 45 123 116 183 75S276 41 333 79 420 113 492 65"/>
+      <path class="neural-flow" style="animation-delay:-1.5s" d="M53 57C115 98 160 42 219 82S334 112 389 55 451 50 503 88"/>
     </g>
-    <!-- grass pixels -->
-    <path d="M8 121v-12h4v7h4v-10h4v15M92 121v-9h4v4h4v-8h4v13M520 121v-12h4v7h4v-9h4v14" stroke="#54b879" stroke-width="3" fill="none"/>
+    <g filter="url(#glow)">
+      <circle class="node-core" cx="54" cy="83" r="5" fill="url(#orb)"/><circle class="node-core node-delay" cx="145" cy="69" r="4" fill="url(#orb)"/>
+      <circle class="node-core" cx="210" cy="88" r="5" fill="url(#orb)"/><circle class="node-core node-delay" cx="342" cy="81" r="4" fill="url(#orb)"/>
+      <circle class="node-core" cx="438" cy="72" r="5" fill="url(#orb)"/><circle class="node-core node-delay" cx="492" cy="88" r="4" fill="url(#orb)"/>
+    </g>
+    <rect class="scan-line" x="18" y="48" width="2" height="72" fill="#91f4ff" opacity=".7" filter="url(#glow)"/>
+    <!-- token orbs -->
+    <g class="coin-a" transform="translate(105 86)"><circle r="12" fill="#173c59" stroke="#44dfff" stroke-width="2"/><path d="M-4-4h8v8h-8z" fill="#9cf5ff"/><circle r="4" fill="#42cfee"/></g>
+    <g class="coin-b" transform="translate(414 95)"><circle r="12" fill="#242456" stroke="#9a87ff" stroke-width="2"/><path d="M0-6l6 6-6 6-6-6z" fill="#c4b9ff"/></g>
+    <!-- floating Codex core -->
+    <g transform="translate(229 40)"><g class="bot-float">
+      <circle cx="32" cy="40" r="38" fill="#102f4a" stroke="#5ce5ff" stroke-opacity=".45"/>
+      <circle cx="32" cy="40" r="30" fill="none" stroke="#866dff" stroke-opacity=".35" stroke-dasharray="3 6"/>
+      <rect x="13" y="18" width="38" height="32" rx="10" fill="#dff9ff"/>
+      <rect x="18" y="24" width="28" height="16" rx="5" fill="#12344f"/>
+      <g class="bot-eyes"><rect x="23" y="29" width="5" height="5" rx="1" fill="#68e8ff"/><rect x="36" y="29" width="5" height="5" rx="1" fill="#a593ff"/></g>
+      <rect x="22" y="50" width="20" height="20" rx="6" fill="#b9eff9"/>
+      <path d="M27 57l5 4-5 4M37 57l-5 4 5 4" fill="none" stroke="#205d80" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="8" cy="34" r="5" fill="#5ce1ff"/><circle cx="56" cy="34" r="5" fill="#9988ff"/>
+    </g></g>
+    <rect x="20" y="122" width="482" height="3" rx="1.5" fill="#173b55"/>
+    <rect class="energy-bar" x="20" y="122" width="298" height="3" rx="1.5" fill="url(#cyanLine)" filter="url(#softGlow)"/>
   </g>
 
   <line x1="30" y1="170" x2="890" y2="170" stroke="#24394e"/>
