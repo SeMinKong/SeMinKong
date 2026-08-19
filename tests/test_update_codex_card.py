@@ -71,6 +71,30 @@ class CodexCardTests(unittest.TestCase):
         self.assertIn("gpt-5.6-luna", svg)
         self.assertIn("<svg", svg)
 
+    def test_baseline_is_preserved_and_new_usage_is_added(self):
+        state = card.load_state(Path("missing-for-test.json"))
+        state["baseline"] = {
+            "total_tokens": 4_050_000_000,
+            "max_daily_tokens": 410_000_000,
+            "longest_streak": 15,
+            "active_dates": ["2026-08-18", "2026-08-19"],
+        }
+        state["days"] = {
+            "2026-08-19": {
+                "turns": 1,
+                "models": {"gpt-5.6-luna": 1},
+                **{key: 0 for key in card.TOKEN_KEYS},
+                "total_tokens": 10_000_000,
+            }
+        }
+
+        svg = card.render_svg(state, date(2026, 8, 19))
+
+        self.assertIn("40.6억", svg)
+        self.assertIn("4.1억", svg)
+        self.assertIn("2일", svg)
+        self.assertIn("15일", svg)
+
 
 if __name__ == "__main__":
     unittest.main()
