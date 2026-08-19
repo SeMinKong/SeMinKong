@@ -1,9 +1,6 @@
 name: Update Codex activity card
 
 on:
-  push:
-    branches:
-      - agent/codex-usage-card
   schedule:
     - cron: "17 * * * *"
   workflow_dispatch:
