@@ -37,6 +37,12 @@ TOKEN_KEYS = (
 KST = ZoneInfo("Asia/Seoul")
 DEFAULT_STATE = {
     "schema_version": 1,
+    "baseline": {
+        "total_tokens": 0,
+        "max_daily_tokens": 0,
+        "longest_streak": 0,
+        "active_dates": [],
+    },
     "days": {},
     "seen_turns": {},
     "last_updated": None,
@@ -196,6 +202,11 @@ def load_state(path: Path) -> dict[str, Any]:
         raise ValueError("Unsupported codex stats schema version")
     state.setdefault("days", {})
     state.setdefault("seen_turns", {})
+    baseline = state.setdefault("baseline", {})
+    baseline.setdefault("total_tokens", 0)
+    baseline.setdefault("max_daily_tokens", 0)
+    baseline.setdefault("longest_streak", 0)
+    baseline.setdefault("active_dates", [])
     return state
 
 
@@ -271,11 +282,16 @@ def collect(client: TempoClient, state: dict[str, Any], now: datetime) -> int:
 
 
 def active_dates(state: dict[str, Any]) -> set[date]:
-    return {
+    collected = {
         date.fromisoformat(day_key)
         for day_key, values in state["days"].items()
         if int(values.get("turns", 0)) > 0
     }
+    baseline = {
+        date.fromisoformat(day_key)
+        for day_key in state.get("baseline", {}).get("active_dates", [])
+    }
+    return collected | baseline
 
 
 def streaks(days: set[date], today: date) -> tuple[int, int]:
@@ -326,9 +342,16 @@ def render_svg(state: dict[str, Any], today: date) -> str:
         date.fromisoformat(key): int(value.get("total_tokens", 0))
         for key, value in state["days"].items()
     }
-    total_tokens = sum(day_values.values())
-    max_daily = max(day_values.values(), default=0)
-    current_streak, longest_streak = streaks(active_dates(state), today)
+    baseline = state.get("baseline", {})
+    total_tokens = int(baseline.get("total_tokens", 0)) + sum(day_values.values())
+    max_daily = max(
+        int(baseline.get("max_daily_tokens", 0)),
+        max(day_values.values(), default=0),
+    )
+    current_streak, collected_longest_streak = streaks(active_dates(state), today)
+    longest_streak = max(
+        int(baseline.get("longest_streak", 0)), collected_longest_streak
+    )
 
     models: Counter[str] = Counter()
     for values in state["days"].values():
