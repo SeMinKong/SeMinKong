@@ -71,11 +71,15 @@ class CodexCardTests(unittest.TestCase):
         self.assertIn("gpt-5.6-luna", svg)
         self.assertIn("PRIMARY MODEL", svg)
         self.assertIn("DEVELOPER TELEMETRY", svg)
-        self.assertIn("ACTIVITY · LAST 52 WEEKS", svg)
+        self.assertIn(">ACTIVITY</text>", svg)
         self.assertNotIn("NEURAL TOKEN MATRIX", svg)
         self.assertNotIn("botFloat", svg)
         self.assertIn("today-cell", svg)
         self.assertIn("<svg", svg)
+
+    def test_display_model_name_preserves_readable_card_layout(self):
+        model = "gpt-5.6-a-very-long-model-name-that-needs-truncation"
+        self.assertEqual(card.display_model_name(model, 26), "gpt-5.6-a-very-long-model…")
 
     def test_primary_model_excludes_internal_codex_automation(self):
         state = card.load_state(Path("missing-for-test.json"))

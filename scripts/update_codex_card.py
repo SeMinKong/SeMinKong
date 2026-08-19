@@ -350,6 +350,12 @@ def primary_model(models: Counter[str]) -> str:
     return user_models.most_common(1)[0][0] if user_models else "No user model yet"
 
 
+def display_model_name(model: str, max_length: int = 26) -> str:
+    if len(model) <= max_length:
+        return model
+    return f"{model[: max_length - 1]}…"
+
+
 def render_svg(state: dict[str, Any], today: date) -> str:
     day_values = {
         date.fromisoformat(key): int(value.get("total_tokens", 0))
@@ -370,6 +376,7 @@ def render_svg(state: dict[str, Any], today: date) -> str:
     for values in state["days"].values():
         models.update({key: int(value) for key, value in values.get("models", {}).items()})
     top_model = primary_model(models)
+    top_model_display = display_model_name(top_model)
 
     weeks = 52
     cell = 9
@@ -415,13 +422,13 @@ def render_svg(state: dict[str, Any], today: date) -> str:
         x = 175 + index * 285
         stat_nodes.append(
             f'<text x="{x}" y="331" text-anchor="middle" class="stat-value">'
-            f'{escape(value)}</text><text x="{x}" y="351" text-anchor="middle" '
+            f'{escape(value)}</text><text x="{x}" y="352" text-anchor="middle" '
             f'class="stat-label">{escape(label)}</text>'
         )
         if index < 2:
             divider_x = 317 + index * 285
             stat_nodes.append(
-                f'<line x1="{divider_x}" y1="311" x2="{divider_x}" y2="346" '
+                f'<line x1="{divider_x}" y1="311" x2="{divider_x}" y2="347" '
                 'stroke="#27384a"/>'
             )
 
@@ -436,12 +443,12 @@ def render_svg(state: dict[str, Any], today: date) -> str:
     .total-label {{ font: 600 11px 'Noto Sans KR', 'Segoe UI', sans-serif; fill: #8b9eb0; }}
     .panel-label {{ font: 700 9px 'Segoe UI', Arial, sans-serif; fill: #71879b; letter-spacing: 1.25px; }}
     .model-value {{ font: 700 15px 'Segoe UI', Arial, sans-serif; fill: #dcecf8; }}
-    .today-value {{ font: 700 18px 'Segoe UI', Arial, sans-serif; fill: #dcecf8; }}
+    .today-value {{ font: 700 18px 'Noto Sans KR', 'Segoe UI', sans-serif; fill: #dcecf8; }}
     .today-label {{ font: 500 10px 'Noto Sans KR', 'Segoe UI', sans-serif; fill: #758da2; }}
     .month {{ font: 600 10px 'Segoe UI', Arial, sans-serif; fill: #71869a; }}
     .weekday {{ font: 500 10px 'Segoe UI', Arial, sans-serif; fill: #667c90; }}
     .stat-value {{ font: 700 18px 'Noto Sans KR', 'Segoe UI', sans-serif; fill: #e6edf3; }}
-    .stat-label {{ font: 500 10px 'Noto Sans KR', 'Segoe UI', sans-serif; fill: #71869a; }}
+    .stat-label {{ font: 500 11px 'Noto Sans KR', 'Segoe UI', sans-serif; fill: #71869a; }}
   </style>
   <rect x="1" y="1" width="918" height="363" rx="16" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
   <path d="M18 1H902A17 17 0 0 1 919 18" fill="none" stroke="#58a6ff" stroke-opacity=".42"/>
@@ -460,7 +467,7 @@ def render_svg(state: dict[str, Any], today: date) -> str:
     <rect width="520" height="98" rx="10" fill="#161b22" stroke="#30363d"/>
     <text x="20" y="23" class="panel-label">PRIMARY MODEL</text>
     <circle cx="23" cy="47" r="4" fill="#58a6ff"/>
-    <text x="36" y="53" class="model-value">{escape(top_model)}</text>
+    <text x="36" y="53" class="model-value"><title>{escape(top_model)}</title>{escape(top_model_display)}</text>
     <line x1="310" y1="17" x2="310" y2="81" stroke="#30363d"/>
     <text x="334" y="23" class="panel-label">TODAY</text>
     <text x="334" y="54" class="today-value">{escape(compact_number(today_tokens))}</text>
@@ -468,9 +475,9 @@ def render_svg(state: dict[str, Any], today: date) -> str:
   </g>
 
   <line x1="30" y1="181" x2="890" y2="181" stroke="#30363d"/>
-  <text x="30" y="199" class="panel-label">ACTIVITY · LAST 52 WEEKS</text>
+  <text x="30" y="194" class="panel-label">ACTIVITY</text>
   {''.join(month_nodes)}
-  <text x="122" y="218" class="weekday">Mon</text><text x="122" y="244" class="weekday">Wed</text><text x="128" y="270" class="weekday">Fri</text>
+  <text x="148" y="218" text-anchor="end" class="weekday">Mon</text><text x="148" y="244" text-anchor="end" class="weekday">Wed</text><text x="148" y="270" text-anchor="end" class="weekday">Fri</text>
   {''.join(cells)}
   <line x1="30" y1="303" x2="890" y2="303" stroke="#30363d"/>
   {''.join(stat_nodes)}
