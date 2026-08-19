@@ -358,16 +358,25 @@ def render_svg(state: dict[str, Any], today: date) -> str:
         models.update({key: int(value) for key, value in values.get("models", {}).items()})
     top_model = models.most_common(1)[0][0] if models else "No activity yet"
 
-    weeks = 32
-    cell = 20
-    gap = 7
-    grid_x = 64
-    grid_y = 165
+    weeks = 52
+    cell = 10
+    gap = 3
+    grid_x = 122
+    grid_y = 211
     end_of_week = today + timedelta(days=(5 - today.weekday()) % 7)
     grid_start = end_of_week - timedelta(days=weeks * 7 - 1)
-    colors = ["#30363d", "#16324f", "#1f4d78", "#2f81f7", "#58a6ff"]
+    colors = ["#263241", "#173f5f", "#20679a", "#2f9bd3", "#6dd5ed"]
     cells: list[str] = []
+    month_nodes: list[str] = []
+    previous_month = -1
     for week in range(weeks):
+        week_start = grid_start + timedelta(days=week * 7)
+        if week_start.month != previous_month:
+            month_nodes.append(
+                f'<text x="{grid_x + week * (cell + gap)}" y="195" '
+                f'class="month">{week_start.strftime("%b")}</text>'
+            )
+            previous_month = week_start.month
         for weekday in range(7):
             current = grid_start + timedelta(days=week * 7 + weekday)
             value = day_values.get(current, 0) if current <= today else 0
@@ -376,60 +385,108 @@ def render_svg(state: dict[str, Any], today: date) -> str:
             x = grid_x + week * (cell + gap)
             y = grid_y + weekday * (cell + gap)
             cells.append(
-                f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="5" '
+                f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="2.5" '
                 f'fill="{colors[level]}" opacity="{opacity}"><title>'
                 f'{escape(current.isoformat())}: {value:,} tokens</title></rect>'
             )
 
     stats = (
-        (compact_number(total_tokens), "누적 토큰"),
         (compact_number(max_daily), "최다 사용일"),
-        (f"{current_streak}일", "현재 연속 기록"),
-        (f"{longest_streak}일", "최장 연속 기록"),
+        (f"{current_streak}일", "현재 연속"),
+        (f"{longest_streak}일", "최장 연속"),
+        (top_model, "주 사용 모델"),
     )
     stat_nodes: list[str] = []
     for index, (value, label) in enumerate(stats):
-        x = 125 + index * 250
+        x = 132 + index * 220
         stat_nodes.append(
-            f'<text x="{x}" y="500" text-anchor="middle" class="stat-value">'
-            f'{escape(value)}</text><text x="{x}" y="538" text-anchor="middle" '
+            f'<text x="{x}" y="344" text-anchor="middle" class="stat-value">'
+            f'{escape(value)}</text><text x="{x}" y="361" text-anchor="middle" '
             f'class="stat-label">{escape(label)}</text>'
         )
         if index < 3:
-            divider_x = 250 + index * 250
+            divider_x = 242 + index * 220
             stat_nodes.append(
-                f'<line x1="{divider_x}" y1="470" x2="{divider_x}" y2="545" '
-                'stroke="#30363d"/>'
+                f'<line x1="{divider_x}" y1="326" x2="{divider_x}" y2="361" '
+                'stroke="#2c4056"/>'
             )
 
     updated = escape(str(state.get("last_updated") or ""))
-    return f'''<svg width="1000" height="610" viewBox="0 0 1000 610" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+    return f'''<svg width="920" height="375" viewBox="0 0 920 375" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Se Min Kong Codex activity</title>
   <desc id="desc">Automatically updated Codex token usage and activity streaks.</desc>
   <style>
-    .name {{ font: 700 38px 'Segoe UI', Arial, sans-serif; fill: #f0f6fc; }}
-    .handle {{ font: 600 25px 'Segoe UI', Arial, sans-serif; fill: #8b949e; }}
-    .brand {{ font: 700 34px 'Segoe UI', Arial, sans-serif; fill: #c9d1d9; }}
-    .initials {{ font: 500 36px 'Segoe UI', Arial, sans-serif; fill: #f0f6fc; }}
-    .model {{ font: 500 17px 'Segoe UI', Arial, sans-serif; fill: #8b949e; }}
-    .stat-value {{ font: 600 36px 'Segoe UI', Arial, sans-serif; fill: #f0f6fc; }}
-    .stat-label {{ font: 500 24px 'Segoe UI', Arial, sans-serif; fill: #8b949e; }}
-    .updated {{ font: 500 13px 'Segoe UI', Arial, sans-serif; fill: #6e7681; }}
+    .handle {{ font: 700 20px 'Segoe UI', Arial, sans-serif; fill: #f0f6fc; }}
+    .streak {{ font: 600 13px 'Segoe UI', Arial, sans-serif; fill: #80e1ff; }}
+    .total {{ font: 800 50px 'Segoe UI', Arial, sans-serif; fill: #7ee7ff; letter-spacing: -2px; }}
+    .total-label {{ font: 600 14px 'Noto Sans KR', 'Segoe UI', sans-serif; fill: #9fb4c9; }}
+    .scene-label {{ font: 700 14px 'Segoe UI', Arial, sans-serif; fill: #d9f3ff; }}
+    .month {{ font: 600 11px 'Segoe UI', Arial, sans-serif; fill: #8298ad; }}
+    .weekday {{ font: 500 10px 'Segoe UI', Arial, sans-serif; fill: #6f8498; }}
+    .stat-value {{ font: 700 17px 'Noto Sans KR', 'Segoe UI', sans-serif; fill: #e7f5ff; }}
+    .stat-label {{ font: 500 10px 'Noto Sans KR', 'Segoe UI', sans-serif; fill: #7890a6; }}
+    .updated {{ font: 500 9px 'Segoe UI', Arial, sans-serif; fill: #587087; }}
   </style>
-  <rect width="1000" height="610" rx="18" fill="#161b22"/>
-  <circle cx="112" cy="82" r="52" fill="#8b9a9d"/>
-  <text x="112" y="94" text-anchor="middle" class="initials">SK</text>
-  <text x="210" y="72" class="name">Se Min Kong</text>
-  <text x="210" y="108" class="handle">@SeMinKong</text>
-  <g transform="translate(765 48)">
-    <circle cx="28" cy="28" r="24" fill="none" stroke="#c9d1d9" stroke-width="6" stroke-dasharray="20 7"/>
-    <path d="M21 20l9 8-9 8" fill="none" stroke="#c9d1d9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="66" y="40" class="brand">Codex</text>
+  <defs>
+    <linearGradient id="cardBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101a28"/><stop offset="1" stop-color="#0b111b"/>
+    </linearGradient>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#173b61"/><stop offset="1" stop-color="#235b78"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="916" height="371" rx="20" fill="url(#cardBg)" stroke="#273b50" stroke-width="2"/>
+
+  <g transform="translate(30 24)">
+    <text x="0" y="20" class="handle">@SeMinKong</text>
+    <rect x="145" y="2" width="104" height="26" rx="13" fill="#143349" stroke="#285b76"/>
+    <circle cx="161" cy="15" r="5" fill="#55d6ff"/>
+    <text x="174" y="20" class="streak">{current_streak}-day streak</text>
+    <text x="0" y="85" class="total">{escape(compact_number(total_tokens))}</text>
+    <text x="3" y="110" class="total-label">누적 토큰 · 계속 성장 중</text>
+    <rect x="0" y="123" width="278" height="5" rx="2.5" fill="#172a3d"/>
+    <rect x="0" y="123" width="194" height="5" rx="2.5" fill="#36b9e8"/>
   </g>
-  <text x="64" y="143" class="model">Most used model: {escape(top_model)}</text>
+
+  <g transform="translate(330 18)">
+    <rect width="560" height="137" rx="16" fill="url(#sky)" stroke="#315f7b"/>
+    <text x="20" y="25" class="scene-label">CODEX TOKEN TRAIL</text>
+    <rect x="0" y="108" width="560" height="29" rx="0" fill="#173c38"/>
+    <path d="M0 125h560v-4 0a16 16 0 0 1-16 16H16A16 16 0 0 1 0 121z" fill="#102d2b"/>
+    <!-- stars and moon -->
+    <rect x="383" y="19" width="4" height="4" fill="#9ee8ff"/><rect x="455" y="34" width="3" height="3" fill="#9ee8ff"/>
+    <rect x="315" y="45" width="3" height="3" fill="#9ee8ff"/><circle cx="510" cy="30" r="14" fill="#ffe28a"/>
+    <circle cx="516" cy="25" r="14" fill="#173b61"/>
+    <!-- pixel trees -->
+    <g fill="#45a86b"><rect x="42" y="65" width="34" height="14"/><rect x="50" y="51" width="18" height="14"/><rect x="34" y="78" width="50" height="14"/></g>
+    <rect x="55" y="91" width="9" height="28" fill="#795536"/>
+    <g fill="#3f9763"><rect x="455" y="69" width="38" height="14"/><rect x="464" y="54" width="20" height="15"/><rect x="448" y="82" width="52" height="14"/></g>
+    <rect x="470" y="95" width="9" height="26" fill="#795536"/>
+    <!-- token coins -->
+    <g><circle cx="133" cy="93" r="11" fill="#f7c843" stroke="#9c6d00" stroke-width="4"/><rect x="129" y="87" width="8" height="12" rx="2" fill="#fff0a1"/></g>
+    <g><circle cx="414" cy="99" r="11" fill="#f7c843" stroke="#9c6d00" stroke-width="4"/><rect x="410" y="93" width="8" height="12" rx="2" fill="#fff0a1"/></g>
+    <!-- pixel Codex bot -->
+    <g transform="translate(245 43)">
+      <rect x="19" y="0" width="26" height="9" rx="3" fill="#78ddff"/>
+      <rect x="10" y="9" width="44" height="38" rx="8" fill="#dff7ff"/>
+      <rect x="16" y="17" width="32" height="20" rx="5" fill="#193b56"/>
+      <rect x="22" y="23" width="6" height="6" fill="#75e5ff"/><rect x="37" y="23" width="6" height="6" fill="#75e5ff"/>
+      <rect x="0" y="20" width="10" height="18" rx="4" fill="#7bdcf7"/><rect x="54" y="20" width="10" height="18" rx="4" fill="#7bdcf7"/>
+      <rect x="17" y="47" width="30" height="31" rx="7" fill="#bceeff"/>
+      <path d="M25 57l8 7-8 7M37 57l-8 7 8 7" fill="none" stroke="#22628a" stroke-width="4" stroke-linecap="round"/>
+      <rect x="18" y="78" width="10" height="8" fill="#75cbe8"/><rect x="36" y="78" width="10" height="8" fill="#75cbe8"/>
+    </g>
+    <!-- grass pixels -->
+    <path d="M8 121v-12h4v7h4v-10h4v15M92 121v-9h4v4h4v-8h4v13M520 121v-12h4v7h4v-9h4v14" stroke="#54b879" stroke-width="3" fill="none"/>
+  </g>
+
+  <line x1="30" y1="170" x2="890" y2="170" stroke="#24394e"/>
+  {''.join(month_nodes)}
+  <text x="78" y="229" class="weekday">Mon</text><text x="78" y="255" class="weekday">Wed</text><text x="84" y="281" class="weekday">Fri</text>
   {''.join(cells)}
+  <line x1="30" y1="316" x2="890" y2="316" stroke="#24394e"/>
   {''.join(stat_nodes)}
-  <text x="936" y="585" text-anchor="end" class="updated">Updated {updated}</text>
+  <text x="890" y="310" text-anchor="end" class="updated">Updated {updated}</text>
 </svg>
 '''
 

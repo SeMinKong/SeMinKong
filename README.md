@@ -46,7 +46,7 @@
 
 <h3 align="center">🤖 Codex Activity</h3>
 <div align="center">
-  <img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong/main/profile/codex-card.svg" width="100%" alt="Codex activity card">
+  <img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong/main/profile/codex-card.svg" width="92%" alt="Codex activity card">
 </div>
 
 <br/><br/>
@@ -62,12 +62,6 @@
 </div>
 
 <br/>
-
-<div align="center">
-  <a href="https://github.com/TOKENPHAGE">
-    <img src="https://api.tokenphage.com/badge/SeMinKong" alt="TokenPhage" />
-  </a>
-</div>
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong/output/github-contribution-grid-snake.svg" width="100%"/>
