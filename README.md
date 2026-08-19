@@ -44,9 +44,9 @@
 
 <br/><br/>
 
-<h3 align="center">🤖 Codex Activity</h3>
+<h3 align="center">Codex Usage</h3>
 <div align="center">
-  <img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong/main/profile/codex-card.svg" width="92%" alt="Codex activity card">
+  <img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong/main/profile/codex-card.svg" width="92%" alt="Codex usage card">
 </div>
 
 <br/><br/>
@@ -59,10 +59,4 @@
   <a href="https://github.com/SeMinKong/github-readme-stats">
     <img src="https://github-readme-stats-two-chi-41.vercel.app/api/top-langs/?username=SeMinKong&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117" height="180">
   </a>
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong/output/github-contribution-grid-snake.svg" width="100%"/>
 </div>

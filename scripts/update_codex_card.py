@@ -372,10 +372,10 @@ def render_svg(state: dict[str, Any], today: date) -> str:
     top_model = primary_model(models)
 
     weeks = 52
-    cell = 10
-    gap = 3
-    grid_x = 122
-    grid_y = 211
+    cell = 9
+    gap = 4
+    grid_x = 164
+    grid_y = 210
     end_of_week = today + timedelta(days=(5 - today.weekday()) % 7)
     grid_start = end_of_week - timedelta(days=weeks * 7 - 1)
     colors = ["#263241", "#173f5f", "#20679a", "#2f9bd3", "#6dd5ed"]
@@ -386,7 +386,7 @@ def render_svg(state: dict[str, Any], today: date) -> str:
         week_start = grid_start + timedelta(days=week * 7)
         if week_start.month != previous_month:
             month_nodes.append(
-                f'<text x="{grid_x + week * (cell + gap)}" y="195" '
+                f'<text x="{grid_x + week * (cell + gap)}" y="194" '
                 f'class="month">{week_start.strftime("%b")}</text>'
             )
             previous_month = week_start.month
@@ -409,144 +409,71 @@ def render_svg(state: dict[str, Any], today: date) -> str:
         (compact_number(max_daily), "최다 사용일"),
         (f"{current_streak}일", "현재 연속"),
         (f"{longest_streak}일", "최장 연속"),
-        (compact_number(today_tokens), "오늘 토큰"),
     )
     stat_nodes: list[str] = []
     for index, (value, label) in enumerate(stats):
-        x = 132 + index * 220
+        x = 175 + index * 285
         stat_nodes.append(
-            f'<text x="{x}" y="344" text-anchor="middle" class="stat-value">'
-            f'{escape(value)}</text><text x="{x}" y="361" text-anchor="middle" '
+            f'<text x="{x}" y="331" text-anchor="middle" class="stat-value">'
+            f'{escape(value)}</text><text x="{x}" y="351" text-anchor="middle" '
             f'class="stat-label">{escape(label)}</text>'
         )
-        if index < 3:
-            divider_x = 242 + index * 220
+        if index < 2:
+            divider_x = 317 + index * 285
             stat_nodes.append(
-                f'<line x1="{divider_x}" y1="326" x2="{divider_x}" y2="361" '
-                'stroke="#2c4056"/>'
+                f'<line x1="{divider_x}" y1="311" x2="{divider_x}" y2="346" '
+                'stroke="#27384a"/>'
             )
 
-    updated = escape(str(state.get("last_updated") or ""))
-    return f'''<svg width="920" height="375" viewBox="0 0 920 375" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Se Min Kong Codex activity</title>
-  <desc id="desc">Animated AI-themed Codex token usage, model, and activity streaks.</desc>
+    return f'''<svg width="920" height="365" viewBox="0 0 920 365" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Se Min Kong Codex usage</title>
+  <desc id="desc">Codex token usage, primary model, activity heatmap, and streaks.</desc>
   <style>
-    .handle {{ font: 700 19px 'Segoe UI', Arial, sans-serif; fill: #f4fbff; }}
-    .streak {{ font: 600 12px 'Segoe UI', Arial, sans-serif; fill: #8be9ff; }}
-    .total {{ font: 800 48px 'Segoe UI', Arial, sans-serif; fill: #8cecff; letter-spacing: -2px; }}
-    .total-label {{ font: 600 12px 'Noto Sans KR', 'Segoe UI', sans-serif; fill: #91aac1; }}
-    .model-label {{ font: 700 9px 'Segoe UI', Arial, sans-serif; fill: #6385a3; letter-spacing: 1px; }}
-    .model-value {{ font: 700 12px 'Segoe UI', Arial, sans-serif; fill: #d7f7ff; }}
-    .scene-label {{ font: 700 12px 'Segoe UI', Arial, sans-serif; fill: #d9f7ff; letter-spacing: 1.4px; }}
-    .scene-sub {{ font: 500 9px 'Segoe UI', Arial, sans-serif; fill: #6f9bb8; letter-spacing: .8px; }}
-    .month {{ font: 600 11px 'Segoe UI', Arial, sans-serif; fill: #8298ad; }}
-    .weekday {{ font: 500 10px 'Segoe UI', Arial, sans-serif; fill: #6f8498; }}
-    .stat-value {{ font: 700 17px 'Noto Sans KR', 'Segoe UI', sans-serif; fill: #e7f5ff; }}
-    .stat-label {{ font: 500 10px 'Noto Sans KR', 'Segoe UI', sans-serif; fill: #7890a6; }}
-    .updated {{ font: 500 9px 'Segoe UI', Arial, sans-serif; fill: #587087; }}
-    .neural-flow {{ stroke-dasharray: 3 8; animation: dataFlow 3s linear infinite; }}
-    .node-core {{ animation: nodePulse 2.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }}
-    .node-delay {{ animation-delay: -1.2s; }}
-    .bot-float {{ animation: botFloat 3.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }}
-    .bot-eyes {{ animation: blink 4.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }}
-    .coin-a {{ animation: coinFloat 2.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }}
-    .coin-b {{ animation: coinFloat 2.8s ease-in-out -1.4s infinite; transform-box: fill-box; transform-origin: center; }}
-    .scan-line {{ animation: scan 4s ease-in-out infinite; }}
-    .energy-bar {{ animation: energy 3.2s ease-in-out infinite; }}
-    .today-cell {{ animation: grassPulse 2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }}
-    @keyframes dataFlow {{ to {{ stroke-dashoffset: -44; }} }}
-    @keyframes nodePulse {{ 0%,100% {{ opacity:.45; transform:scale(.82); }} 50% {{ opacity:1; transform:scale(1.22); }} }}
-    @keyframes botFloat {{ 0%,100% {{ transform:translateY(0); }} 50% {{ transform:translateY(-6px); }} }}
-    @keyframes blink {{ 0%,46%,50%,100% {{ transform:scaleY(1); }} 48% {{ transform:scaleY(.12); }} }}
-    @keyframes coinFloat {{ 0%,100% {{ transform:translateY(0) rotate(0deg); }} 50% {{ transform:translateY(-5px) rotate(8deg); }} }}
-    @keyframes scan {{ 0%,100% {{ transform:translateX(0); opacity:0; }} 15% {{ opacity:.75; }} 85% {{ opacity:.75; }} 100% {{ transform:translateX(462px); opacity:0; }} }}
-    @keyframes energy {{ 0%,100% {{ opacity:.55; }} 50% {{ opacity:1; }} }}
-    @keyframes grassPulse {{ 0%,100% {{ opacity:.75; transform:scale(.9); }} 50% {{ opacity:1; transform:scale(1.18); }} }}
-    @media (prefers-reduced-motion: reduce) {{
-      .neural-flow,.node-core,.bot-float,.bot-eyes,.coin-a,.coin-b,.scan-line,.energy-bar,.today-cell {{ animation:none; }}
-    }}
+    .eyebrow {{ font: 700 10px 'Segoe UI', Arial, sans-serif; fill: #6e8499; letter-spacing: 1.5px; }}
+    .title {{ font: 700 22px 'Segoe UI', Arial, sans-serif; fill: #f0f6fc; letter-spacing: -.35px; }}
+    .handle {{ font: 600 12px 'Segoe UI', Arial, sans-serif; fill: #8b9eb0; }}
+    .total {{ font: 800 45px 'Segoe UI', Arial, sans-serif; fill: #f0f6fc; letter-spacing: -2px; }}
+    .total-label {{ font: 600 11px 'Noto Sans KR', 'Segoe UI', sans-serif; fill: #8b9eb0; }}
+    .panel-label {{ font: 700 9px 'Segoe UI', Arial, sans-serif; fill: #71879b; letter-spacing: 1.25px; }}
+    .model-value {{ font: 700 15px 'Segoe UI', Arial, sans-serif; fill: #dcecf8; }}
+    .today-value {{ font: 700 18px 'Segoe UI', Arial, sans-serif; fill: #dcecf8; }}
+    .today-label {{ font: 500 10px 'Noto Sans KR', 'Segoe UI', sans-serif; fill: #758da2; }}
+    .month {{ font: 600 10px 'Segoe UI', Arial, sans-serif; fill: #71869a; }}
+    .weekday {{ font: 500 10px 'Segoe UI', Arial, sans-serif; fill: #667c90; }}
+    .stat-value {{ font: 700 18px 'Noto Sans KR', 'Segoe UI', sans-serif; fill: #e6edf3; }}
+    .stat-label {{ font: 500 10px 'Noto Sans KR', 'Segoe UI', sans-serif; fill: #71869a; }}
   </style>
-  <defs>
-    <linearGradient id="cardBg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0f1b2b"/><stop offset=".55" stop-color="#0a1422"/><stop offset="1" stop-color="#080e17"/>
-    </linearGradient>
-    <linearGradient id="aiPanel" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#102d4b"/><stop offset=".55" stop-color="#122841"/><stop offset="1" stop-color="#112135"/>
-    </linearGradient>
-    <linearGradient id="cyanLine" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#36d7ff" stop-opacity="0"/><stop offset=".5" stop-color="#82f4ff"/><stop offset="1" stop-color="#7b61ff" stop-opacity="0"/>
-    </linearGradient>
-    <radialGradient id="orb"><stop offset="0" stop-color="#a8f6ff"/><stop offset=".35" stop-color="#36d7ff"/><stop offset="1" stop-color="#16719d"/></radialGradient>
-    <pattern id="circuitGrid" width="22" height="22" patternUnits="userSpaceOnUse">
-      <path d="M22 0H0V22" fill="none" stroke="#4ecff2" stroke-opacity=".08" stroke-width="1"/>
-      <circle cx="0" cy="0" r="1.3" fill="#71e6ff" fill-opacity=".18"/>
-    </pattern>
-    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
-      <feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  </defs>
-  <rect x="2" y="2" width="916" height="371" rx="20" fill="url(#cardBg)" stroke="#29435a" stroke-width="2"/>
-  <path d="M22 2H898A20 20 0 0 1 918 22" fill="none" stroke="#5ce1ff" stroke-opacity=".28"/>
+  <rect x="1" y="1" width="918" height="363" rx="16" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
+  <path d="M18 1H902A17 17 0 0 1 919 18" fill="none" stroke="#58a6ff" stroke-opacity=".42"/>
+  <text x="30" y="28" class="eyebrow">DEVELOPER TELEMETRY</text>
+  <text x="30" y="51" class="title">Codex Usage</text>
+  <text x="890" y="43" text-anchor="end" class="handle">@SeMinKong</text>
 
-  <!-- Golden-ratio summary region: 322px / 522px -->
-  <g transform="translate(30 18)">
-    <rect width="322" height="137" rx="16" fill="#0e2033" fill-opacity=".86" stroke="#28465f"/>
-    <path d="M16 1H306" stroke="url(#cyanLine)" stroke-width="2"/>
-    <text x="18" y="29" class="handle">@SeMinKong</text>
-    <rect x="190" y="11" width="113" height="27" rx="13.5" fill="#123a52" stroke="#2a718f"/>
-    <circle class="node-core" cx="207" cy="24.5" r="5" fill="url(#orb)" filter="url(#softGlow)"/>
-    <text x="220" y="29" class="streak">{current_streak}-day streak</text>
-    <text x="18" y="87" class="total">{escape(compact_number(total_tokens))}</text>
-    <text x="20" y="108" class="total-label">누적 토큰 · 실시간 통합</text>
-    <rect x="18" y="117" width="286" height="1" fill="#28425a"/>
-    <text x="18" y="131" class="model-label">PRIMARY MODEL</text>
-    <rect x="112" y="120" width="192" height="13" rx="6.5" fill="#142b42" stroke="#274b65"/>
-    <circle cx="124" cy="126.5" r="3" fill="#8cf3ff" filter="url(#softGlow)"/>
-    <text x="133" y="131" class="model-value">{escape(top_model)}</text>
+  <!-- information split: 326px / 520px -->
+  <g transform="translate(30 67)">
+    <rect width="326" height="98" rx="10" fill="#161b22" stroke="#30363d"/>
+    <text x="18" y="23" class="panel-label">TOTAL TOKENS</text>
+    <text x="18" y="68" class="total">{escape(compact_number(total_tokens))}</text>
+    <text x="20" y="86" class="total-label">Codex 전체 사용량</text>
+  </g>
+  <g transform="translate(370 67)">
+    <rect width="520" height="98" rx="10" fill="#161b22" stroke="#30363d"/>
+    <text x="20" y="23" class="panel-label">PRIMARY MODEL</text>
+    <circle cx="23" cy="47" r="4" fill="#58a6ff"/>
+    <text x="36" y="53" class="model-value">{escape(top_model)}</text>
+    <line x1="310" y1="17" x2="310" y2="81" stroke="#30363d"/>
+    <text x="334" y="23" class="panel-label">TODAY</text>
+    <text x="334" y="54" class="today-value">{escape(compact_number(today_tokens))}</text>
+    <text x="334" y="76" class="today-label">오늘 기록된 토큰</text>
   </g>
 
-  <g transform="translate(368 18)">
-    <rect width="522" height="137" rx="16" fill="url(#aiPanel)" stroke="#315c79"/>
-    <rect width="522" height="137" rx="16" fill="url(#circuitGrid)"/>
-    <text x="20" y="25" class="scene-label">NEURAL TOKEN MATRIX</text>
-    <text x="20" y="40" class="scene-sub">LIVE CODEX TELEMETRY</text>
-    <!-- animated neural graph -->
-    <g fill="none" stroke="#48d9ff" stroke-opacity=".38" stroke-width="1.5">
-      <path class="neural-flow" d="M32 91C92 45 123 116 183 75S276 41 333 79 420 113 492 65"/>
-      <path class="neural-flow" style="animation-delay:-1.5s" d="M53 57C115 98 160 42 219 82S334 112 389 55 451 50 503 88"/>
-    </g>
-    <g filter="url(#glow)">
-      <circle class="node-core" cx="54" cy="83" r="5" fill="url(#orb)"/><circle class="node-core node-delay" cx="145" cy="69" r="4" fill="url(#orb)"/>
-      <circle class="node-core" cx="210" cy="88" r="5" fill="url(#orb)"/><circle class="node-core node-delay" cx="342" cy="81" r="4" fill="url(#orb)"/>
-      <circle class="node-core" cx="438" cy="72" r="5" fill="url(#orb)"/><circle class="node-core node-delay" cx="492" cy="88" r="4" fill="url(#orb)"/>
-    </g>
-    <rect class="scan-line" x="18" y="48" width="2" height="72" fill="#91f4ff" opacity=".7" filter="url(#glow)"/>
-    <!-- token orbs -->
-    <g class="coin-a" transform="translate(105 86)"><circle r="12" fill="#173c59" stroke="#44dfff" stroke-width="2"/><path d="M-4-4h8v8h-8z" fill="#9cf5ff"/><circle r="4" fill="#42cfee"/></g>
-    <g class="coin-b" transform="translate(414 95)"><circle r="12" fill="#242456" stroke="#9a87ff" stroke-width="2"/><path d="M0-6l6 6-6 6-6-6z" fill="#c4b9ff"/></g>
-    <!-- floating Codex core -->
-    <g transform="translate(229 40)"><g class="bot-float">
-      <circle cx="32" cy="40" r="38" fill="#102f4a" stroke="#5ce5ff" stroke-opacity=".45"/>
-      <circle cx="32" cy="40" r="30" fill="none" stroke="#866dff" stroke-opacity=".35" stroke-dasharray="3 6"/>
-      <rect x="13" y="18" width="38" height="32" rx="10" fill="#dff9ff"/>
-      <rect x="18" y="24" width="28" height="16" rx="5" fill="#12344f"/>
-      <g class="bot-eyes"><rect x="23" y="29" width="5" height="5" rx="1" fill="#68e8ff"/><rect x="36" y="29" width="5" height="5" rx="1" fill="#a593ff"/></g>
-      <rect x="22" y="50" width="20" height="20" rx="6" fill="#b9eff9"/>
-      <path d="M27 57l5 4-5 4M37 57l-5 4 5 4" fill="none" stroke="#205d80" stroke-width="3" stroke-linecap="round"/>
-      <circle cx="8" cy="34" r="5" fill="#5ce1ff"/><circle cx="56" cy="34" r="5" fill="#9988ff"/>
-    </g></g>
-    <rect x="20" y="122" width="482" height="3" rx="1.5" fill="#173b55"/>
-    <rect class="energy-bar" x="20" y="122" width="298" height="3" rx="1.5" fill="url(#cyanLine)" filter="url(#softGlow)"/>
-  </g>
-
-  <line x1="30" y1="170" x2="890" y2="170" stroke="#24394e"/>
+  <line x1="30" y1="181" x2="890" y2="181" stroke="#30363d"/>
+  <text x="30" y="199" class="panel-label">ACTIVITY · LAST 52 WEEKS</text>
   {''.join(month_nodes)}
-  <text x="78" y="229" class="weekday">Mon</text><text x="78" y="255" class="weekday">Wed</text><text x="84" y="281" class="weekday">Fri</text>
+  <text x="122" y="218" class="weekday">Mon</text><text x="122" y="244" class="weekday">Wed</text><text x="128" y="270" class="weekday">Fri</text>
   {''.join(cells)}
-  <line x1="30" y1="316" x2="890" y2="316" stroke="#24394e"/>
+  <line x1="30" y1="303" x2="890" y2="303" stroke="#30363d"/>
   {''.join(stat_nodes)}
-  <text x="890" y="310" text-anchor="end" class="updated">Updated {updated}</text>
 </svg>
 '''
 
