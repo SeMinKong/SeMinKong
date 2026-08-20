@@ -6,8 +6,6 @@
   </a>
 </div>
 
-<br/><br/>
-
 <div align="center">
   <p>
     안녕하세요! 공세민입니다.<br>
