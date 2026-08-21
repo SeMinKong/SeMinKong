@@ -36,6 +36,10 @@
   <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white">
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white">
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white">
+  <img src="https://img.shields.io/badge/YOLO-%23111F68.svg?style=for-the-badge&logo=yolo&logoColor=white">
+  <img src="https://img.shields.io/badge/vllm-%2330A2FF.svg?style=for-the-badge&logo=vllm&logoColor=ffffff">
+  <img src="https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white">
+  
 </div>
 
 <br/><br/>
