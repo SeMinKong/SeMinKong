@@ -42,20 +42,20 @@
       "total_tokens": 2055958
     },
     "2026-08-21": {
-      "turns": 86,
+      "turns": 98,
       "models": {
-        "gpt-5.6-luna": 25,
+        "gpt-5.6-luna": 27,
         "gpt-5.6-terra": 3,
-        "codex-auto-review": 42,
-        "gpt-5.6-sol": 16
+        "codex-auto-review": 50,
+        "gpt-5.6-sol": 18
       },
-      "input_tokens": 86625232,
-      "output_tokens": 300519,
-      "cached_input_tokens": 80537216,
-      "non_cached_input_tokens": 6088016,
-      "reasoning_output_tokens": 114561,
+      "input_tokens": 118934306,
+      "output_tokens": 399126,
+      "cached_input_tokens": 110731776,
+      "non_cached_input_tokens": 8202530,
+      "reasoning_output_tokens": 154974,
       "cache_write_input_tokens": 0,
-      "total_tokens": 86925751
+      "total_tokens": 119333432
     }
   },
   "seen_turns": {
@@ -307,7 +307,19 @@
     "01a0234d-0a52-7e53-9efb-274a7ecb4272": "2026-08-21",
     "01a02326-fac1-7ea2-a23a-a061b250103f": "2026-08-21",
     "01a02327-789d-7d40-84f3-723f58dbf1fe": "2026-08-21",
-    "01a02326-fd10-7163-be02-38a7d686e76f": "2026-08-21"
+    "01a02326-fd10-7163-be02-38a7d686e76f": "2026-08-21",
+    "01a02332-44b9-7461-866c-bac26e834e51": "2026-08-21",
+    "01a02364-aa7f-7a73-86e7-be05fed785b0": "2026-08-21",
+    "01a02366-10de-7de1-ba1b-31a25b841c92": "2026-08-21",
+    "01a0236a-f9fe-7a22-b2ca-dc33b4460e03": "2026-08-21",
+    "01a0236f-acb0-79d2-b996-29bb8cf6fb33": "2026-08-21",
+    "01a02374-531e-79f0-913b-2cfd8db9b3c9": "2026-08-21",
+    "01a0237c-312c-7f90-804c-902c20c067ec": "2026-08-21",
+    "01a02380-f922-71e3-aa05-58fa2e8e641b": "2026-08-21",
+    "01a02385-c167-7283-96cd-59fd4c8f2540": "2026-08-21",
+    "01a0238b-74b7-7951-938b-884d4073fb39": "2026-08-21",
+    "01a0237d-8419-7663-8949-a6c1831c13e9": "2026-08-21",
+    "01a02364-ac71-7992-ae48-b037a60e9717": "2026-08-21"
   },
-  "last_updated": "2026-08-21T16:58:32+09:00"
+  "last_updated": "2026-08-21T17:59:29+09:00"
 }
