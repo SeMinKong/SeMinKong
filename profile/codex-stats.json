@@ -42,20 +42,20 @@
       "total_tokens": 2055958
     },
     "2026-08-21": {
-      "turns": 72,
+      "turns": 86,
       "models": {
-        "gpt-5.6-luna": 22,
+        "gpt-5.6-luna": 25,
         "gpt-5.6-terra": 3,
-        "codex-auto-review": 35,
-        "gpt-5.6-sol": 12
+        "codex-auto-review": 42,
+        "gpt-5.6-sol": 16
       },
-      "input_tokens": 65496235,
-      "output_tokens": 240261,
-      "cached_input_tokens": 60658688,
-      "non_cached_input_tokens": 4837547,
-      "reasoning_output_tokens": 94611,
+      "input_tokens": 86625232,
+      "output_tokens": 300519,
+      "cached_input_tokens": 80537216,
+      "non_cached_input_tokens": 6088016,
+      "reasoning_output_tokens": 114561,
       "cache_write_input_tokens": 0,
-      "total_tokens": 65736496
+      "total_tokens": 86925751
     }
   },
   "seen_turns": {
@@ -293,7 +293,21 @@
     "01a022e0-c694-7be2-9f4a-9be0a6332172": "2026-08-21",
     "01a0230b-b3c2-7481-8cb2-20be4e477977": "2026-08-21",
     "01a0230b-d1ed-72a1-abd4-f8a87f24e7f4": "2026-08-21",
-    "01a022e0-c4d8-72c0-a20a-6132eda98c82": "2026-08-21"
+    "01a022e0-c4d8-72c0-a20a-6132eda98c82": "2026-08-21",
+    "01a0232e-a1fe-7d00-aede-4fc4be2f58fe": "2026-08-21",
+    "01a0233b-52a9-75c1-99c6-aaa26b812b30": "2026-08-21",
+    "01a02340-0366-76c2-afb3-4ce246aef92b": "2026-08-21",
+    "01a02346-e9d4-76c0-b91d-5551cc4f1055": "2026-08-21",
+    "01a0234b-8f82-7fc2-8c34-78a1959fceb4": "2026-08-21",
+    "01a02332-4648-7663-bce8-54df4dc03040": "2026-08-21",
+    "01a0232c-2729-7b52-9796-2daeb6ce7f09": "2026-08-21",
+    "01a0232b-f841-7b23-9b06-73c38db432c7": "2026-08-21",
+    "01a02319-c82c-7840-bb41-9dba8df47ff0": "2026-08-21",
+    "01a0230b-64c6-7113-a638-e7effc8b45da": "2026-08-21",
+    "01a0234d-0a52-7e53-9efb-274a7ecb4272": "2026-08-21",
+    "01a02326-fac1-7ea2-a23a-a061b250103f": "2026-08-21",
+    "01a02327-789d-7d40-84f3-723f58dbf1fe": "2026-08-21",
+    "01a02326-fd10-7163-be02-38a7d686e76f": "2026-08-21"
   },
-  "last_updated": "2026-08-21T16:08:40+09:00"
+  "last_updated": "2026-08-21T16:58:32+09:00"
 }
