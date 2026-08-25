@@ -74,19 +74,19 @@
       "total_tokens": 46285026
     },
     "2026-08-25": {
-      "turns": 20,
+      "turns": 34,
       "models": {
-        "codex-auto-review": 13,
+        "codex-auto-review": 26,
         "gpt-5.6-terra": 2,
-        "gpt-5.6-sol": 5
+        "gpt-5.6-sol": 6
       },
-      "input_tokens": 22896767,
-      "output_tokens": 115913,
-      "cached_input_tokens": 21374464,
-      "non_cached_input_tokens": 1522303,
-      "reasoning_output_tokens": 39741,
+      "input_tokens": 27177049,
+      "output_tokens": 122846,
+      "cached_input_tokens": 24496512,
+      "non_cached_input_tokens": 2680537,
+      "reasoning_output_tokens": 41223,
       "cache_write_input_tokens": 0,
-      "total_tokens": 23012680
+      "total_tokens": 27299895
     }
   },
   "seen_turns": {
@@ -558,7 +558,21 @@
     "01a0344b-42c4-72e2-87d9-81f9a22c8dc7": "2026-08-25",
     "01a0363f-c4d5-7f23-a0a5-8c0d79f6ca60": "2026-08-25",
     "01a03642-8084-7eb0-be91-1b64e8f89a87": "2026-08-25",
-    "01a03682-d1c3-7aa2-9068-ce40d08329e7": "2026-08-25"
+    "01a03682-d1c3-7aa2-9068-ce40d08329e7": "2026-08-25",
+    "01a036a3-4534-7732-a14e-6345d5f78db0": "2026-08-25",
+    "01a036a7-f13f-7051-80b5-c49c4740d438": "2026-08-25",
+    "01a036af-d369-7b51-b53c-54ab2b86d5be": "2026-08-25",
+    "01a036da-8014-7743-ad58-7ef7f0b99b9d": "2026-08-25",
+    "01a036dc-b3ff-7b30-8c13-034f82ae2e1a": "2026-08-25",
+    "01a036e6-3c44-7711-96f2-7ad8d1a8b4f0": "2026-08-25",
+    "01a036d2-f921-7bb1-ab8c-2cddd2967f29": "2026-08-25",
+    "01a036a3-519e-7c32-a4dd-58348b464092": "2026-08-25",
+    "01a036aa-5f5a-7032-8f69-cc7320f7b69f": "2026-08-25",
+    "01a036ae-af1f-7273-aae9-d41c49aaf514": "2026-08-25",
+    "01a036d4-bc50-70f1-9873-53c45bb93ca6": "2026-08-25",
+    "01a036db-7fbb-7b91-88c0-9966c39c6a56": "2026-08-25",
+    "01a036e2-93b6-79b1-bbcc-ee2ab34e11ff": "2026-08-25",
+    "01a036b0-187b-7263-95aa-32c17c922c66": "2026-08-25"
   },
-  "last_updated": "2026-08-25T10:53:21+09:00"
+  "last_updated": "2026-08-25T12:13:21+09:00"
 }
