@@ -90,18 +90,18 @@
       "total_tokens": 56016428
     },
     "2026-08-26": {
-      "turns": 9,
+      "turns": 12,
       "models": {
-        "gpt-5.6-sol": 8,
+        "gpt-5.6-sol": 11,
         "gpt-5.6-luna": 1
       },
-      "input_tokens": 6025825,
-      "output_tokens": 27240,
-      "cached_input_tokens": 5786752,
-      "non_cached_input_tokens": 239073,
-      "reasoning_output_tokens": 11712,
+      "input_tokens": 9390327,
+      "output_tokens": 46673,
+      "cached_input_tokens": 8934784,
+      "non_cached_input_tokens": 455543,
+      "reasoning_output_tokens": 21930,
       "cache_write_input_tokens": 0,
-      "total_tokens": 6053065
+      "total_tokens": 9437000
     }
   },
   "seen_turns": {
@@ -669,7 +669,10 @@
     "01a03b96-2265-74b3-9705-48e8926f3a6f": "2026-08-26",
     "01a03b82-de0c-7802-84f7-76ba71e8c9b9": "2026-08-26",
     "01a03ba5-2534-7683-a6ff-dab8d449f9de": "2026-08-26",
-    "01a03c5f-7fec-7571-8697-a55cb8d3de3d": "2026-08-26"
+    "01a03c5f-7fec-7571-8697-a55cb8d3de3d": "2026-08-26",
+    "01a03c6f-d384-70b0-b94e-76a75c5801cd": "2026-08-26",
+    "01a03c79-5113-73f1-983c-05b2f9571d8f": "2026-08-26",
+    "01a03c8a-4662-70a1-b463-501a8a2c5c25": "2026-08-26"
   },
-  "last_updated": "2026-08-26T13:57:02+09:00"
+  "last_updated": "2026-08-26T14:50:55+09:00"
 }
