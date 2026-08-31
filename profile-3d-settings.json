@@ -1,0 +1,33 @@
+{
+  "type": "normal",
+  "fileName": "profile-physical-ai.svg",
+  "backgroundColor": "#ffffff",
+  "foregroundColor": "#24292f",
+  "strongColor": "#22314E",
+  "weakColor": "#57606a",
+  "radarColor": "#0A8F70",
+  "growingAnimation": true,
+  "contribColors": [
+    "#ebedf0",
+    "#c8f5e8",
+    "#7ee6c4",
+    "#30c99b",
+    "#0a8f70"
+  ],
+  "darkMode": {
+    "type": "normal",
+    "backgroundColor": "#0d1117",
+    "foregroundColor": "#f0f6fc",
+    "strongColor": "#50E3C2",
+    "weakColor": "#8b949e",
+    "radarColor": "#76B900",
+    "contribColors": [
+      "#161b22",
+      "#0e4429",
+      "#006d32",
+      "#26a641",
+      "#39d353"
+    ]
+  }
+}
+
