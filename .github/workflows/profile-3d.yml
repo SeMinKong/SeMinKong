@@ -1,6 +1,12 @@
 name: Refresh profile terrain
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - profile-3d-settings.json
+      - .github/workflows/profile-3d.yml
   schedule:
     - cron: "17 18 * * *" # 03:17 KST
   workflow_dispatch:
