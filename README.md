@@ -13,17 +13,9 @@
 
 ## Sense → Reason → Act → Learn
 
-```mermaid
-flowchart TD
-  A["Signals<br/>Camera · MRI · Language"]
-  B["Perception<br/>MediaPipe · OpenCV · YOLO"]
-  C["Learning & Reasoning<br/>PyTorch · RL · LangGraph · Local LLM"]
-  D["Control & Safety<br/>ROS 2 · Edge · Command Guard"]
-  E["Physical Action & Data<br/>Robot Motion · rosbag2 · Evaluation"]
-
-  A --> B --> C --> D --> E
-  E -. feedback .-> C
-```
+<p align="center">
+  <img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong/main/assets/physical-ai-pipeline.svg" width="100%" alt="카메라·MRI·언어 입력이 perception, reasoning, ROS 2 안전 제어, 실제 동작과 평가 데이터로 이어지는 Physical AI 시스템 루프" />
+</p>
 
 > My work lives in the interfaces between these layers.
 
@@ -101,7 +93,7 @@ flowchart TD
 ## Activity, rendered as terrain
 
 <p align="center">
-  <img src="./profile-3d-contrib/profile-physical-ai.svg" width="100%" alt="Se Min Kong의 GitHub 기여도와 저장소 활동을 표현한 테마 대응 3D 지형" />
+  <img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong/main/profile-3d-contrib/profile-physical-ai.svg" width="100%" alt="Se Min Kong의 GitHub 기여도와 저장소 활동을 표현한 테마 대응 3D 지형" />
 </p>
 
 <p align="center"><sub>Generated daily by GitHub Actions · light/dark theme aware</sub></p>
