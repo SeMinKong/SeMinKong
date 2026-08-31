@@ -1,54 +1,117 @@
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0D1117&height=180&section=header&text=Welcome&fontSize=50&fontColor=ffffff&fontAlign=50" width="100%">
-  
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=25&pause=1000&color=50E3C2&center=true&vCenter=true&width=435&lines=Artificial+Intelligence;Robotics;Always+Learning;Building+the+Future" alt="Typing SVG" />
+# Se Min Kong · 공세민
+
+### Building AI that sees, reasons, and moves.
+
+비전·에이전트·로봇 제어를 연결해 **입력부터 검증 가능한 physical action까지** 동작하는 시스템을 만듭니다.  
+모델 하나보다 perception–decision–control–data가 끊기지 않는 전체 흐름에 관심이 있습니다.
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-View_Work-0A8F70?style=flat-square&logo=githubpages&logoColor=white)](https://seminkong.github.io/SeMinKong_Web/)
+[![Resume](https://img.shields.io/badge/Resume-Experience-22314E?style=flat-square&logo=readme&logoColor=white)](https://seminkong.github.io/SeMinKong_Web/resume/)
+[![Email](https://img.shields.io/badge/Email-semin1224%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:semin1224@gmail.com)
+
+---
+
+## Sense → Reason → Act → Learn
+
+```mermaid
+flowchart TD
+  A["Signals<br/>Camera · MRI · Language"]
+  B["Perception<br/>MediaPipe · OpenCV · YOLO"]
+  C["Learning & Reasoning<br/>PyTorch · RL · LangGraph · Local LLM"]
+  D["Control & Safety<br/>ROS 2 · Edge · Command Guard"]
+  E["Physical Action & Data<br/>Robot Motion · rosbag2 · Evaluation"]
+
+  A --> B --> C --> D --> E
+  E -. feedback .-> C
+```
+
+> My work lives in the interfaces between these layers.
+
+| Now | What I am testing |
+|---|---|
+| `RETARGETING` | 21개 손 landmark를 안전한 7-DoF 텐던 핸드 명령으로 바꾸는 방법 |
+| `SIM-TO-REAL` | sensor noise·latency·contact dynamics의 domain gap을 비교하고 줄이는 방법 |
+| `EDGE AI` | Jetson·Raspberry Pi 환경에서 latency·memory budget·observability를 함께 설계하는 방법 |
+
+---
+
+## Selected Systems
+
+### 01 — THING · Human-Mimetic Robot Hand
+
+`Hand landmarks → safe 7-axis motion → experiment data`
+
+카메라가 읽은 21개 손 landmark를 7축 `HandCommand`로 변환하고, ROS 2 명령 중재·Command Guard·GPIO E-Stop을 거쳐 실제 텐던 로봇 핸드와 기록 파이프라인까지 연결한 팀 프로젝트입니다.
+
+<p align="center">
+  <a href="https://seminkong.github.io/SeMinKong_Web/work/thing/">
+    <img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong_Web/main/src/assets/projects/thing/final-demo-poster.webp" width="720" alt="THING 텐던 로봇 핸드의 실시간 손동작 모방 시연" />
   </a>
-</div>
+</p>
 
-<div align="center">
-  <p>
-    안녕하세요! 공세민입니다.<br>
-    비전기술, Physical AI에 깊은 관심을 가지고 있습니다.<br>
-    <br>
-    <a href="https://seminkong.github.io/SeMinKong_Web">
-      <img src="https://img.shields.io/badge/Profile_Web-22314E?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Profile Website"/>
-    </a>
-  </p>
-</div>
+[Case study](https://seminkong.github.io/SeMinKong_Web/work/thing/) · [Repository](https://github.com/SeMinKong/THING) · [Full demos](https://github.com/SeMinKong/THING#시연)
 
-<h3 align="center">🛠️ Tech Stack & Tools</h3>
-<div align="center">
-  <img src="https://img.shields.io/badge/ROS2-22314E?style=for-the-badge&logo=ros&logoColor=white">
-  <img src="https://img.shields.io/badge/NVIDIA_Isaac_Sim-76B900?style=for-the-badge&logo=nvidia&logoColor=white">
-  <img src="https://img.shields.io/badge/Isaac_Lab-76B900?style=for-the-badge&logo=nvidia&logoColor=white">
-  <br/>
+| System | Input → Output | Evidence |
+|---|---|---|
+| [**AQIS for Smart Factory**](https://seminkong.github.io/SeMinKong_Web/work/aqis/) | RealSense·YOLO 검사 → conveyor·Dobot·dashboard | Team Lead · ROS 2 bridge · device adapters |
+| [**Brain Tumor MRI Vision**](https://seminkong.github.io/SeMinKong_Web/work/brain-tumor-mri/) | MRI → classification + segmentation mask | [YOLO11 pipeline](https://github.com/SeMinKong/BrainMRISegmentation_YOLO) · mask-to-polygon preprocessing |
+| [**Project Prompt Generator**](https://seminkong.github.io/SeMinKong_Web/work/project-prompt-generator/) | Idea → six parallel design conversations → implementation brief | [LangGraph state workflow](https://github.com/SeMinKong/ProjectPromptGenerator_LangGraph) · FastAPI · WebSocket |
 
-  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
-  <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi&logoColor=white">
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white">
-  <img src="https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white">
-  <img src="https://img.shields.io/badge/llama.cpp-000000?style=for-the-badge">
-  <br/>
+<details>
+<summary><strong>More experiments</strong></summary>
 
-  <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white">
-  <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white">
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white">
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white">
-  <img src="https://img.shields.io/badge/YOLO-%23111F68.svg?style=for-the-badge&logo=yolo&logoColor=white">
-  <img src="https://img.shields.io/badge/vllm-%2330A2FF.svg?style=for-the-badge&logo=vllm&logoColor=ffffff">
-  <img src="https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white">
-  
-</div>
+- [**Briefit**](https://seminkong.github.io/SeMinKong_Web/work/briefit/) — 비동기 뉴스 수집, 유사 기사 grouping, KoBART 요약 파이프라인
+- [**Snake DQN**](https://github.com/SeMinKong/Snake_DQN) — CNN/feature-vector agents, Double DQN, reward redesign
+- [**TSP GPU Solver**](https://github.com/SeMinKong/TSP) — PyTorch 기반 GA·SA 병렬 탐색
 
-<br/><br/>
+</details>
 
-<div align="center">
-  <a href="https://github.com/SeMinKong/github-readme-stats">
-    <img src="https://github-readme-stats-two-chi-41.vercel.app/api?username=SeMinKong&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117" height="180">
-  </a>
-  <a href="https://github.com/SeMinKong/github-readme-stats">
-    <img src="https://github-readme-stats-two-chi-41.vercel.app/api/top-langs/?username=SeMinKong&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117" height="180">
-  </a>
-</div>
+---
+
+## Capability Map
+
+| Layer | Tools |
+|---|---|
+| **Robotics & Edge** | ROS 2 · DYNAMIXEL · NVIDIA Jetson · Raspberry Pi · Intel RealSense |
+| **Perception** | OpenCV · MediaPipe · Ultralytics YOLO · Intel RealSense |
+| **Learning & Agents** | PyTorch · LangGraph · Transformers · Ollama |
+| **Delivery** | Python · C++ · TypeScript · FastAPI · React · Docker · AWS |
+
+`EXPLORING` Isaac Sim/Lab · sim-to-real · llama.cpp on edge devices
+
+---
+
+## Journey
+
+- **2026 — Present** · SSAFY Robotics Track — Computer Vision, ROS 2, hardware/software integration
+- **2020 — 2026** · Soongsil University — B.E. in Software, AI & Big Data convergence major
+
+<details>
+<summary><strong>Awards & language</strong></summary>
+
+- IT Project Pro League — Encouragement Award, Soongsil University Spartan SW Education Center (2025)
+- Software Competition — Gold Prize, Soongsil University SW
+- Capstone Design Competition — Encouragement Award, Soongsil University SW
+- OPIc English — IH
+
+</details>
+
+---
+
+## Activity, rendered as terrain
+
+<p align="center">
+  <img src="./profile-3d-contrib/profile-physical-ai.svg" width="100%" alt="Se Min Kong의 GitHub 기여도와 저장소 활동을 표현한 테마 대응 3D 지형" />
+</p>
+
+<p align="center"><sub>Generated daily by GitHub Actions · light/dark theme aware</sub></p>
+
+---
+
+<p align="center">
+  <strong>Let's build something that can see, reason, and move.</strong><br/><br/>
+  <a href="https://seminkong.github.io/SeMinKong_Web/">Portfolio</a> ·
+  <a href="https://github.com/SeMinKong">GitHub</a> ·
+  <a href="mailto:semin1224@gmail.com">Email</a>
+</p>
+
