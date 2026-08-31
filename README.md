@@ -1,109 +1,71 @@
-# Se Min Kong · 공세민
+# 공세민 | Se Min Kong
 
-### Building AI that sees, reasons, and moves.
+안녕하세요, 공세민입니다.
 
-비전·에이전트·로봇 제어를 연결해 **입력부터 검증 가능한 physical action까지** 동작하는 시스템을 만듭니다.  
-모델 하나보다 perception–decision–control–data가 끊기지 않는 전체 흐름에 관심이 있습니다.
+카메라와 모델이 만든 결과를 실제 장치의 움직임까지 연결하는 작업을 좋아합니다.  
+숭실대학교에서 소프트웨어를 전공했고, 현재 SSAFY Robotics Track에서 ROS 2와 로봇 시스템을 공부하고 있습니다.
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-View_Work-0A8F70?style=flat-square&logo=githubpages&logoColor=white)](https://seminkong.github.io/SeMinKong_Web/)
-[![Resume](https://img.shields.io/badge/Resume-Experience-22314E?style=flat-square&logo=readme&logoColor=white)](https://seminkong.github.io/SeMinKong_Web/resume/)
-[![Email](https://img.shields.io/badge/Email-semin1224%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:semin1224@gmail.com)
+로봇을 만들 때는 잘 움직이는지만 보지 않습니다. 센서 연결이 끊겼을 때 안전하게 멈추는지, 여러 명령이 겹치면 무엇을 먼저 처리할지, 실험 과정을 나중에 다시 확인할 수 있는지도 함께 봅니다.
 
----
+[포트폴리오](https://seminkong.github.io/SeMinKong_Web/) · [이력서](https://seminkong.github.io/SeMinKong_Web/resume/) · [메일](mailto:semin1224@gmail.com)
 
-## Sense → Reason → Act → Learn
+## 요즘 보고 있는 것
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong/main/assets/physical-ai-pipeline.svg" width="100%" alt="카메라·MRI·언어 입력이 perception, reasoning, ROS 2 안전 제어, 실제 동작과 평가 데이터로 이어지는 Physical AI 시스템 루프" />
-</p>
+- 손의 21개 landmark를 7축 텐던 핸드 명령으로 바꾸는 방법
+- simulator에서 잘 되던 움직임이 실제 장치에서도 버티게 만드는 방법
+- Jetson과 Raspberry Pi에서 지연 시간, 메모리, 기록을 함께 챙기는 방법
 
-> My work lives in the interfaces between these layers.
+## 최근에 만든 것
 
-| Now | What I am testing |
-|---|---|
-| `RETARGETING` | 21개 손 landmark를 안전한 7-DoF 텐던 핸드 명령으로 바꾸는 방법 |
-| `SIM-TO-REAL` | sensor noise·latency·contact dynamics의 domain gap을 비교하고 줄이는 방법 |
-| `EDGE AI` | Jetson·Raspberry Pi 환경에서 latency·memory budget·observability를 함께 설계하는 방법 |
+### THING
 
----
+사람의 손동작을 따라 하는 7축 텐던 로봇 핸드를 만든 팀 프로젝트입니다.  
+MediaPipe로 읽은 손 좌표를 실제 모터 명령으로 바꾸고, ROS 2에서 명령 중재와 안전 처리를 거쳐 로봇 손까지 전달했습니다.
 
-## Selected Systems
+구성 메모:
 
-### 01 — THING · Human-Mimetic Robot Hand
-
-`Hand landmarks → safe 7-axis motion → experiment data`
-
-카메라가 읽은 21개 손 landmark를 7축 `HandCommand`로 변환하고, ROS 2 명령 중재·Command Guard·GPIO E-Stop을 거쳐 실제 텐던 로봇 핸드와 기록 파이프라인까지 연결한 팀 프로젝트입니다.
+- 입력: 카메라와 MediaPipe의 21개 hand landmark
+- 명령 생성: Jetson에서 7축 `HandCommand` 생성
+- 안전 처리: Raspberry Pi 5, ROS 2 명령 우선순위, 관절 제한, GPIO E-stop
+- 구동: DYNAMIXEL XL330 7개와 텐던 구조
+- 기록: rosbag2 데이터를 JSON·CSV로 변환하고 SHA-256과 함께 EC2에 저장
 
 <p align="center">
   <a href="https://seminkong.github.io/SeMinKong_Web/work/thing/">
-    <img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong_Web/main/src/assets/projects/thing/final-demo-poster.webp" width="720" alt="THING 텐던 로봇 핸드의 실시간 손동작 모방 시연" />
+    <img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong_Web/main/src/assets/projects/thing/final-demo-poster.webp" width="640" alt="THING 텐던 로봇 핸드 시연 포스터" />
   </a>
 </p>
 
-[Case study](https://seminkong.github.io/SeMinKong_Web/work/thing/) · [Repository](https://github.com/SeMinKong/THING) · [Full demos](https://github.com/SeMinKong/THING#시연)
+[프로젝트 기록](https://seminkong.github.io/SeMinKong_Web/work/thing/) · [코드](https://github.com/SeMinKong/THING) · [시연 영상](https://github.com/SeMinKong/THING#시연)
 
-| System | Input → Output | Evidence |
-|---|---|---|
-| [**AQIS for Smart Factory**](https://seminkong.github.io/SeMinKong_Web/work/aqis/) | RealSense·YOLO 검사 → conveyor·Dobot·dashboard | Team Lead · ROS 2 bridge · device adapters |
-| [**Brain Tumor MRI Vision**](https://seminkong.github.io/SeMinKong_Web/work/brain-tumor-mri/) | MRI → classification + segmentation mask | [YOLO11 pipeline](https://github.com/SeMinKong/BrainMRISegmentation_YOLO) · mask-to-polygon preprocessing |
-| [**Project Prompt Generator**](https://seminkong.github.io/SeMinKong_Web/work/project-prompt-generator/) | Idea → six parallel design conversations → implementation brief | [LangGraph state workflow](https://github.com/SeMinKong/ProjectPromptGenerator_LangGraph) · FastAPI · WebSocket |
+### 다른 작업
 
-<details>
-<summary><strong>More experiments</strong></summary>
+- [**AQIS**](https://seminkong.github.io/SeMinKong_Web/work/aqis/) — 팀장으로 참여한 스마트 팩토리 검사 프로젝트입니다. RealSense와 YOLO의 검사 결과를 컨베이어, Dobot, 대시보드까지 연결했습니다.
+- [**Brain MRI**](https://seminkong.github.io/SeMinKong_Web/work/brain-tumor-mri/) — YOLO11로 뇌 MRI 분류와 segmentation을 함께 실험했습니다. [전처리와 학습 코드](https://github.com/SeMinKong/BrainMRISegmentation_YOLO)도 정리해 두었습니다.
+- [**Project Prompt Generator**](https://seminkong.github.io/SeMinKong_Web/work/project-prompt-generator/) — 하나의 아이디어를 여러 설계 대화로 나누는 [LangGraph workflow](https://github.com/SeMinKong/ProjectPromptGenerator_LangGraph)입니다. FastAPI와 WebSocket으로 진행 상황을 보여줍니다.
+- [**Briefit**](https://seminkong.github.io/SeMinKong_Web/work/briefit/) — 뉴스를 비동기로 모으고, 비슷한 기사를 묶은 뒤 KoBART로 요약하는 파이프라인을 만들었습니다.
 
-- [**Briefit**](https://seminkong.github.io/SeMinKong_Web/work/briefit/) — 비동기 뉴스 수집, 유사 기사 grouping, KoBART 요약 파이프라인
-- [**Snake DQN**](https://github.com/SeMinKong/Snake_DQN) — CNN/feature-vector agents, Double DQN, reward redesign
-- [**TSP GPU Solver**](https://github.com/SeMinKong/TSP) — PyTorch 기반 GA·SA 병렬 탐색
+공부하면서 만든 작은 실험은 [Snake DQN](https://github.com/SeMinKong/Snake_DQN)과 [TSP GPU Solver](https://github.com/SeMinKong/TSP)에 남겨 두었습니다.
 
-</details>
+## 자주 쓰는 도구
 
----
+로봇 쪽에서는 ROS 2, Python, C++, DYNAMIXEL을 주로 씁니다.  
+비전 작업에는 OpenCV, MediaPipe, PyTorch, YOLO를 사용하고, 필요한 API와 화면은 FastAPI, React, WebSocket으로 붙입니다.
 
-## Capability Map
+최근에는 Isaac Sim/Lab과 edge inference를 공부하고 있습니다.
 
-| Layer | Tools |
-|---|---|
-| **Robotics & Edge** | ROS 2 · DYNAMIXEL · NVIDIA Jetson · Raspberry Pi · Intel RealSense |
-| **Perception** | OpenCV · MediaPipe · Ultralytics YOLO · Intel RealSense |
-| **Learning & Agents** | PyTorch · LangGraph · Transformers · Ollama |
-| **Delivery** | Python · C++ · TypeScript · FastAPI · React · Docker · AWS |
+## 간단한 이력
 
-`EXPLORING` Isaac Sim/Lab · sim-to-real · llama.cpp on edge devices
+- 2026–현재 · SSAFY Robotics Track
+- 2020–2026 · 숭실대학교 소프트웨어학부, AI·빅데이터 융합전공
 
----
+## GitHub 기록
 
-## Journey
-
-- **2026 — Present** · SSAFY Robotics Track — Computer Vision, ROS 2, hardware/software integration
-- **2020 — 2026** · Soongsil University — B.E. in Software, AI & Big Data convergence major
-
-<details>
-<summary><strong>Awards & language</strong></summary>
-
-- IT Project Pro League — Encouragement Award, Soongsil University Spartan SW Education Center (2025)
-- Software Competition — Gold Prize, Soongsil University SW
-- Capstone Design Competition — Encouragement Award, Soongsil University SW
-- OPIc English — IH
-
-</details>
-
----
-
-## Activity, rendered as terrain
+잔디는 평면보다 지형으로 보는 편이 재미있어서 3D로 남겨 두었습니다. GitHub Actions가 하루에 한 번 갱신합니다.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong/main/profile-3d-contrib/profile-physical-ai-static.svg" width="100%" alt="Se Min Kong의 GitHub 기여도와 저장소 활동을 표현한 테마 대응 3D 지형" />
+  <img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong/main/profile-3d-contrib/profile-physical-ai-static.svg" width="100%" alt="공세민의 GitHub 활동을 나타낸 3D 기여 지형" />
 </p>
 
-<p align="center"><sub>Generated daily by GitHub Actions · light/dark theme aware</sub></p>
-
----
-
-<p align="center">
-  <strong>Let's build something that can see, reason, and move.</strong><br/><br/>
-  <a href="https://seminkong.github.io/SeMinKong_Web/">Portfolio</a> ·
-  <a href="https://github.com/SeMinKong">GitHub</a> ·
-  <a href="mailto:semin1224@gmail.com">Email</a>
-</p>
+작업 이야기는 [메일](mailto:semin1224@gmail.com)로 편하게 연락 주세요.
 
