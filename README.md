@@ -93,7 +93,7 @@
 ## Activity, rendered as terrain
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong/main/profile-3d-contrib/profile-physical-ai.svg" width="100%" alt="Se Min Kong의 GitHub 기여도와 저장소 활동을 표현한 테마 대응 3D 지형" />
+  <img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong/main/profile-3d-contrib/profile-physical-ai-static.svg" width="100%" alt="Se Min Kong의 GitHub 기여도와 저장소 활동을 표현한 테마 대응 3D 지형" />
 </p>
 
 <p align="center"><sub>Generated daily by GitHub Actions · light/dark theme aware</sub></p>
