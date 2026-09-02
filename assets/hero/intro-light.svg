@@ -1,98 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="132" viewBox="0 0 720 132" role="img" aria-labelledby="hero-title hero-desc">
-  <title id="hero-title">SeMinKong — Vision Technology and Physical AI</title>
-  <desc id="hero-desc">A calm, one-time sequence introducing Vision Technology and Physical AI, the path from perception to robot action, and systems that sense, reason, and act.</desc>
-
-  <defs>
-    <linearGradient id="accent" x1="294" y1="0" x2="426" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#2563EB"/>
-      <stop offset="0.5" stop-color="#7C3AED"/>
-      <stop offset="1" stop-color="#0D9488"/>
-    </linearGradient>
-
-    <clipPath id="reveal-one" clipPathUnits="userSpaceOnUse">
-      <rect class="wipe wipe-one" x="172" y="51" width="376" height="34" rx="2"/>
-    </clipPath>
-    <clipPath id="reveal-two" clipPathUnits="userSpaceOnUse">
-      <rect class="wipe wipe-two" x="200" y="51" width="320" height="34" rx="2"/>
-    </clipPath>
-    <clipPath id="reveal-three" clipPathUnits="userSpaceOnUse">
-      <rect class="wipe wipe-three" x="106" y="51" width="508" height="34" rx="2"/>
-    </clipPath>
-  </defs>
-
+  <title id="hero-title">공세민의 비전 기술 스케치</title>
+  <desc id="hero-desc">카메라에서 모델을 거쳐 로봇의 움직임으로 이어지는 과정을 손으로 그린 듯 표현한 파이프라인입니다.</desc>
   <style>
-    .scene {
-      animation-duration: 14s;
-      animation-iteration-count: 1;
-      animation-fill-mode: both;
-      animation-timing-function: ease-in-out;
-    }
-    .scene-one { animation-name: scene-one; }
-    .scene-two { animation-name: scene-two; }
-    .scene-three { animation-name: scene-three; }
-    .wipe {
-      transform-box: fill-box;
-      transform-origin: left center;
-      animation-duration: 14s;
-      animation-iteration-count: 1;
-      animation-fill-mode: both;
-    }
-    .wipe-one { animation-name: wipe-one; animation-timing-function: steps(33, end); }
-    .wipe-two { animation-name: wipe-two; animation-timing-function: steps(27, end); }
-    .wipe-three { animation-name: wipe-three; animation-timing-function: steps(46, end); }
-
-    @keyframes scene-one {
-      0%, 24% { opacity: 1; }
-      30%, 100% { opacity: 0; }
-    }
-    @keyframes scene-two {
-      0%, 28% { opacity: 0; }
-      34%, 55% { opacity: 1; }
-      62%, 100% { opacity: 0; }
-    }
-    @keyframes scene-three {
-      0%, 60% { opacity: 0; }
-      66%, 100% { opacity: 1; }
-    }
-    @keyframes wipe-one {
-      0% { transform: scaleX(0); }
-      13%, 100% { transform: scaleX(1); }
-    }
-    @keyframes wipe-two {
-      0%, 30% { transform: scaleX(0); }
-      43%, 100% { transform: scaleX(1); }
-    }
-    @keyframes wipe-three {
-      0%, 62% { transform: scaleX(0); }
-      78%, 100% { transform: scaleX(1); }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .scene,
-      .wipe {
-        animation: none !important;
-      }
-      .scene-one { opacity: 1; }
-      .scene-two,
-      .scene-three { opacity: 0; }
-      .wipe { transform: none; }
-    }
+    .ink{fill:none;stroke:#26344A;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}.pencil{fill:none;stroke:#9AA6B6;stroke-width:1.05;stroke-linecap:round;stroke-linejoin:round}.accent{fill:none;stroke:#0A8F70;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}.dot{fill:#0A8F70}.note{fill:#536174;font-family:"Segoe Print","Comic Sans MS",cursive;font-size:12px}.caption{fill:#26344A;font-family:"Segoe Print","Comic Sans MS",cursive;font-size:13px}.trace{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.6s ease-out .15s 1 forwards}@keyframes draw{to{stroke-dashoffset:0}}@media (prefers-reduced-motion:reduce){.trace{animation:none;stroke-dashoffset:0}}
   </style>
 
-  <rect x="0.75" y="0.75" width="718.5" height="130.5" rx="18" fill="#F8FAFC" stroke="#DCE5F0" stroke-width="1.5"/>
-  <rect x="294" y="18" width="132" height="3" rx="1.5" fill="url(#accent)"/>
+  <text class="caption" x="360" y="17" text-anchor="middle">보는 것에서, 움직이는 것까지.</text>
+  <path class="pencil" d="M271 21 C308 24 354 20 389 22 C413 23 432 21 449 22"/>
+  <path class="accent trace" pathLength="1" d="M151 67 C194 48 246 85 303 66 C348 51 400 50 446 67 C481 80 511 75 541 61"/>
+  <path class="accent" d="M270 61 l8 4 l-7 6 M499 65 l8 4 l-7 6"/>
 
-  <text x="360" y="42" text-anchor="middle" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" letter-spacing="2.4">NOW EXPLORING</text>
+  <g aria-label="camera">
+    <path class="pencil" d="M56 48 L76 47 L84 38 L111 39 L120 48 L148 49 L149 91 L56 90 Z"/>
+    <path class="ink" d="M54 46 L75 46 L83 36 L112 37 L121 47 L147 47 L148 89 L55 90 Z"/>
+    <path class="pencil" d="M82 36 L88 33 L109 34 L112 37"/>
+    <path class="ink" d="M55 57 C72 56 82 57 88 58 M116 57 C128 56 137 57 147 56"/>
+    <path class="pencil" d="M101 51 C111 51 121 59 121 69 C121 80 113 88 101 88 C89 87 81 80 82 68 C82 58 90 52 101 51 Z"/>
+    <path class="ink" d="M101 53 C112 53 119 60 119 69 C119 79 112 86 101 86 C90 86 84 79 84 69 C84 59 91 53 101 53 Z"/>
+    <circle class="dot" cx="101" cy="69" r="4.2"/><circle class="dot" cx="136" cy="53" r="2"/>
+    <text class="note" x="101" y="108" text-anchor="middle">camera</text>
+  </g>
 
-  <g class="scene scene-one" opacity="1" clip-path="url(#reveal-one)">
-    <text x="360" y="77" text-anchor="middle" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="650">Vision Technology · Physical AI</text>
-  </g>
-  <g class="scene scene-two" opacity="0" clip-path="url(#reveal-two)">
-    <text x="360" y="77" text-anchor="middle" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="650">Perception → Robot Action</text>
-  </g>
-  <g class="scene scene-three" opacity="0" clip-path="url(#reveal-three)">
-    <text x="360" y="77" text-anchor="middle" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="650">Building systems that sense, reason, and act</text>
+  <g aria-label="model">
+    <path class="pencil" d="M318 42 C342 39 379 41 405 40 L407 94 C380 96 344 93 319 95 Z"/>
+    <path class="ink" d="M316 40 C341 42 377 39 404 41 L405 92 C379 94 343 91 318 93 Z"/>
+    <path class="pencil" d="M312 48 l-7 0 M312 59 l-8 1 M312 73 l-7 -1 M312 85 l-8 1 M410 49 l8 -1 M410 61 l7 1 M410 74 l8 -1 M410 86 l7 1"/>
+    <path class="pencil" d="M337 55 L360 67 L386 53 M337 55 L361 82 M337 78 L360 67 M337 78 L361 82 M360 67 L386 78 M361 82 L386 53"/>
+    <g class="dot"><circle cx="337" cy="55" r="3.2"/><circle cx="337" cy="78" r="3.2"/><circle cx="360" cy="67" r="3.2"/><circle cx="361" cy="82" r="3.2"/><circle cx="386" cy="53" r="3.2"/><circle cx="386" cy="78" r="3.2"/></g>
+    <text class="note" x="361" y="108" text-anchor="middle">model</text>
   </g>
 
-  <text x="360" y="108" text-anchor="middle" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" font-weight="600" letter-spacing="1.7">VISION · ROBOTICS · EMBODIED INTELLIGENCE</text>
+  <g aria-label="robot motion">
+    <path class="pencil" d="M575 91 L626 91 L633 98 L568 98 Z M589 88 L585 72 L600 60 L613 73 L604 88 M580 66 L555 48 L546 57"/>
+    <path class="ink" d="M572 89 L625 89 L631 96 L568 96 Z M587 88 L584 71 L599 58 L614 72 L605 88 M581 65 L557 47 L548 56"/>
+    <circle class="pencil" cx="584" cy="71" r="7.5"/><circle class="ink" cx="584" cy="71" r="6"/>
+    <circle class="pencil" cx="614" cy="72" r="7.5"/><circle class="ink" cx="614" cy="72" r="6"/>
+    <circle class="dot" cx="584" cy="71" r="3"/><circle class="dot" cx="614" cy="72" r="3"/>
+    <path class="ink" d="M548 56 l-8 -8 M548 56 l-10 5 M548 56 l2 11"/>
+    <path class="pencil" d="M539 47 l4 -5 M537 60 l-6 1 M550 68 l1 6"/>
+    <path class="accent" d="M628 49 C639 54 642 62 640 71 M637 68 l3 4 l4 -4"/>
+    <text class="note" x="605" y="108" text-anchor="middle">robot motion</text>
+  </g>
+
+  <text class="note" x="360" y="126" text-anchor="middle">camera  →  model  →  robot motion</text>
 </svg>
