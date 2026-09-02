@@ -1,12 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="132" viewBox="0 0 720 132" role="img" aria-labelledby="hero-title hero-desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="118" viewBox="0 0 720 118" role="img" aria-labelledby="hero-title hero-desc">
   <title id="hero-title">공세민의 비전 기술 스케치</title>
   <desc id="hero-desc">카메라에서 모델을 거쳐 로봇의 움직임으로 이어지는 과정을 손으로 그린 듯 표현한 파이프라인입니다.</desc>
   <style>
-    .ink{fill:none;stroke:#D9E2F0;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}.pencil{fill:none;stroke:#526171;stroke-width:1.05;stroke-linecap:round;stroke-linejoin:round}.accent{fill:none;stroke:#58C7AC;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}.dot{fill:#58C7AC}.note{fill:#9EADBE;font-family:"Segoe Print","Comic Sans MS",cursive;font-size:12px}.caption{fill:#D9E2F0;font-family:"Segoe Print","Comic Sans MS",cursive;font-size:13px}.trace{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.6s ease-out .15s 1 forwards}@keyframes draw{to{stroke-dashoffset:0}}@media (prefers-reduced-motion:reduce){.trace{animation:none;stroke-dashoffset:0}}
+    .ink{fill:none;stroke:#D9E2F0;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}.pencil{fill:none;stroke:#708090;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.accent{fill:none;stroke:#58C7AC;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.dot{fill:#58C7AC}.trace{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.6s ease-out .15s 1 forwards}@keyframes draw{to{stroke-dashoffset:0}}@media (prefers-reduced-motion:reduce){.trace{animation:none;stroke-dashoffset:0}}
   </style>
 
-  <text class="caption" x="360" y="17" text-anchor="middle">보는 것에서, 움직이는 것까지.</text>
-  <path class="pencil" d="M271 21 C308 24 354 20 389 22 C413 23 432 21 449 22"/>
   <path class="accent trace" pathLength="1" d="M151 67 C194 48 246 85 303 66 C348 51 400 50 446 67 C481 80 511 75 541 61"/>
   <path class="accent" d="M270 61 l8 4 l-7 6 M499 65 l8 4 l-7 6"/>
 
@@ -18,7 +16,6 @@
     <path class="pencil" d="M101 51 C111 51 121 59 121 69 C121 80 113 88 101 88 C89 87 81 80 82 68 C82 58 90 52 101 51 Z"/>
     <path class="ink" d="M101 53 C112 53 119 60 119 69 C119 79 112 86 101 86 C90 86 84 79 84 69 C84 59 91 53 101 53 Z"/>
     <circle class="dot" cx="101" cy="69" r="4.2"/><circle class="dot" cx="136" cy="53" r="2"/>
-    <text class="note" x="101" y="108" text-anchor="middle">camera</text>
   </g>
 
   <g aria-label="model">
@@ -27,7 +24,6 @@
     <path class="pencil" d="M312 48 l-7 0 M312 59 l-8 1 M312 73 l-7 -1 M312 85 l-8 1 M410 49 l8 -1 M410 61 l7 1 M410 74 l8 -1 M410 86 l7 1"/>
     <path class="pencil" d="M337 55 L360 67 L386 53 M337 55 L361 82 M337 78 L360 67 M337 78 L361 82 M360 67 L386 78 M361 82 L386 53"/>
     <g class="dot"><circle cx="337" cy="55" r="3.2"/><circle cx="337" cy="78" r="3.2"/><circle cx="360" cy="67" r="3.2"/><circle cx="361" cy="82" r="3.2"/><circle cx="386" cy="53" r="3.2"/><circle cx="386" cy="78" r="3.2"/></g>
-    <text class="note" x="361" y="108" text-anchor="middle">model</text>
   </g>
 
   <g aria-label="robot motion">
@@ -39,8 +35,5 @@
     <path class="ink" d="M548 56 l-8 -8 M548 56 l-10 5 M548 56 l2 11"/>
     <path class="pencil" d="M539 47 l4 -5 M537 60 l-6 1 M550 68 l1 6"/>
     <path class="accent" d="M628 49 C639 54 642 62 640 71 M637 68 l3 4 l4 -4"/>
-    <text class="note" x="605" y="108" text-anchor="middle">robot motion</text>
   </g>
-
-  <text class="note" x="360" y="126" text-anchor="middle">camera  →  model  →  robot motion</text>
 </svg>
