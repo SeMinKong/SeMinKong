@@ -105,18 +105,9 @@
 ## 수상
 
 <p align="center">
-  <strong>2025 · IT대학 소프트웨어 공모전</strong><br />
-  <img src="https://img.shields.io/badge/%EA%B8%88%EC%83%81-806000?style=for-the-badge" alt="금상" height="28" />
-</p>
-
-<p align="center">
-  <strong>2025 · IT프로젝트 프로리그</strong><br />
-  <img src="https://img.shields.io/badge/%EC%9E%A5%EB%A0%A4%EC%83%81-08715A?style=for-the-badge" alt="장려상" height="28" />
-</p>
-
-<p align="center">
-  <strong>2025 · 제15회 숭실 캡스톤디자인 경진대회</strong><br />
-  <img src="https://img.shields.io/badge/%EC%9E%A5%EB%A0%A4%EC%83%81-22314E?style=for-the-badge" alt="장려상" height="28" />
+  <img src="https://img.shields.io/badge/2025_%C2%B7_IT%EB%8C%80%ED%95%99_%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4_%EA%B3%B5%EB%AA%A8%EC%A0%84-%EA%B8%88%EC%83%81-806000?style=for-the-badge" alt="2025 · IT대학 소프트웨어 공모전 금상" height="28" />
+  <img src="https://img.shields.io/badge/2025_%C2%B7_IT%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%ED%94%84%EB%A1%9C%EB%A6%AC%EA%B7%B8-%EC%9E%A5%EB%A0%A4%EC%83%81-08715A?style=for-the-badge" alt="2025 · IT프로젝트 프로리그 장려상" height="28" />
+  <img src="https://img.shields.io/badge/2025_%C2%B7_%EC%A0%9C15%ED%9A%8C_%EC%88%AD%EC%8B%A4_%EC%BA%A1%EC%8A%A4%ED%86%A4%EB%94%94%EC%9E%90%EC%9D%B8_%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C-%EC%9E%A5%EB%A0%A4%EC%83%81-22314E?style=for-the-badge" alt="2025 · 제15회 숭실 캡스톤디자인 경진대회 장려상" height="28" />
 </p>
 
 ## 이력
