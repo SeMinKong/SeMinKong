@@ -23,13 +23,13 @@
 
 <p align="center">
   <a href="https://seminkong.github.io/SeMinKong_Web/">
-    <img src="https://img.shields.io/badge/Web-22314E?style=for-the-badge&amp;logo=googlechrome&amp;logoColor=white" alt="포트폴리오 웹사이트 열기" />
+    <img src="https://img.shields.io/badge/Web-22314E?style=for-the-badge&amp;logo=googlechrome&amp;logoColor=white" alt="포트폴리오 웹사이트 열기" height="28" />
   </a>
   <a href="https://seminkong.github.io/SeMinKong_Web/resume/">
-    <img src="https://img.shields.io/badge/Resume-08715A?style=for-the-badge&amp;logo=readme&amp;logoColor=white" alt="이력서 보기" />
+    <img src="https://img.shields.io/badge/Resume-08715A?style=for-the-badge&amp;logo=readme&amp;logoColor=white" alt="이력서 보기" height="28" />
   </a>
   <a href="mailto:semin1224@gmail.com">
-    <img src="https://img.shields.io/badge/Email-B3261E?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" alt="이메일 보내기" />
+    <img src="https://img.shields.io/badge/Email-B3261E?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" alt="이메일 보내기" height="28" />
   </a>
 </p>
 
@@ -37,89 +37,86 @@
 
 <p align="center">
   <strong>Robotics · Simulation</strong><br />
-  <img src="https://img.shields.io/badge/ROS_2-26344A?style=flat-square&amp;logo=ros&amp;logoColor=white" alt="ROS 2" />
-  <img src="https://img.shields.io/badge/NVIDIA_Isaac_Sim-26344A?style=flat-square&amp;logo=nvidia&amp;logoColor=white" alt="NVIDIA Isaac Sim" />
-  <img src="https://img.shields.io/badge/Isaac_Lab-26344A?style=flat-square&amp;logo=nvidia&amp;logoColor=white" alt="Isaac Lab" />
+  <img src="https://img.shields.io/badge/ROS%202-%230A0FF9.svg?style=for-the-badge&amp;logo=ros&amp;logoColor=white" alt="ROS 2" height="28" />
+  <img src="https://img.shields.io/badge/Isaac%20Sim-%2376B900.svg?style=for-the-badge&amp;logo=nvidia&amp;logoColor=white" alt="NVIDIA Isaac Sim" height="28" />
+  <img src="https://img.shields.io/badge/Isaac%20Lab-%2376B900.svg?style=for-the-badge&amp;logo=nvidia&amp;logoColor=white" alt="Isaac Lab" height="28" />
 </p>
 
 <p align="center">
   <strong>Languages</strong><br />
-  <img src="https://img.shields.io/badge/C%2B%2B-26344A?style=flat-square&amp;logo=cplusplus&amp;logoColor=white" alt="C++" />
-  <img src="https://img.shields.io/badge/Python-26344A?style=flat-square&amp;logo=python&amp;logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/c%2B%2B-%2300599C.svg?style=for-the-badge&amp;logo=cplusplus&amp;logoColor=white" alt="C++" height="28" />
+  <img src="https://img.shields.io/badge/python-%233670A0.svg?style=for-the-badge&amp;logo=python&amp;logoColor=ffdd54" alt="Python" height="28" />
 </p>
 
 <p align="center">
   <strong>AI · Computer Vision</strong><br />
-  <img src="https://img.shields.io/badge/PyTorch-26344A?style=flat-square&amp;logo=pytorch&amp;logoColor=white" alt="PyTorch" />
-  <img src="https://img.shields.io/badge/YOLO-26344A?style=flat-square&amp;logo=yolo&amp;logoColor=white" alt="YOLO" />
+  <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&amp;logo=pytorch&amp;logoColor=white" alt="PyTorch" height="28" />
+  <img src="https://img.shields.io/badge/YOLO-%23111F68.svg?style=for-the-badge&amp;logo=yolo&amp;logoColor=white" alt="YOLO" height="28" />
 </p>
 
 <p align="center">
   <strong>LLM · Backend</strong><br />
-  <img src="https://img.shields.io/badge/FastAPI-26344A?style=flat-square&amp;logo=fastapi&amp;logoColor=white" alt="FastAPI" />
-  <img src="https://img.shields.io/badge/LangChain-26344A?style=flat-square&amp;logo=langchain&amp;logoColor=white" alt="LangChain" /><br />
-  <img src="https://img.shields.io/badge/Ollama-26344A?style=flat-square&amp;logo=ollama&amp;logoColor=white" alt="Ollama" />
-  <img src="https://img.shields.io/badge/llama.cpp-26344A?style=flat-square" alt="llama.cpp" />
-  <img src="https://img.shields.io/badge/vLLM-26344A?style=flat-square" alt="vLLM" />
+  <img src="https://img.shields.io/badge/fastapi-%23009688.svg?style=for-the-badge&amp;logo=fastapi&amp;logoColor=white" alt="FastAPI" height="28" />
+  <img src="https://img.shields.io/badge/langchain-%231C3C3C.svg?style=for-the-badge&amp;logo=langchain&amp;logoColor=white" alt="LangChain" height="28" /><br />
+  <img src="https://img.shields.io/badge/ollama-%23000000.svg?style=for-the-badge&amp;logo=ollama&amp;logoColor=white" alt="Ollama" height="28" />
+  <img src="https://img.shields.io/badge/llama.cpp-%23000000.svg?style=for-the-badge&amp;logo=cplusplus&amp;logoColor=white" alt="llama.cpp" height="28" />
+  <img src="https://img.shields.io/badge/vllm-%2330A2FF.svg?style=for-the-badge&amp;logo=vllm&amp;logoColor=ffffff" alt="vLLM" height="28" />
 </p>
 
 <p align="center">
   <strong>Platform · Collaboration</strong><br />
-  <img src="https://img.shields.io/badge/Ubuntu-26344A?style=flat-square&amp;logo=ubuntu&amp;logoColor=white" alt="Ubuntu" />
-  <img src="https://img.shields.io/badge/Docker-26344A?style=flat-square&amp;logo=docker&amp;logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/Git-26344A?style=flat-square&amp;logo=git&amp;logoColor=white" alt="Git" />
-  <img src="https://img.shields.io/badge/Jira-26344A?style=flat-square&amp;logo=jira&amp;logoColor=white" alt="Jira" />
+  <img src="https://img.shields.io/badge/Ubuntu-%23E95420.svg?style=for-the-badge&amp;logo=ubuntu&amp;logoColor=white" alt="Ubuntu" height="28" />
+  <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&amp;logo=docker&amp;logoColor=white" alt="Docker" height="28" />
+  <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&amp;logo=git&amp;logoColor=white" alt="Git" height="28" />
+  <img src="https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&amp;logo=jira&amp;logoColor=white" alt="Jira" height="28" />
 </p>
 
-## 대표 프로젝트
+## 프로젝트
 
-### [THING](https://seminkong.github.io/SeMinKong_Web/work/thing/)
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <sub>ROBOTICS · CONTROL</sub>
+      <h3><a href="https://seminkong.github.io/SeMinKong_Web/work/thing/">THING ↗</a></h3>
+      <p><strong>손의 움직임을 실제 핸드로</strong></p>
+      <p>손의 21개 랜드마크를 7축 명령으로 바꿔 텐던 로봇 핸드를 움직였습니다.</p>
+      <p><code>ROS 2</code> · <code>Hand Tracking</code> · <code>Robot Control</code></p>
+    </td>
+    <td width="50%" valign="top">
+      <sub>VISION · AUTOMATION</sub>
+      <h3><a href="https://seminkong.github.io/SeMinKong_Web/work/aqis/">AQIS ↗</a></h3>
+      <p><strong>검사 결과를 공정 동작으로</strong></p>
+      <p>RealSense와 YOLO의 검사 결과를 컨베이어, Dobot, 운영 화면까지 연결했습니다.</p>
+      <p><code>YOLO</code> · <code>RealSense</code> · <code>Dobot</code></p>
+    </td>
+  </tr>
+</table>
 
-**손의 움직임을 텐던 로봇 핸드로 옮기기**
+### 다른 프로젝트
 
-손의 21개 랜드마크를 7축 명령으로 바꿔 텐던 로봇 핸드를 움직였습니다.  
-`ROS 2` · `Hand Tracking` · `Robot Control`  
-[작업 기록 →](https://seminkong.github.io/SeMinKong_Web/work/thing/)
-
-### [AQIS](https://seminkong.github.io/SeMinKong_Web/work/aqis/)
-
-**검사 결과를 공정 동작으로 연결하기**
-
-RealSense와 YOLO의 검사 결과를 컨베이어, Dobot, 운영 화면까지 연결했습니다.  
-`YOLO` · `RealSense` · `Dobot`  
-[작업 기록 →](https://seminkong.github.io/SeMinKong_Web/work/aqis/)
-
-### 프로젝트 모아보기
-
-**비전 · 의료 AI**
-
-- [Brain Tumor MRI](https://seminkong.github.io/SeMinKong_Web/work/brain-tumor-mri/) — YOLO11 종양 분류·분할 및 폴리곤 전처리
-
-**LLM · NLP**
-
-- [Project Prompt Generator](https://seminkong.github.io/SeMinKong_Web/work/project-prompt-generator/) — LangGraph 기반 설계 대화·구현 문서 생성
-- [Briefit](https://seminkong.github.io/SeMinKong_Web/work/briefit/) — 뉴스 군집화 및 KoBART 요약
-
-**학습 · 최적화**
-
-- [Snake DQN](https://github.com/SeMinKong/Snake_DQN) — 상태 표현에 따른 DQN 성능 비교
-- [TSP](https://github.com/SeMinKong/TSP) — PyTorch 기반 유전 알고리즘·simulated annealing
+| 분야 | 프로젝트 | 작업 내용 |
+| :--- | :--- | :--- |
+| 비전 · 의료 AI | [Brain Tumor MRI ↗](https://seminkong.github.io/SeMinKong_Web/work/brain-tumor-mri/) | YOLO11 종양 분류·분할 및 폴리곤 전처리 |
+| LLM · NLP | [Project Prompt Generator ↗](https://seminkong.github.io/SeMinKong_Web/work/project-prompt-generator/) | LangGraph 기반 설계 대화 및 구현 문서 생성 |
+| LLM · NLP | [Briefit ↗](https://seminkong.github.io/SeMinKong_Web/work/briefit/) | 뉴스 군집화 및 KoBART 요약 |
+| 학습 · 최적화 | [Snake DQN ↗](https://github.com/SeMinKong/Snake_DQN) | 상태 표현에 따른 DQN 성능 비교 |
+| 학습 · 최적화 | [TSP ↗](https://github.com/SeMinKong/TSP) | PyTorch 기반 유전 알고리즘 및 simulated annealing |
 
 ## 수상
 
 <p align="center">
   <strong>2025 · IT대학 소프트웨어 공모전</strong><br />
-  <img src="https://img.shields.io/badge/%EA%B8%88%EC%83%81-806000?style=for-the-badge" alt="금상" />
+  <img src="https://img.shields.io/badge/%EA%B8%88%EC%83%81-806000?style=for-the-badge" alt="금상" height="28" />
 </p>
 
 <p align="center">
   <strong>2025 · IT프로젝트 프로리그</strong><br />
-  <img src="https://img.shields.io/badge/%EC%9E%A5%EB%A0%A4%EC%83%81-08715A?style=for-the-badge" alt="장려상" />
+  <img src="https://img.shields.io/badge/%EC%9E%A5%EB%A0%A4%EC%83%81-08715A?style=for-the-badge" alt="장려상" height="28" />
 </p>
 
 <p align="center">
   <strong>2025 · 제15회 숭실 캡스톤디자인 경진대회</strong><br />
-  <img src="https://img.shields.io/badge/%EC%9E%A5%EB%A0%A4%EC%83%81-22314E?style=for-the-badge" alt="장려상" />
+  <img src="https://img.shields.io/badge/%EC%9E%A5%EB%A0%A4%EC%83%81-22314E?style=for-the-badge" alt="장려상" height="28" />
 </p>
 
 ## 이력
