@@ -7,9 +7,9 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/hero/intro-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./assets/hero/intro-light.svg" />
-    <img src="./assets/hero/intro-light.svg" width="720" alt="카메라 인식부터 모델과 로봇 동작까지 이어지는 과정을 손그림처럼 표현한 작업 흐름" />
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/hero/sketch-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/hero/sketch-light.svg" />
+    <img src="./assets/hero/sketch-light.svg" width="720" alt="카메라 인식부터 모델과 로봇 동작까지 이어지는 과정을 손그림처럼 표현한 작업 흐름" />
   </picture>
 </p>
 
