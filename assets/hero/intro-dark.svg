@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="132" viewBox="0 0 720 132" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">SeMinKong — Vision Technology and Physical AI</title>
+  <desc id="hero-desc">A calm, one-time sequence introducing Vision Technology and Physical AI, the path from perception to robot action, and systems that sense, reason, and act.</desc>
+
+  <defs>
+    <linearGradient id="accent" x1="294" y1="0" x2="426" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#58A6FF"/>
+      <stop offset="0.5" stop-color="#BC8CFF"/>
+      <stop offset="1" stop-color="#39D0C3"/>
+    </linearGradient>
+
+    <clipPath id="reveal-one" clipPathUnits="userSpaceOnUse">
+      <rect class="wipe wipe-one" x="172" y="51" width="376" height="34" rx="2"/>
+    </clipPath>
+    <clipPath id="reveal-two" clipPathUnits="userSpaceOnUse">
+      <rect class="wipe wipe-two" x="200" y="51" width="320" height="34" rx="2"/>
+    </clipPath>
+    <clipPath id="reveal-three" clipPathUnits="userSpaceOnUse">
+      <rect class="wipe wipe-three" x="106" y="51" width="508" height="34" rx="2"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .scene {
+      animation-duration: 14s;
+      animation-iteration-count: 1;
+      animation-fill-mode: both;
+      animation-timing-function: ease-in-out;
+    }
+    .scene-one { animation-name: scene-one; }
+    .scene-two { animation-name: scene-two; }
+    .scene-three { animation-name: scene-three; }
+    .wipe {
+      transform-box: fill-box;
+      transform-origin: left center;
+      animation-duration: 14s;
+      animation-iteration-count: 1;
+      animation-fill-mode: both;
+    }
+    .wipe-one { animation-name: wipe-one; animation-timing-function: steps(33, end); }
+    .wipe-two { animation-name: wipe-two; animation-timing-function: steps(27, end); }
+    .wipe-three { animation-name: wipe-three; animation-timing-function: steps(46, end); }
+
+    @keyframes scene-one {
+      0%, 24% { opacity: 1; }
+      30%, 100% { opacity: 0; }
+    }
+    @keyframes scene-two {
+      0%, 28% { opacity: 0; }
+      34%, 55% { opacity: 1; }
+      62%, 100% { opacity: 0; }
+    }
+    @keyframes scene-three {
+      0%, 60% { opacity: 0; }
+      66%, 100% { opacity: 1; }
+    }
+    @keyframes wipe-one {
+      0% { transform: scaleX(0); }
+      13%, 100% { transform: scaleX(1); }
+    }
+    @keyframes wipe-two {
+      0%, 30% { transform: scaleX(0); }
+      43%, 100% { transform: scaleX(1); }
+    }
+    @keyframes wipe-three {
+      0%, 62% { transform: scaleX(0); }
+      78%, 100% { transform: scaleX(1); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .scene,
+      .wipe {
+        animation: none !important;
+      }
+      .scene-one { opacity: 1; }
+      .scene-two,
+      .scene-three { opacity: 0; }
+      .wipe { transform: none; }
+    }
+  </style>
+
+  <rect x="0.75" y="0.75" width="718.5" height="130.5" rx="18" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+  <rect x="294" y="18" width="132" height="3" rx="1.5" fill="url(#accent)"/>
+
+  <text x="360" y="42" text-anchor="middle" fill="#8B949E" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" letter-spacing="2.4">NOW EXPLORING</text>
+
+  <g class="scene scene-one" opacity="1" clip-path="url(#reveal-one)">
+    <text x="360" y="77" text-anchor="middle" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="650">Vision Technology · Physical AI</text>
+  </g>
+  <g class="scene scene-two" opacity="0" clip-path="url(#reveal-two)">
+    <text x="360" y="77" text-anchor="middle" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="650">Perception → Robot Action</text>
+  </g>
+  <g class="scene scene-three" opacity="0" clip-path="url(#reveal-three)">
+    <text x="360" y="77" text-anchor="middle" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="650">Building systems that sense, reason, and act</text>
+  </g>
+
+  <text x="360" y="108" text-anchor="middle" fill="#8B949E" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" font-weight="600" letter-spacing="1.7">VISION · ROBOTICS · EMBODIED INTELLIGENCE</text>
+</svg>
