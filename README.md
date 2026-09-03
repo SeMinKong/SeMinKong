@@ -23,19 +23,27 @@
 
 <p align="center">
   <a href="https://seminkong.github.io/SeMinKong_Web/resume/">
-    <img src="https://img.shields.io/badge/Resume-08715A?style=for-the-badge&amp;logo=readme&amp;logoColor=white" alt="이력서 보기" height="28" />
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/cta/resume-button-dark.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="./assets/cta/resume-button-light.svg" />
+      <img src="./assets/cta/resume-button-light.svg" alt="이력서 보기" height="28" />
+    </picture>
   </a>
   <a href="mailto:semin1224@gmail.com">
-    <img src="https://img.shields.io/badge/Email-B3261E?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" alt="이메일 보내기" height="28" />
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/cta/email-button-dark.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="./assets/cta/email-button-light.svg" />
+      <img src="./assets/cta/email-button-light.svg" alt="이메일 보내기" height="28" />
+    </picture>
   </a>
 </p>
 
 <p align="right">
   <a href="https://seminkong.github.io/SeMinKong_Web/">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="./assets/cta/web-callout-compact-dark.svg" />
-      <source media="(prefers-color-scheme: light)" srcset="./assets/cta/web-callout-compact-light.svg" />
-      <img src="./assets/cta/web-callout-compact-light.svg" width="300" alt="Web 포트폴리오에서 프로젝트와 작업 기록 보기" />
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/cta/web-callout-clean-dark.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="./assets/cta/web-callout-clean-light.svg" />
+      <img src="./assets/cta/web-callout-clean-light.svg" width="300" alt="Web 포트폴리오에서 프로젝트와 작업 기록 보기" />
     </picture>
   </a>
 </p>
@@ -127,3 +135,4 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong/main/profile-3d-contrib/profile-physical-ai-static.svg" width="100%" alt="공세민의 GitHub 활동을 나타낸 3D 기여 지형" />
 </p>
+
