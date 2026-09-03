@@ -24,26 +24,23 @@
 <p align="center">
   <a href="https://seminkong.github.io/SeMinKong_Web/resume/">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="./assets/cta/resume-button-dark.svg" />
-      <source media="(prefers-color-scheme: light)" srcset="./assets/cta/resume-button-light.svg" />
-      <img src="./assets/cta/resume-button-light.svg" alt="이력서 보기" height="28" />
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/cta/resume-callout-row-dark.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="./assets/cta/resume-callout-row-light.svg" />
+      <img src="./assets/cta/resume-callout-row-light.svg" width="220" alt="손글씨 Resume 안내로 이력서 보기" />
+    </picture>
+  </a>
+  <a href="https://seminkong.github.io/SeMinKong_Web/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/cta/web-callout-row-dark.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="./assets/cta/web-callout-row-light.svg" />
+      <img src="./assets/cta/web-callout-row-light.svg" width="220" alt="손글씨 Web 안내로 포트폴리오와 작업 기록 보기" />
     </picture>
   </a>
   <a href="mailto:semin1224@gmail.com">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="./assets/cta/email-button-dark.svg" />
-      <source media="(prefers-color-scheme: light)" srcset="./assets/cta/email-button-light.svg" />
-      <img src="./assets/cta/email-button-light.svg" alt="이메일 보내기" height="28" />
-    </picture>
-  </a>
-</p>
-
-<p align="right">
-  <a href="https://seminkong.github.io/SeMinKong_Web/">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="./assets/cta/web-callout-clean-dark.svg" />
-      <source media="(prefers-color-scheme: light)" srcset="./assets/cta/web-callout-clean-light.svg" />
-      <img src="./assets/cta/web-callout-clean-light.svg" width="300" alt="Web 포트폴리오에서 프로젝트와 작업 기록 보기" />
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/cta/email-callout-row-dark.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="./assets/cta/email-callout-row-light.svg" />
+      <img src="./assets/cta/email-callout-row-light.svg" width="220" alt="손글씨 Email 안내로 이메일 보내기" />
     </picture>
   </a>
 </p>
