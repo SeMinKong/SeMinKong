@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="224" viewBox="0 0 720 224" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="email-title email-desc">
+  <title id="email-title">Email 바로가기</title>
+  <desc id="email-desc">손으로 쓴 Email과 세 개의 화살표가 이메일 버튼을 가리킵니다.</desc>
+  <style>
+    .ink{fill:none;stroke:#26344A;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.pencil{fill:none;stroke:#7B8798;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}.accent{fill:none;stroke:#B3261E;stroke-width:3.1;stroke-linecap:round;stroke-linejoin:round}.panel{fill:#F8E9E7;stroke:#B3261E;stroke-width:3.1;stroke-linecap:round;stroke-linejoin:round}.label{fill:#26344A;font:700 40px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:1.6px}.draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.4s ease-out forwards}.d1{animation-delay:.10s}.d2{animation-delay:.35s}.d3{animation-delay:.60s}.tip{opacity:0;animation:reveal .12s ease-out forwards}.t1{animation-delay:1.35s}.t2{animation-delay:1.60s}.t3{animation-delay:1.85s}@keyframes draw{to{stroke-dashoffset:0}}@keyframes reveal{to{opacity:1}}@media (prefers-reduced-motion:reduce){.draw{animation:none;stroke-dashoffset:0}.tip{animation:none;opacity:1}}
+  </style>
+
+  <g aria-label="EMAIL">
+    <path class="pencil" transform="translate(2 2)" d="M101 27 C99 42 99 59 101 75 M102 28 C123 27 147 24 168 22 M101 49 C120 49 137 48 154 48 M101 74 C123 77 148 73 170 68 M204 75 C203 58 204 42 206 27 C220 40 235 55 246 65 C257 52 269 39 283 27 C285 42 286 58 287 74 M321 75 C332 54 345 35 360 23 C376 38 389 57 400 75 M337 55 C351 53 372 54 386 56 M439 25 C452 27 467 25 479 22 M459 25 C457 42 457 59 459 73 M441 75 C453 73 468 74 480 71 M519 27 C517 43 517 59 520 74 C551 76 586 73 620 68"/>
+    <path class="ink" d="M101 27 C99 42 99 59 101 75 M102 28 C123 27 147 24 168 22 M101 49 C120 49 137 48 154 48 M101 74 C123 77 148 73 170 68 M204 75 C203 58 204 42 206 27 C220 40 235 55 246 65 C257 52 269 39 283 27 C285 42 286 58 287 74 M321 75 C332 54 345 35 360 23 C376 38 389 57 400 75 M337 55 C351 53 372 54 386 56 M439 25 C452 27 467 25 479 22 M459 25 C457 42 457 59 459 73 M441 75 C453 73 468 74 480 71 M519 27 C517 43 517 59 520 74 C551 76 586 73 620 68"/>
+  </g>
+
+  <path class="accent draw d1" pathLength="1" d="M205 89 C240 96 263 115 286 140"/>
+  <path class="accent draw d2" pathLength="1" d="M360 90 C357 108 358 124 359 140"/>
+  <path class="accent draw d3" pathLength="1" d="M515 89 C480 96 457 115 434 140"/>
+  <path class="accent tip t1" d="M276 135 l11 6 l-1 -13"/>
+  <path class="accent tip t2" d="M352 130 l7 11 l7 -11"/>
+  <path class="accent tip t3" d="M444 134 l-11 7 l2 -13"/>
+
+  <g aria-label="이메일 보내기">
+    <path class="panel" d="M220 148 C292 146 420 149 500 147 L499 209 C414 210 304 208 221 210 Z"/>
+    <path class="pencil" d="M223 151 C299 149 417 152 497 150 L496 206 C413 207 307 206 224 207 Z"/>
+    <text class="label" x="360" y="193" text-anchor="middle">EMAIL ↗</text>
+  </g>
+</svg>
