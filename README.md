@@ -114,7 +114,7 @@
 
 ## 이력
 
-- 2026–현재 · SSAFY Robotics Track
+- 2026–현재 · SSAFY Robotics Track 15기
 - 2020–2026 · 숭실대학교 소프트웨어학부, AI·빅데이터 융합전공
 
 ## GitHub 기록
