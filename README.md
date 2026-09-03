@@ -23,8 +23,12 @@
 
 <p align="center">
   <a href="https://seminkong.github.io/SeMinKong_Web/">
-    <img src="https://img.shields.io/badge/Web-22314E?style=for-the-badge&amp;logo=googlechrome&amp;logoColor=white" alt="포트폴리오 웹사이트 열기" height="28" />
-  </a>
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/cta/web-callout-dark.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="./assets/cta/web-callout-light.svg" />
+      <img src="./assets/cta/web-callout-light.svg" width="620" alt="Web 포트폴리오에서 프로젝트와 작업 기록 보기" />
+    </picture>
+  </a><br />
   <a href="https://seminkong.github.io/SeMinKong_Web/resume/">
     <img src="https://img.shields.io/badge/Resume-08715A?style=for-the-badge&amp;logo=readme&amp;logoColor=white" alt="이력서 보기" height="28" />
   </a>
