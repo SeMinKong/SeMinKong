@@ -26,7 +26,7 @@
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="./assets/cta/web-callout-dark.svg" />
       <source media="(prefers-color-scheme: light)" srcset="./assets/cta/web-callout-light.svg" />
-      <img src="./assets/cta/web-callout-light.svg" width="620" alt="Web 포트폴리오에서 프로젝트와 작업 기록 보기" />
+      <img src="./assets/cta/web-callout-light.svg" width="300" alt="Web 포트폴리오에서 프로젝트와 작업 기록 보기" />
     </picture>
   </a><br />
   <a href="https://seminkong.github.io/SeMinKong_Web/resume/">
