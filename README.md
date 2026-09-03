@@ -24,9 +24,9 @@
 <p align="center">
   <a href="https://seminkong.github.io/SeMinKong_Web/">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="./assets/cta/web-callout-dark.svg?v=2" />
-      <source media="(prefers-color-scheme: light)" srcset="./assets/cta/web-callout-light.svg?v=2" />
-      <img src="./assets/cta/web-callout-light.svg?v=2" width="300" alt="Web 포트폴리오에서 프로젝트와 작업 기록 보기" />
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/cta/web-callout-compact-dark.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="./assets/cta/web-callout-compact-light.svg" />
+      <img src="./assets/cta/web-callout-compact-light.svg" width="300" alt="Web 포트폴리오에서 프로젝트와 작업 기록 보기" />
     </picture>
   </a><br />
   <a href="https://seminkong.github.io/SeMinKong_Web/resume/">
