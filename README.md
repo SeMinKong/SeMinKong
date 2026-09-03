@@ -135,4 +135,3 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong/main/profile-3d-contrib/profile-physical-ai-static.svg" width="100%" alt="공세민의 GitHub 활동을 나타낸 3D 기여 지형" />
 </p>
-
