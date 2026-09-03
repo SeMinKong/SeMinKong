@@ -23,19 +23,19 @@
 
 <p align="center">
   <a href="https://seminkong.github.io/SeMinKong_Web/resume/"><picture>
-      <source media="(prefers-color-scheme: dark)" srcset="./assets/cta/resume-callout-burst-dark.svg" />
-      <source media="(prefers-color-scheme: light)" srcset="./assets/cta/resume-callout-burst-light.svg" />
-      <img src="./assets/cta/resume-callout-burst-light.svg" width="220" alt="손글씨 Resume 안내로 이력서 보기" />
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/cta/resume-callout-airy-dark.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="./assets/cta/resume-callout-airy-light.svg" />
+      <img src="./assets/cta/resume-callout-airy-light.svg" width="220" alt="손글씨 Resume 안내로 이력서 보기" />
     </picture></a>
   <a href="https://seminkong.github.io/SeMinKong_Web/"><picture>
-      <source media="(prefers-color-scheme: dark)" srcset="./assets/cta/web-callout-burst-dark.svg" />
-      <source media="(prefers-color-scheme: light)" srcset="./assets/cta/web-callout-burst-light.svg" />
-      <img src="./assets/cta/web-callout-burst-light.svg" width="220" alt="손글씨 Web 안내로 포트폴리오와 작업 기록 보기" />
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/cta/web-callout-airy-dark.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="./assets/cta/web-callout-airy-light.svg" />
+      <img src="./assets/cta/web-callout-airy-light.svg" width="220" alt="손글씨 Web 안내로 포트폴리오와 작업 기록 보기" />
     </picture></a>
   <a href="mailto:semin1224@gmail.com"><picture>
-      <source media="(prefers-color-scheme: dark)" srcset="./assets/cta/email-callout-burst-dark.svg" />
-      <source media="(prefers-color-scheme: light)" srcset="./assets/cta/email-callout-burst-light.svg" />
-      <img src="./assets/cta/email-callout-burst-light.svg" width="220" alt="손글씨 Email 안내로 이메일 보내기" />
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/cta/email-callout-airy-dark.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="./assets/cta/email-callout-airy-light.svg" />
+      <img src="./assets/cta/email-callout-airy-light.svg" width="220" alt="손글씨 Email 안내로 이메일 보내기" />
     </picture></a>
 </p>
 
