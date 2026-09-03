@@ -2,7 +2,6 @@
 
 <p align="center">
   카메라가 본 장면을 로봇의 움직임으로 옮기는 일을 좋아합니다.<br />
-  숭실대학교 소프트웨어학부 · SSAFY Robotics Track
 </p>
 
 <p align="center">
