@@ -2,7 +2,7 @@
   <title id="web-title">Web 포트폴리오 바로가기</title>
   <desc id="web-desc">손으로 그린 W, E, B와 세 개의 화살표가 프로젝트와 작업 기록을 볼 수 있는 포트폴리오 버튼을 가리킵니다.</desc>
   <style>
-    .ink{fill:none;stroke:#26344A;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}.pencil{fill:none;stroke:#7B8798;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.accent{fill:none;stroke:#08715A;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.panel{fill:#E8F4F0;stroke:#08715A;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.label{fill:#26344A;font:700 18px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:1.4px}.note{fill:#58677A;font:500 12.5px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.3px}.draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.4s ease-out forwards}.d1{animation-delay:.10s}.d2{animation-delay:.35s}.d3{animation-delay:.60s}.tip{opacity:0;animation:reveal .12s ease-out forwards}.t1{animation-delay:1.35s}.t2{animation-delay:1.60s}.t3{animation-delay:1.85s}@keyframes draw{to{stroke-dashoffset:0}}@keyframes reveal{to{opacity:1}}@media (prefers-reduced-motion:reduce){.draw{animation:none;stroke-dashoffset:0}.tip{animation:none;opacity:1}}
+    .ink{fill:none;stroke:#26344A;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.pencil{fill:none;stroke:#7B8798;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}.accent{fill:none;stroke:#08715A;stroke-width:3.1;stroke-linecap:round;stroke-linejoin:round}.panel{fill:#E8F4F0;stroke:#08715A;stroke-width:3.1;stroke-linecap:round;stroke-linejoin:round}.label{fill:#26344A;font:700 26px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:1.4px}.draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.4s ease-out forwards}.d1{animation-delay:.10s}.d2{animation-delay:.35s}.d3{animation-delay:.60s}.tip{opacity:0;animation:reveal .12s ease-out forwards}.t1{animation-delay:1.35s}.t2{animation-delay:1.60s}.t3{animation-delay:1.85s}@keyframes draw{to{stroke-dashoffset:0}}@keyframes reveal{to{opacity:1}}@media (prefers-reduced-motion:reduce){.draw{animation:none;stroke-dashoffset:0}.tip{animation:none;opacity:1}}
   </style>
 
   <g aria-label="W">
@@ -33,7 +33,6 @@
   <g aria-label="Web 포트폴리오 열기">
     <path class="panel" d="M220 148 C292 146 420 149 500 147 L499 209 C414 210 304 208 221 210 Z"/>
     <path class="pencil" d="M223 151 C299 149 417 152 497 150 L496 206 C413 207 307 206 224 207 Z"/>
-    <text class="label" x="360" y="178" text-anchor="middle">WEB PORTFOLIO ↗</text>
-    <text class="note" x="360" y="198" text-anchor="middle">프로젝트와 작업 기록</text>
+    <text class="label" x="360" y="188" text-anchor="middle">PORTFOLIO ↗</text>
   </g>
 </svg>
