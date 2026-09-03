@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="64" viewBox="0 0 220 64" role="img" aria-labelledby="resume-title resume-desc">
+  <title id="resume-title">Resume 바로가기</title>
+  <desc id="resume-desc">손으로 그린 문서 아이콘과 Resume 버튼입니다.</desc>
+  <style>
+    .ink{fill:none;stroke:#D9E2F0;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}.pencil{fill:none;stroke:#708090;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.accent{fill:none;stroke:#58C7AC;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round}.panel{fill:#12312C;stroke:#58C7AC;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}.label{fill:#EDF4FA;font:700 21px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:1px}
+  </style>
+  <path class="panel" d="M3 4 C58 2 163 4 217 3 L216 60 C159 62 61 59 4 61 Z"/>
+  <path class="pencil" d="M6 7 C64 5 157 7 214 6 L213 57 C154 59 66 56 7 58 Z"/>
+  <g aria-label="문서">
+    <path class="ink" d="M18 17 C27 15 37 17 45 20 L45 47 C36 44 27 43 18 46 Z M45 20 C53 17 62 16 70 18 L70 46 C61 43 53 44 45 47 Z"/>
+    <path class="accent" d="M45 22 L45 45"/>
+    <path class="pencil" d="M23 24 C29 23 35 24 40 26 M23 31 C29 30 35 31 40 33 M50 25 C55 23 61 23 66 24 M50 32 C55 30 61 30 66 31"/>
+  </g>
+  <text class="label" x="82" y="39">RESUME ↗</text>
+</svg>
