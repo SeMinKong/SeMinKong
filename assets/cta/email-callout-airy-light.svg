@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="248" viewBox="0 0 720 248" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="email-title email-desc">
+  <title id="email-title">Email 바로가기</title>
+  <desc id="email-desc">손으로 쓴 Email 아래의 손그림 강조선이 이메일 버튼을 둘러쌉니다.</desc>
+  <style>
+    .ink{fill:none;stroke:#26344A;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.pencil{fill:none;stroke:#7B8798;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}.burst{fill:none;stroke:#B3261E;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;opacity:.96}.panel{fill:#F8E9E7;stroke:#B3261E;stroke-width:3.1;stroke-linecap:round;stroke-linejoin:round}.label{fill:#26344A;font:700 40px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:1.6px}.draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.15s cubic-bezier(.2,.7,.2,1) .12s forwards}@keyframes draw{to{stroke-dashoffset:0}}@media (prefers-reduced-motion:reduce){.draw{animation:none;stroke-dashoffset:0}}
+  </style>
+
+  <g aria-label="EMAIL">
+    <path class="pencil" transform="translate(2 2)" d="M101 27 C99 42 99 59 101 75 M102 28 C123 27 147 24 168 22 M101 49 C120 49 137 48 154 48 M101 74 C123 77 148 73 170 68 M204 75 C203 58 204 42 206 27 C220 40 235 55 246 65 C257 52 269 39 283 27 C285 42 286 58 287 74 M321 75 C332 54 345 35 360 23 C376 38 389 57 400 75 M337 55 C351 53 372 54 386 56 M439 25 C452 27 467 25 479 22 M459 25 C457 42 457 59 459 73 M441 75 C453 73 468 74 480 71 M519 27 C517 43 517 59 520 74 C551 76 586 73 620 68"/>
+    <path class="ink" d="M101 27 C99 42 99 59 101 75 M102 28 C123 27 147 24 168 22 M101 49 C120 49 137 48 154 48 M101 74 C123 77 148 73 170 68 M204 75 C203 58 204 42 206 27 C220 40 235 55 246 65 C257 52 269 39 283 27 C285 42 286 58 287 74 M321 75 C332 54 345 35 360 23 C376 38 389 57 400 75 M337 55 C351 53 372 54 386 56 M439 25 C452 27 467 25 479 22 M459 25 C457 42 457 59 459 73 M441 75 C453 73 468 74 480 71 M519 27 C517 43 517 59 520 74 C551 76 586 73 620 68"/>
+  </g>
+
+  <path class="burst draw" pathLength="1" aria-label="버튼을 여유 있게 감싸는 손그림 강조선" d="M104 130 C134 125 157 114 174 96 C188 112 203 119 224 119 C242 119 256 112 268 100 C281 115 299 121 323 120 C346 120 365 115 385 105 C391 120 407 126 431 123 C454 121 476 111 498 96 C509 113 527 123 551 124 C574 126 592 119 607 108 C619 123 621 138 603 149 C590 158 601 169 632 177 C602 188 586 201 600 218 C573 214 548 219 527 236 C505 221 482 222 461 240 C441 224 422 224 404 239 C384 222 364 223 347 241 C327 224 304 225 286 239 C262 224 238 222 215 234 C194 218 171 217 144 221 C160 202 152 189 120 177 C143 163 135 146 104 130 Z"/>
+
+  <g aria-label="이메일 보내기">
+    <path class="panel" d="M220 145 C292 143 420 146 500 144 L499 204 C414 205 304 203 221 205 Z"/>
+    <path class="pencil" d="M223 148 C299 146 417 149 497 147 L496 201 C413 202 307 201 224 202 Z"/>
+    <text class="label" x="360" y="189" text-anchor="middle">EMAIL ↗</text>
+  </g>
+</svg>
