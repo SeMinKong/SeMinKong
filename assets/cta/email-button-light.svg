@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="196" height="64" viewBox="0 0 196 64" role="img" aria-labelledby="email-title email-desc">
+  <title id="email-title">Email 바로가기</title>
+  <desc id="email-desc">손으로 그린 봉투 아이콘과 Email 버튼입니다.</desc>
+  <style>
+    .ink{fill:none;stroke:#26344A;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}.pencil{fill:none;stroke:#7B8798;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.accent{fill:none;stroke:#B3261E;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round}.panel{fill:#F8E9E7;stroke:#B3261E;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}.label{fill:#26344A;font:700 21px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:1px}
+  </style>
+  <path class="panel" d="M3 4 C52 2 145 4 193 3 L192 60 C142 62 55 59 4 61 Z"/>
+  <path class="pencil" d="M6 7 C57 5 141 7 190 6 L189 57 C138 59 59 56 7 58 Z"/>
+  <g aria-label="봉투">
+    <path class="ink" d="M17 18 C31 16 51 17 66 18 L65 46 C49 45 32 46 18 45 Z"/>
+    <path class="accent" d="M19 20 C30 29 39 35 42 35 C47 33 56 26 64 20"/>
+    <path class="pencil" d="M19 43 L34 31 M65 43 L51 31"/>
+  </g>
+  <text class="label" x="76" y="39">EMAIL ↗</text>
+</svg>
