@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="248" viewBox="0 0 720 248" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="web-title web-desc">
+  <title id="web-title">Web 포트폴리오 바로가기</title>
+  <desc id="web-desc">손으로 그린 W, E, B 아래의 손그림 강조선이 포트폴리오 버튼을 둘러쌉니다.</desc>
+  <style>
+    .ink{fill:none;stroke:#D9E2F0;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.pencil{fill:none;stroke:#708090;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}.burst{fill:none;stroke:#58C7AC;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;opacity:.96}.panel{fill:#12312C;stroke:#58C7AC;stroke-width:3.1;stroke-linecap:round;stroke-linejoin:round}.label{fill:#EDF4FA;font:700 26px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:1.4px}.draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.15s cubic-bezier(.2,.7,.2,1) .12s forwards}@keyframes draw{to{stroke-dashoffset:0}}@media (prefers-reduced-motion:reduce){.draw{animation:none;stroke-dashoffset:0}}
+  </style>
+
+  <g aria-label="W" transform="translate(360 0) scale(1.07 1) translate(-360 0)">
+    <path class="pencil" d="M100 30 C105 43 111 59 123 73 C135 62 144 47 151 35 C157 50 164 63 177 74 C188 58 197 42 205 28"/>
+    <path class="ink" d="M98 27 C103 42 110 58 122 72 C134 61 143 46 150 34 C155 49 163 62 176 72 C187 57 196 41 203 26"/>
+  </g>
+
+  <g aria-label="E" transform="translate(360 0) scale(1.07 1) translate(-360 0)">
+    <path class="pencil" d="M331 28 C329 41 329 60 331 75 M332 29 C354 28 376 23 395 21 M332 49 C351 49 367 48 383 49 M331 74 C352 77 378 72 398 68"/>
+    <path class="ink" d="M328 26 C327 41 327 59 329 73 M329 27 C352 27 374 22 394 19 M330 47 C349 47 366 46 381 47 M329 72 C351 75 376 70 396 66"/>
+  </g>
+
+  <g aria-label="B" transform="translate(360 0) scale(1.07 1) translate(-360 0)">
+    <path class="pencil" d="M530 27 C529 42 529 60 531 77 M532 28 C553 21 580 20 589 27 C599 36 580 46 551 49 M551 49 C580 48 595 56 591 66 C587 77 557 79 532 75"/>
+    <path class="ink" d="M527 25 C526 42 526 59 529 75 M529 26 C551 20 578 18 588 25 C598 34 578 44 549 47 M549 47 C579 46 594 54 589 64 C584 75 555 77 529 73"/>
+  </g>
+
+  <path class="burst draw" pathLength="1" aria-label="버튼을 여유 있게 감싸는 손그림 강조선" d="M104 130 C134 125 157 114 174 96 C188 112 203 119 224 119 C242 119 256 112 268 100 C281 115 299 121 323 120 C346 120 365 115 385 105 C391 120 407 126 431 123 C454 121 476 111 498 96 C509 113 527 123 551 124 C574 126 592 119 607 108 C619 123 621 138 603 149 C590 158 601 169 632 177 C602 188 586 201 600 218 C573 214 548 219 527 236 C505 221 482 222 461 240 C441 224 422 224 404 239 C384 222 364 223 347 241 C327 224 304 225 286 239 C262 224 238 222 215 234 C194 218 171 217 144 221 C160 202 152 189 120 177 C143 163 135 146 104 130 Z"/>
+
+  <g aria-label="Web 포트폴리오 열기">
+    <path class="panel" d="M220 145 C292 143 420 146 500 144 L499 204 C414 205 304 203 221 205 Z"/>
+    <path class="pencil" d="M223 148 C299 146 417 149 497 147 L496 201 C413 202 307 201 224 202 Z"/>
+    <text class="label" x="360" y="184" text-anchor="middle">PORTFOLIO ↗</text>
+  </g>
+</svg>
