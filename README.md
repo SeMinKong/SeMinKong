@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <em>로보틱스, VISION, Physical AI</em>
+  <em>VISION, 로보틱스, Physical AI</em>
 </p>
 
 <p align="center">
@@ -14,10 +14,6 @@
     <source media="(prefers-color-scheme: light)" srcset="./assets/hero/sketch-light.svg" />
     <img src="./assets/hero/sketch-light.svg" width="720" alt="카메라 인식부터 모델과 로봇 동작까지 이어지는 과정을 손그림처럼 표현한 작업 흐름" />
   </picture>
-</p>
-
-<p align="center">
-  <sub>camera → model → robot motion</sub>
 </p>
 
 <p align="center">
