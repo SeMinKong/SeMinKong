@@ -1,11 +1,11 @@
 <h1 align="center">공세민 · Se Min Kong</h1>
 
 <p align="center">
-  카메라가 본 장면을 로봇의 움직임으로 옮기는 일을 좋아합니다.<br />
+  새로운것을 배우는 것을 좋아합니다.<br />
 </p>
 
 <p align="center">
-  <em>본 것을, 움직임으로.</em>
+  <em>로보틱스, VISION, Physical AI</em>
 </p>
 
 <p align="center">
