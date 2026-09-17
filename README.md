@@ -1,7 +1,7 @@
 <h1 align="center">공세민 · Se Min Kong</h1>
 
 <p align="center">
-  새로운것을 배우는 것을 좋아합니다.<br />
+  새로운 것을 배우는 걸 좋아합니다.<br />
 </p>
 
 <p align="center">
