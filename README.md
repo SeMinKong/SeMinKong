@@ -103,6 +103,7 @@
 ## 수상
 
 <p align="center">
+  <img src="https://img.shields.io/badge/SSAFY_%EA%B3%B5%ED%86%B5%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-1%EB%93%B1-806000?style=for-the-badge" alt="SSAFY 특화프로젝트 2등" height="28" />
   <img src="https://img.shields.io/badge/SSAFY_%EA%B3%B5%ED%86%B5%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-1%EB%93%B1-806000?style=for-the-badge" alt="SSAFY 공통프로젝트 1등" height="28" />
   <img src="https://img.shields.io/badge/2025_%C2%B7_IT%EB%8C%80%ED%95%99_%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4_%EA%B3%B5%EB%AA%A8%EC%A0%84-%EA%B8%88%EC%83%81-806000?style=for-the-badge" alt="2025 · IT대학 소프트웨어 공모전 금상" height="28" />
   <img src="https://img.shields.io/badge/2025_%C2%B7_IT%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%ED%94%84%EB%A1%9C%EB%A6%AC%EA%B7%B8-%EC%9E%A5%EB%A0%A4%EC%83%81-08715A?style=for-the-badge" alt="2025 · IT프로젝트 프로리그 장려상" height="28" />
@@ -117,5 +118,5 @@
 ## GitHub 기록
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong/main/profile-3d-contrib/profile-physical-ai-static.svg" width="100%" alt="공세민의 GitHub 활동을 나타낸 3D 기여 지형" />
+  <img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong/main/profile-3d-contrib/profile-physical-ai-static.svg" width="100%" alt="3D 잔디" />
 </p>
