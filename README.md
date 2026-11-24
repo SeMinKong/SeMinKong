@@ -31,30 +31,39 @@
 
 ## 프로젝트
 
+<pre>├─ <strong>로봇</strong>
+│  ├─ <a href="https://seminkong.github.io/SeMinKong_Web/work/tac-touch/"><strong>Tac-Touch</strong></a>  촉각 그리퍼
+│  └─ <a href="https://seminkong.github.io/SeMinKong_Web/work/thing/"><strong>THING</strong></a>  손짓을 따르는 로봇 손
+└─ <strong>VR 전시</strong>
+   └─ <a href="https://seminkong.github.io/SeMinKong_Web/work/bondi/"><strong>Bondi · 본디</strong></a>  빗살무늬토기</pre>
+
+<details>
+<summary>세 프로젝트에서 맡은 일</summary>
+
 <h3><a href="https://seminkong.github.io/SeMinKong_Web/work/tac-touch/">Tac-Touch</a>&ensp;<sub>SSAFY 자율프로젝트</sub></h3>
 
 <p>그리퍼 손끝의 <strong>촉각을 읽는 펌웨어</strong>를 개발하고,<br />PC 앱의 <strong>3D 기구 편집</strong> 기능을 MCP에 연결했습니다.</p>
-
-<h3><a href="https://seminkong.github.io/SeMinKong_Web/work/bondi/">Bondi · 본디</a>&ensp;<sub>SSAFY 특화프로젝트</sub></h3>
-
-<p><strong>빗살무늬토기의 3D 복원</strong>을 실험하고,<br />관람자가 손으로 유물을 집고 돌려 보는 <strong>VR 전시실</strong>을 만들었습니다.</p>
 
 <h3><a href="https://seminkong.github.io/SeMinKong_Web/work/thing/">THING</a>&ensp;<sub>SSAFY 공통프로젝트</sub></h3>
 
 <p>손동작을 따라 움직이는 로봇 손의 <strong>텐던 기구</strong>를 설계하고,<br />ROS 2에서 <strong>모터 7개를 동시에 제어</strong>하는 통신을 구현했습니다.</p>
 
+<h3><a href="https://seminkong.github.io/SeMinKong_Web/work/bondi/">Bondi · 본디</a>&ensp;<sub>SSAFY 특화프로젝트</sub></h3>
+
+<p><strong>빗살무늬토기의 3D 복원</strong>을 실험하고,<br />관람자가 손으로 유물을 집고 돌려 보는 <strong>VR 전시실</strong>을 만들었습니다.</p>
+
+</details>
+
 <details>
 <summary>다른 프로젝트 7개</summary>
 
-| 프로젝트 | 작업 내용 |
-| :--- | :--- |
-| [AQIS](https://seminkong.github.io/SeMinKong_Web/work/aqis/) | 카메라로 불량을 검사하고 로봇팔로 제품을 분류하는 공정 |
-| [Brain Tumor MRI](https://seminkong.github.io/SeMinKong_Web/work/brain-tumor-mri/) | YOLO11 기반 MRI 종양 분류·분할과 폴리곤 전처리 |
-| [Alkkagi.io](https://seminkong.github.io/SeMinKong_Web/work/alkkagi/) | 서버가 돌의 충돌과 마찰을 판정하는 실시간 알까기 |
-| [Project Prompt Generator](https://seminkong.github.io/SeMinKong_Web/work/project-prompt-generator/) | LangGraph 설계 대화로 요구사항과 구현 문서 생성 |
-| [Briefit](https://seminkong.github.io/SeMinKong_Web/work/briefit/) | 뉴스 군집화와 KoBART 기사 요약 |
-| [Snake DQN](https://github.com/SeMinKong/Snake_DQN) | 상태 표현에 따른 DQN 성능 비교 |
-| [TSP](https://github.com/SeMinKong/TSP) | 유전 알고리즘과 모의 담금질로 외판원 문제 풀이 |
+- [AQIS](https://seminkong.github.io/SeMinKong_Web/work/aqis/) — 카메라로 불량을 검사하고 로봇팔로 제품을 분류하는 공정
+- [Brain Tumor MRI](https://seminkong.github.io/SeMinKong_Web/work/brain-tumor-mri/) — YOLO11 기반 MRI 종양 분류·분할과 폴리곤 전처리
+- [Alkkagi.io](https://seminkong.github.io/SeMinKong_Web/work/alkkagi/) — 서버가 돌의 충돌과 마찰을 판정하는 실시간 알까기
+- [Project Prompt Generator](https://seminkong.github.io/SeMinKong_Web/work/project-prompt-generator/) — LangGraph 설계 대화로 요구사항과 구현 문서 생성
+- [Briefit](https://seminkong.github.io/SeMinKong_Web/work/briefit/) — 뉴스 군집화와 KoBART 기사 요약
+- [Snake DQN](https://github.com/SeMinKong/Snake_DQN) — 상태 표현에 따른 DQN 성능 비교
+- [TSP](https://github.com/SeMinKong/TSP) — 유전 알고리즘과 모의 담금질로 외판원 문제 풀이
 
 </details>
 
