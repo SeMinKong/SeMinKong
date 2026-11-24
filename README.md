@@ -145,8 +145,11 @@ LangGraph로 설계 대화의 상태를 관리하고, 대화에서 정리한 요
 <p>
   <strong>로보틱스·AI</strong><br />
   <img src="https://img.shields.io/badge/ROS%202-%230A0FF9.svg?style=for-the-badge&amp;logo=ros&amp;logoColor=white" alt="ROS 2" height="24" />
+  <img src="https://img.shields.io/badge/Isaac%20Sim-%2376B900.svg?style=for-the-badge&amp;logo=nvidia&amp;logoColor=white" alt="NVIDIA Isaac Sim" height="24" />
+  <img src="https://img.shields.io/badge/Isaac%20Lab-%2376B900.svg?style=for-the-badge&amp;logo=nvidia&amp;logoColor=white" alt="Isaac Lab" height="24" />
   <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&amp;logo=pytorch&amp;logoColor=white" alt="PyTorch" height="24" />
   <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&amp;logo=opencv&amp;logoColor=white" alt="OpenCV" height="24" />
+  <img src="https://img.shields.io/badge/YOLO-%23111F68.svg?style=for-the-badge&amp;logo=yolo&amp;logoColor=white" alt="YOLO" height="24" />
 </p>
 
 <p>
@@ -156,10 +159,21 @@ LangGraph로 설계 대화의 상태를 관리하고, 대화에서 정리한 요
 </p>
 
 <p>
+  <strong>LLM</strong><br />
+  <img src="https://img.shields.io/badge/langchain-%231C3C3C.svg?style=for-the-badge&amp;logo=langchain&amp;logoColor=white" alt="LangChain" height="24" />
+  <img src="https://img.shields.io/badge/ollama-%23000000.svg?style=for-the-badge&amp;logo=ollama&amp;logoColor=white" alt="Ollama" height="24" />
+  <img src="https://img.shields.io/badge/llama.cpp-%23000000.svg?style=for-the-badge&amp;logo=cplusplus&amp;logoColor=white" alt="llama.cpp" height="24" />
+  <img src="https://img.shields.io/badge/vllm-%2330A2FF.svg?style=for-the-badge&amp;logo=vllm&amp;logoColor=ffffff" alt="vLLM" height="24" />
+  <img src="https://img.shields.io/badge/MCP-3B3A39?style=for-the-badge&amp;logo=modelcontextprotocol&amp;logoColor=white" alt="MCP" height="24" />
+</p>
+
+<p>
   <strong>백엔드·개발 도구</strong><br />
   <img src="https://img.shields.io/badge/fastapi-%23009688.svg?style=for-the-badge&amp;logo=fastapi&amp;logoColor=white" alt="FastAPI" height="24" />
+  <img src="https://img.shields.io/badge/Ubuntu-%23E95420.svg?style=for-the-badge&amp;logo=ubuntu&amp;logoColor=white" alt="Ubuntu" height="24" />
   <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&amp;logo=docker&amp;logoColor=white" alt="Docker" height="24" />
   <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&amp;logo=git&amp;logoColor=white" alt="Git" height="24" />
+  <img src="https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&amp;logo=jira&amp;logoColor=white" alt="Jira" height="24" />
 </p>
 
 ## GitHub 기여 기록
