@@ -1,11 +1,11 @@
 <h1 align="center">공세민 · Se Min Kong</h1>
 
 <p align="center">
-  새로운 것을 배우는 걸 좋아합니다.<br />
+  로봇의 손끝에서 읽은 신호와 사진에서 복원한 3D 형상을 사람이 직접 다룰 수 있는 도구로 만듭니다.
 </p>
 
 <p align="center">
-  <em>VISION, 로보틱스, Physical AI</em>
+  <em>Robotics · Computer Vision · XR</em>
 </p>
 
 <p align="center">
@@ -31,79 +31,56 @@
       <img src="./assets/cta/email-callout-airy-light.svg" width="220" alt="손글씨 Email 안내로 이메일 보내기" /></picture></a>
 </p>
 
-## 기술 스택
-
-<p align="center">
-  <strong>Robotics · Simulation</strong><br />
-  <img src="https://img.shields.io/badge/ROS%202-%230A0FF9.svg?style=for-the-badge&amp;logo=ros&amp;logoColor=white" alt="ROS 2" height="28" />
-  <img src="https://img.shields.io/badge/Isaac%20Sim-%2376B900.svg?style=for-the-badge&amp;logo=nvidia&amp;logoColor=white" alt="NVIDIA Isaac Sim" height="28" />
-  <img src="https://img.shields.io/badge/Isaac%20Lab-%2376B900.svg?style=for-the-badge&amp;logo=nvidia&amp;logoColor=white" alt="Isaac Lab" height="28" />
-</p>
-
-<p align="center">
-  <strong>Languages</strong><br />
-  <img src="https://img.shields.io/badge/c%2B%2B-%2300599C.svg?style=for-the-badge&amp;logo=cplusplus&amp;logoColor=white" alt="C++" height="28" />
-  <img src="https://img.shields.io/badge/python-%233670A0.svg?style=for-the-badge&amp;logo=python&amp;logoColor=ffdd54" alt="Python" height="28" />
-</p>
-
-<p align="center">
-  <strong>AI · Computer Vision</strong><br />
-  <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&amp;logo=pytorch&amp;logoColor=white" alt="PyTorch" height="28" />
-  <img src="https://img.shields.io/badge/YOLO-%23111F68.svg?style=for-the-badge&amp;logo=yolo&amp;logoColor=white" alt="YOLO" height="28" />
-</p>
-
-<p align="center">
-  <strong>LLM · Backend</strong><br />
-  <img src="https://img.shields.io/badge/fastapi-%23009688.svg?style=for-the-badge&amp;logo=fastapi&amp;logoColor=white" alt="FastAPI" height="28" />
-  <img src="https://img.shields.io/badge/langchain-%231C3C3C.svg?style=for-the-badge&amp;logo=langchain&amp;logoColor=white" alt="LangChain" height="28" /><br />
-  <img src="https://img.shields.io/badge/ollama-%23000000.svg?style=for-the-badge&amp;logo=ollama&amp;logoColor=white" alt="Ollama" height="28" />
-  <img src="https://img.shields.io/badge/llama.cpp-%23000000.svg?style=for-the-badge&amp;logo=cplusplus&amp;logoColor=white" alt="llama.cpp" height="28" />
-  <img src="https://img.shields.io/badge/vllm-%2330A2FF.svg?style=for-the-badge&amp;logo=vllm&amp;logoColor=ffffff" alt="vLLM" height="28" />
-</p>
-
-<p align="center">
-  <strong>Platform · Collaboration</strong><br />
-  <img src="https://img.shields.io/badge/Ubuntu-%23E95420.svg?style=for-the-badge&amp;logo=ubuntu&amp;logoColor=white" alt="Ubuntu" height="28" />
-  <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&amp;logo=docker&amp;logoColor=white" alt="Docker" height="28" />
-  <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&amp;logo=git&amp;logoColor=white" alt="Git" height="28" />
-  <img src="https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&amp;logo=jira&amp;logoColor=white" alt="Jira" height="28" />
-</p>
-
-## 프로젝트
+## 대표 프로젝트
 
 <table>
   <tr>
-    <td width="50%" valign="top">
-      <sub>ROBOTICS · CONTROL</sub>
-      <h3><a href="https://seminkong.github.io/SeMinKong_Web/work/thing/">THING ↗</a></h3>
-      <p><strong>손의 움직임을 실제 핸드로</strong></p>
-      <p>손의 21개 랜드마크를 7축 명령으로 바꿔 텐던 로봇 핸드를 움직였습니다.</p>
-      <p><code>ROS 2</code> · <code>Hand Tracking</code> · <code>Robot Control</code></p>
+    <td width="39%"><a href="https://seminkong.github.io/SeMinKong_Web/work/tac-touch/"><img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong_Web/main/src/assets/projects/tac-touch/dashboard.webp" width="440" alt="Tac-Touch 전시 화면. 모의 센서 입력으로 그리퍼 양쪽 손끝의 움직임을 표시한 장면" /></a></td>
+    <td valign="middle">
+      <sub>SSAFY 자율프로젝트 · 택로봇 기업 연계</sub>
+      <h3><a href="https://seminkong.github.io/SeMinKong_Web/work/tac-touch/">Tac-Touch</a></h3>
+      <p>로봇 그리퍼의 손끝이 멈춘 순간과 센서가 응답하지 않은 순간을 어떻게 구별할까요? 채널별 수집 상태를 기록하는 펌웨어와, 3D 기구 설정을 읽고 편집하는 PC 앱의 MCP 연동을 맡았습니다.</p>
     </td>
-    <td width="50%" valign="top">
-      <sub>VISION · AUTOMATION</sub>
-      <h3><a href="https://seminkong.github.io/SeMinKong_Web/work/aqis/">AQIS ↗</a></h3>
-      <p><strong>검사 결과를 공정 동작으로</strong></p>
-      <p>RealSense와 YOLO의 검사 결과를 컨베이어, Dobot, 운영 화면까지 연결했습니다.</p>
-      <p><code>YOLO</code> · <code>RealSense</code> · <code>Dobot</code></p>
+  </tr>
+  <tr>
+    <td width="39%"><a href="https://seminkong.github.io/SeMinKong_Web/work/bondi/"><img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong_Web/main/src/assets/projects/bondi/exhibit.webp" width="440" alt="Bondi VR 박물관의 손 조작 안내와 빗살무늬토기 전시 좌대" /></a></td>
+    <td valign="middle">
+      <sub>SSAFY 특화프로젝트</sub>
+      <h3><a href="https://seminkong.github.io/SeMinKong_Web/work/bondi/">Bondi · 본디</a></h3>
+      <p>빗살무늬토기의 사진으로 3D 메시를 만들고 깨진 부분의 형태를 추정했습니다. 전시 공간을 설계하고, 관람자가 손으로 토기를 돌려 보며 복원 전후를 비교하는 VR 상호작용을 구현했습니다.</p>
     </td>
   </tr>
 </table>
 
 ### 다른 프로젝트
 
-| 분야 | 프로젝트 | 작업 내용 |
-| :--- | :--- | :--- |
-| 비전 · 의료 AI | [Brain Tumor MRI ↗](https://seminkong.github.io/SeMinKong_Web/work/brain-tumor-mri/) | YOLO11 종양 분류·분할 및 폴리곤 전처리 |
-| LLM · NLP | [Project Prompt Generator ↗](https://seminkong.github.io/SeMinKong_Web/work/project-prompt-generator/) | LangGraph 기반 설계 대화 및 구현 문서 생성 |
-| LLM · NLP | [Briefit ↗](https://seminkong.github.io/SeMinKong_Web/work/briefit/) | 뉴스 군집화 및 KoBART 요약 |
-| 학습 · 최적화 | [Snake DQN ↗](https://github.com/SeMinKong/Snake_DQN) | 상태 표현에 따른 DQN 성능 비교 |
-| 학습 · 최적화 | [TSP ↗](https://github.com/SeMinKong/TSP) | PyTorch 기반 유전 알고리즘 및 simulated annealing |
+| 프로젝트 | 작업 내용 |
+| :--- | :--- |
+| [THING](https://seminkong.github.io/SeMinKong_Web/work/thing/) | 손의 21개 랜드마크를 7축 명령으로 바꾸는 텐던 로봇 핸드. 모터 통신과 텐던 기구 통합을 담당했습니다. |
+| [AQIS](https://seminkong.github.io/SeMinKong_Web/work/aqis/) | RealSense와 YOLO 검사 결과를 컨베이어, Dobot, 실시간 관제 화면에 연결한 스마트 팩토리 |
+| [Brain Tumor MRI](https://seminkong.github.io/SeMinKong_Web/work/brain-tumor-mri/) | YOLO11 종양 분류·분할과 폴리곤 전처리 |
+| [Alkkagi.io](https://seminkong.github.io/SeMinKong_Web/work/alkkagi/) | 서버가 충돌과 마찰을 판정하는 실시간 멀티플레이 알까기 |
+| [Project Prompt Generator](https://seminkong.github.io/SeMinKong_Web/work/project-prompt-generator/) | LangGraph 기반의 설계 대화와 구현 문서 생성 |
+| [Briefit](https://seminkong.github.io/SeMinKong_Web/work/briefit/) | 뉴스 군집화와 KoBART 요약 |
+| [Snake DQN](https://github.com/SeMinKong/Snake_DQN) | 상태 표현에 따른 DQN 성능 비교 |
+| [TSP](https://github.com/SeMinKong/TSP) | PyTorch 기반 유전 알고리즘과 simulated annealing |
+
+## 기술 스택
+
+| 분야 | 사용한 기술 |
+| :--- | :--- |
+| 센서 수집과 로봇 제어 | C++, MCU 펌웨어, ROS 2, MCP |
+| 3D 복원과 VR | TRELLIS, AdaPoinTr, Blender, Unreal Engine, OpenXR |
+| AI와 컴퓨터 비전 | Python, PyTorch, YOLO, OpenCV |
+| 로봇 시뮬레이션 | Isaac Sim, Isaac Lab |
+| LLM과 백엔드 | FastAPI, LangChain, Ollama, llama.cpp, vLLM |
+| 개발 환경과 협업 | Ubuntu, Docker, Git, Jira |
 
 ## 수상
 
 <p align="center">
-  <img src="https://img.shields.io/badge/SSAFY_%ED%8A%B9%ED%99%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-2%EB%93%B1-806000?style=for-the-badge" alt="SSAFY 특화프로젝트 2등" height="28" />
+  <a href="https://seminkong.github.io/SeMinKong_Web/work/tac-touch/"><img src="./assets/awards/tac-touch.svg" alt="SSAFY 자율프로젝트 · Tac-Touch" height="28" /></a>
+  <a href="https://seminkong.github.io/SeMinKong_Web/work/bondi/"><img src="https://img.shields.io/badge/SSAFY_%ED%8A%B9%ED%99%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-2%EB%93%B1-806000?style=for-the-badge" alt="Bondi · SSAFY 특화프로젝트 2등" height="28" /></a>
   <img src="https://img.shields.io/badge/SSAFY_%EA%B3%B5%ED%86%B5%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-1%EB%93%B1-806000?style=for-the-badge" alt="SSAFY 공통프로젝트 1등" height="28" />
   <img src="https://img.shields.io/badge/2025_%C2%B7_IT%EB%8C%80%ED%95%99_%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4_%EA%B3%B5%EB%AA%A8%EC%A0%84-%EA%B8%88%EC%83%81-806000?style=for-the-badge" alt="2025 · IT대학 소프트웨어 공모전 금상" height="28" />
   <img src="https://img.shields.io/badge/2025_%C2%B7_IT%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%ED%94%84%EB%A1%9C%EB%A6%AC%EA%B7%B8-%EC%9E%A5%EB%A0%A4%EC%83%81-08715A?style=for-the-badge" alt="2025 · IT프로젝트 프로리그 장려상" height="28" />
