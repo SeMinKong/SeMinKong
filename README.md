@@ -1,6 +1,6 @@
 # 공세민 · Se Min Kong
 
-**로보틱스 소프트웨어 개발자**입니다. 컴퓨터 비전으로 손동작을 읽고, 로봇 손의 모터를 제어하는 코드를 만듭니다.
+**AI를 딛고 한 걸음 더 나아가는 개발자**
 
 [포트폴리오](https://seminkong.github.io/SeMinKong_Web/) · [이력서](https://seminkong.github.io/SeMinKong_Web/resume/) · [이메일](mailto:semin1224@gmail.com)
 
