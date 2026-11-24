@@ -1,21 +1,49 @@
-# 공세민 · Se Min Kong
+<h1 id="공세민--se-min-kong" align="center">
+  공세민 · <a href="https://seminkong.github.io/SeMinKong_Web/"><img src="./assets/profile-signature.svg" width="132" alt="Se Min Kong" /></a>
+</h1>
 
-**AI를 딛고 한 걸음 더 나아가는 개발자**
+<p align="center"><strong>AI를 딛고 한 걸음 더 나아가는 개발자</strong></p>
 
-[포트폴리오](https://seminkong.github.io/SeMinKong_Web/) · [이력서](https://seminkong.github.io/SeMinKong_Web/resume/) · [이메일](mailto:semin1224@gmail.com)
+<p align="center">
+  <a href="https://seminkong.github.io/SeMinKong_Web/">포트폴리오</a>&emsp;
+  <a href="https://seminkong.github.io/SeMinKong_Web/resume/">이력서</a>&emsp;
+  <a href="mailto:semin1224@gmail.com">이메일</a>
+</p>
 
 ## 이력
 
-- **SSAFY 15기 로보틱스 트랙** · 2026.01–현재
-- **숭실대학교 소프트웨어학부 학사** · AI·빅데이터 전공, 빅데이터 융합전공 · 2020.03–2026.02
-- **육군 전술통신장비 운용·정비** · 2021.05–2022.11
-- **정보처리기사** · 2026.09 취득
+<table width="100%">
+  <tr>
+    <th scope="row" width="144" align="left" valign="top" nowrap><samp>2026.01–현재</samp></th>
+    <td width="840"><strong>SSAFY 15기 로보틱스 트랙</strong></td>
+  </tr>
+  <tr>
+    <th scope="row" width="144" align="left" valign="top"><samp>2020.03–2026.02</samp></th>
+    <td width="840"><strong>숭실대학교 소프트웨어학부 학사</strong><br />AI·빅데이터 전공,<br />빅데이터 융합전공</td>
+  </tr>
+  <tr>
+    <th scope="row" width="144" align="left" valign="top"><samp>2021.05–2022.11</samp></th>
+    <td width="840"><strong>육군 전술통신장비 운용·정비</strong></td>
+  </tr>
+  <tr>
+    <th scope="row" width="144" align="left" valign="top"><samp>2026.09</samp></th>
+    <td width="840"><strong>정보처리기사</strong> 취득</td>
+  </tr>
+</table>
 
 ## 프로젝트
 
-- **[Tac-Touch](https://seminkong.github.io/SeMinKong_Web/work/tac-touch/) · SSAFY 자율프로젝트**<br />그리퍼 손끝의 촉각을 읽는 펌웨어를 개발하고, PC 앱의 3D 기구 편집 기능을 MCP에 연결했습니다.
-- **[Bondi · 본디](https://seminkong.github.io/SeMinKong_Web/work/bondi/) · SSAFY 특화프로젝트**<br />빗살무늬토기의 3D 복원을 실험하고, 관람자가 손으로 유물을 집고 돌려 보는 VR 전시실을 만들었습니다.
-- **[THING](https://seminkong.github.io/SeMinKong_Web/work/thing/) · SSAFY 공통프로젝트**<br />손동작을 따라 움직이는 로봇 손의 텐던 기구를 설계하고, ROS 2에서 모터 7개를 동시에 제어하는 통신을 구현했습니다.
+<h3><a href="https://seminkong.github.io/SeMinKong_Web/work/tac-touch/">Tac-Touch</a>&ensp;<sub>SSAFY 자율프로젝트</sub></h3>
+
+<p>그리퍼 손끝의 <strong>촉각을 읽는 펌웨어</strong>를 개발하고,<br />PC 앱의 <strong>3D 기구 편집</strong> 기능을 MCP에 연결했습니다.</p>
+
+<h3><a href="https://seminkong.github.io/SeMinKong_Web/work/bondi/">Bondi · 본디</a>&ensp;<sub>SSAFY 특화프로젝트</sub></h3>
+
+<p><strong>빗살무늬토기의 3D 복원</strong>을 실험하고,<br />관람자가 손으로 유물을 집고 돌려 보는 <strong>VR 전시실</strong>을 만들었습니다.</p>
+
+<h3><a href="https://seminkong.github.io/SeMinKong_Web/work/thing/">THING</a>&ensp;<sub>SSAFY 공통프로젝트</sub></h3>
+
+<p>손동작을 따라 움직이는 로봇 손의 <strong>텐던 기구</strong>를 설계하고,<br />ROS 2에서 <strong>모터 7개를 동시에 제어</strong>하는 통신을 구현했습니다.</p>
 
 <details>
 <summary>다른 프로젝트 7개</summary>
@@ -48,53 +76,62 @@
 
 ## 기술 스택
 
-<p>
-  <strong>언어</strong><br />
-  <img src="https://img.shields.io/badge/c%2B%2B-%2300599C.svg?style=for-the-badge&amp;logo=cplusplus&amp;logoColor=white" alt="C++" height="28" />
-  <img src="https://img.shields.io/badge/python-%233670A0.svg?style=for-the-badge&amp;logo=python&amp;logoColor=ffdd54" alt="Python" height="28" />
-</p>
-
-<p>
-  <strong>로보틱스·시뮬레이션</strong><br />
-  <img src="https://img.shields.io/badge/ROS%202-%230A0FF9.svg?style=for-the-badge&amp;logo=ros&amp;logoColor=white" alt="ROS 2" height="28" />
-  <img src="https://img.shields.io/badge/MCU%20%ED%8E%8C%EC%9B%A8%EC%96%B4-5B6264?style=for-the-badge" alt="MCU 펌웨어" height="28" />
-  <img src="https://img.shields.io/badge/Isaac%20Sim-%2376B900.svg?style=for-the-badge&amp;logo=nvidia&amp;logoColor=white" alt="NVIDIA Isaac Sim" height="28" />
-  <img src="https://img.shields.io/badge/Isaac%20Lab-%2376B900.svg?style=for-the-badge&amp;logo=nvidia&amp;logoColor=white" alt="Isaac Lab" height="28" />
-</p>
-
-<p>
-  <strong>컴퓨터 비전</strong><br />
-  <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&amp;logo=pytorch&amp;logoColor=white" alt="PyTorch" height="28" />
-  <img src="https://img.shields.io/badge/YOLO-%23111F68.svg?style=for-the-badge&amp;logo=yolo&amp;logoColor=white" alt="YOLO" height="28" />
-  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&amp;logo=opencv&amp;logoColor=white" alt="OpenCV" height="28" />
-</p>
-
-<p>
-  <strong>3D 복원·XR</strong><br />
-  <img src="https://img.shields.io/badge/TRELLIS-596B74?style=for-the-badge" alt="TRELLIS" height="28" />
-  <img src="https://img.shields.io/badge/AdaPoinTr-665E75?style=for-the-badge" alt="AdaPoinTr" height="28" />
-  <img src="https://img.shields.io/badge/Blender-C45412?style=for-the-badge&amp;logo=blender&amp;logoColor=white" alt="Blender" height="28" />
-  <img src="https://img.shields.io/badge/Unreal%20Engine-313131?style=for-the-badge&amp;logo=unrealengine&amp;logoColor=white" alt="Unreal Engine" height="28" />
-  <img src="https://img.shields.io/badge/OpenXR-923A3D?style=for-the-badge&amp;logo=openxr&amp;logoColor=white" alt="OpenXR" height="28" />
-</p>
-
-<p>
-  <strong>LLM·백엔드</strong><br />
-  <img src="https://img.shields.io/badge/fastapi-%23009688.svg?style=for-the-badge&amp;logo=fastapi&amp;logoColor=white" alt="FastAPI" height="28" />
-  <img src="https://img.shields.io/badge/langchain-%231C3C3C.svg?style=for-the-badge&amp;logo=langchain&amp;logoColor=white" alt="LangChain" height="28" />
-  <img src="https://img.shields.io/badge/ollama-%23000000.svg?style=for-the-badge&amp;logo=ollama&amp;logoColor=white" alt="Ollama" height="28" />
-  <img src="https://img.shields.io/badge/llama.cpp-%23000000.svg?style=for-the-badge&amp;logo=cplusplus&amp;logoColor=white" alt="llama.cpp" height="28" />
-  <img src="https://img.shields.io/badge/vllm-%2330A2FF.svg?style=for-the-badge&amp;logo=vllm&amp;logoColor=ffffff" alt="vLLM" height="28" />
-  <img src="https://img.shields.io/badge/MCP-3B3A39?style=for-the-badge&amp;logo=modelcontextprotocol&amp;logoColor=white" alt="MCP" height="28" />
-</p>
-
-<p>
-  <strong>개발 환경·협업</strong><br />
-  <img src="https://img.shields.io/badge/Ubuntu-%23E95420.svg?style=for-the-badge&amp;logo=ubuntu&amp;logoColor=white" alt="Ubuntu" height="28" />
-  <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&amp;logo=docker&amp;logoColor=white" alt="Docker" height="28" />
-  <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&amp;logo=git&amp;logoColor=white" alt="Git" height="28" />
-  <img src="https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&amp;logo=jira&amp;logoColor=white" alt="Jira" height="28" />
-</p>
+<table width="100%">
+  <tr>
+    <th scope="row" width="144" align="left" valign="middle" nowrap>언어</th>
+    <td width="840">
+      <img src="https://img.shields.io/badge/c%2B%2B-%2300599C.svg?style=for-the-badge&amp;logo=cplusplus&amp;logoColor=white" alt="C++" height="28" />
+      <img src="https://img.shields.io/badge/python-%233670A0.svg?style=for-the-badge&amp;logo=python&amp;logoColor=ffdd54" alt="Python" height="28" />
+    </td>
+  </tr>
+  <tr>
+    <th scope="row" width="144" align="left" valign="middle" nowrap>로보틱스<br />시뮬레이션</th>
+    <td width="840">
+      <img src="https://img.shields.io/badge/ROS%202-%230A0FF9.svg?style=for-the-badge&amp;logo=ros&amp;logoColor=white" alt="ROS 2" height="28" />
+      <img src="https://img.shields.io/badge/MCU%20%ED%8E%8C%EC%9B%A8%EC%96%B4-5B6264?style=for-the-badge" alt="MCU 펌웨어" height="28" />
+      <img src="https://img.shields.io/badge/Isaac%20Sim-%2376B900.svg?style=for-the-badge&amp;logo=nvidia&amp;logoColor=white" alt="NVIDIA Isaac Sim" height="28" />
+      <img src="https://img.shields.io/badge/Isaac%20Lab-%2376B900.svg?style=for-the-badge&amp;logo=nvidia&amp;logoColor=white" alt="Isaac Lab" height="28" />
+    </td>
+  </tr>
+  <tr>
+    <th scope="row" width="144" align="left" valign="middle" nowrap>컴퓨터 비전</th>
+    <td width="840">
+      <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&amp;logo=pytorch&amp;logoColor=white" alt="PyTorch" height="28" />
+      <img src="https://img.shields.io/badge/YOLO-%23111F68.svg?style=for-the-badge&amp;logo=yolo&amp;logoColor=white" alt="YOLO" height="28" />
+      <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&amp;logo=opencv&amp;logoColor=white" alt="OpenCV" height="28" />
+    </td>
+  </tr>
+  <tr>
+    <th scope="row" width="144" align="left" valign="middle" nowrap>3D 복원·XR</th>
+    <td width="840">
+      <img src="https://img.shields.io/badge/TRELLIS-596B74?style=for-the-badge" alt="TRELLIS" height="28" />
+      <img src="https://img.shields.io/badge/AdaPoinTr-665E75?style=for-the-badge" alt="AdaPoinTr" height="28" />
+      <img src="https://img.shields.io/badge/Blender-C45412?style=for-the-badge&amp;logo=blender&amp;logoColor=white" alt="Blender" height="28" />
+      <img src="https://img.shields.io/badge/Unreal%20Engine-313131?style=for-the-badge&amp;logo=unrealengine&amp;logoColor=white" alt="Unreal Engine" height="28" />
+      <img src="https://img.shields.io/badge/OpenXR-923A3D?style=for-the-badge&amp;logo=openxr&amp;logoColor=white" alt="OpenXR" height="28" />
+    </td>
+  </tr>
+  <tr>
+    <th scope="row" width="144" align="left" valign="middle" nowrap>LLM·백엔드</th>
+    <td width="840">
+      <img src="https://img.shields.io/badge/fastapi-%23009688.svg?style=for-the-badge&amp;logo=fastapi&amp;logoColor=white" alt="FastAPI" height="28" />
+      <img src="https://img.shields.io/badge/langchain-%231C3C3C.svg?style=for-the-badge&amp;logo=langchain&amp;logoColor=white" alt="LangChain" height="28" />
+      <img src="https://img.shields.io/badge/ollama-%23000000.svg?style=for-the-badge&amp;logo=ollama&amp;logoColor=white" alt="Ollama" height="28" />
+      <img src="https://img.shields.io/badge/llama.cpp-%23000000.svg?style=for-the-badge&amp;logo=cplusplus&amp;logoColor=white" alt="llama.cpp" height="28" />
+      <img src="https://img.shields.io/badge/vllm-%2330A2FF.svg?style=for-the-badge&amp;logo=vllm&amp;logoColor=ffffff" alt="vLLM" height="28" />
+      <img src="https://img.shields.io/badge/MCP-3B3A39?style=for-the-badge&amp;logo=modelcontextprotocol&amp;logoColor=white" alt="MCP" height="28" />
+    </td>
+  </tr>
+  <tr>
+    <th scope="row" width="144" align="left" valign="middle" nowrap>개발 환경<br />협업</th>
+    <td width="840">
+      <img src="https://img.shields.io/badge/Ubuntu-%23E95420.svg?style=for-the-badge&amp;logo=ubuntu&amp;logoColor=white" alt="Ubuntu" height="28" />
+      <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&amp;logo=docker&amp;logoColor=white" alt="Docker" height="28" />
+      <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&amp;logo=git&amp;logoColor=white" alt="Git" height="28" />
+      <img src="https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&amp;logo=jira&amp;logoColor=white" alt="Jira" height="28" />
+    </td>
+  </tr>
+</table>
 
 <details>
   <summary>GitHub 기여 기록</summary>
