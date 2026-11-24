@@ -1,53 +1,36 @@
 <h1 align="center">공세민 · Se Min Kong</h1>
 
-<p align="center">
-  로봇의 손끝에서 읽은 신호와 사진에서 복원한 3D 형상을 사람이 직접 다룰 수 있는 도구로 만듭니다.
-</p>
-
-<p align="center">
-  <em>Robotics · Computer Vision · XR</em>
-</p>
+<p align="center">로봇 센서와 3D 인터랙션을 개발합니다.</p>
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/hero/sketch-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="./assets/hero/sketch-light.svg" />
-    <img src="./assets/hero/sketch-light.svg" width="720" alt="카메라 인식부터 모델과 로봇 동작까지 이어지는 과정을 손그림처럼 표현한 작업 흐름" />
+    <img src="./assets/hero/sketch-light.svg" width="720" alt="카메라 인식부터 모델과 로봇 동작까지 이어지는 과정을 그린 스케치" />
   </picture>
 </p>
 
 <p align="center">
-  <a href="https://seminkong.github.io/SeMinKong_Web/resume/"><picture>
-      <source media="(prefers-color-scheme: dark)" srcset="./assets/cta/resume-callout-airy-dark.svg" />
-      <source media="(prefers-color-scheme: light)" srcset="./assets/cta/resume-callout-airy-light.svg" />
-      <img src="./assets/cta/resume-callout-airy-light.svg" width="220" alt="손글씨 Resume 안내로 이력서 보기" /></picture></a>
-  <a href="https://seminkong.github.io/SeMinKong_Web/"><picture>
-      <source media="(prefers-color-scheme: dark)" srcset="./assets/cta/web-callout-airy-dark.svg" />
-      <source media="(prefers-color-scheme: light)" srcset="./assets/cta/web-callout-airy-light.svg" />
-      <img src="./assets/cta/web-callout-airy-light.svg" width="220" alt="손글씨 Web 안내로 포트폴리오와 작업 기록 보기" /></picture></a>
-  <a href="mailto:semin1224@gmail.com"><picture>
-      <source media="(prefers-color-scheme: dark)" srcset="./assets/cta/email-callout-airy-dark.svg" />
-      <source media="(prefers-color-scheme: light)" srcset="./assets/cta/email-callout-airy-light.svg" />
-      <img src="./assets/cta/email-callout-airy-light.svg" width="220" alt="손글씨 Email 안내로 이메일 보내기" /></picture></a>
+  <a href="https://seminkong.github.io/SeMinKong_Web/">포트폴리오</a> ·
+  <a href="https://seminkong.github.io/SeMinKong_Web/resume/">이력서</a> ·
+  <a href="mailto:semin1224@gmail.com">이메일</a>
 </p>
 
 ## 대표 프로젝트
 
 <table>
   <tr>
-    <td width="39%"><a href="https://seminkong.github.io/SeMinKong_Web/work/tac-touch/"><img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong_Web/main/src/assets/projects/tac-touch/dashboard.webp" width="440" alt="Tac-Touch 전시 화면. 모의 센서 입력으로 그리퍼 양쪽 손끝의 움직임을 표시한 장면" /></a></td>
-    <td valign="middle">
-      <sub>SSAFY 자율프로젝트 · 택로봇 기업 연계</sub>
-      <h3><a href="https://seminkong.github.io/SeMinKong_Web/work/tac-touch/">Tac-Touch</a></h3>
-      <p>로봇 그리퍼의 손끝이 멈춘 순간과 센서가 응답하지 않은 순간을 어떻게 구별할까요? 채널별 수집 상태를 기록하는 펌웨어와, 3D 기구 설정을 읽고 편집하는 PC 앱의 MCP 연동을 맡았습니다.</p>
+    <td width="50%" valign="top">
+      <p><strong><a href="https://seminkong.github.io/SeMinKong_Web/work/tac-touch/">Tac-Touch</a></strong><br />그리퍼 촉각 측정</p>
+      <a href="https://seminkong.github.io/SeMinKong_Web/work/tac-touch/"><img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong_Web/main/src/assets/projects/tac-touch/dashboard.webp" width="480" alt="모의 입력으로 양쪽 손끝의 촉각을 표시한 전시 화면" /></a>
+      <p>센서 펌웨어와 3D 편집기의 MCP 연동을 맡았습니다.</p>
+      <sub>SSAFY 자율프로젝트</sub>
     </td>
-  </tr>
-  <tr>
-    <td width="39%"><a href="https://seminkong.github.io/SeMinKong_Web/work/bondi/"><img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong_Web/main/src/assets/projects/bondi/exhibit.webp" width="440" alt="Bondi VR 박물관의 손 조작 안내와 빗살무늬토기 전시 좌대" /></a></td>
-    <td valign="middle">
+    <td width="50%" valign="top">
+      <p><strong><a href="https://seminkong.github.io/SeMinKong_Web/work/bondi/">Bondi · 본디</a></strong><br />유물 복원 VR 박물관</p>
+      <a href="https://seminkong.github.io/SeMinKong_Web/work/bondi/"><img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong_Web/main/src/assets/projects/bondi/exhibit.webp" width="480" alt="VR 전시실의 손 조작 안내와 빗살무늬토기" /></a>
+      <p>토기 복원을 실험하고 VR 전시실과 손 조작을 구현했습니다.</p>
       <sub>SSAFY 특화프로젝트</sub>
-      <h3><a href="https://seminkong.github.io/SeMinKong_Web/work/bondi/">Bondi · 본디</a></h3>
-      <p>빗살무늬토기의 사진으로 3D 메시를 만들고 깨진 부분의 형태를 추정했습니다. 전시 공간을 설계하고, 관람자가 손으로 토기를 돌려 보며 복원 전후를 비교하는 VR 상호작용을 구현했습니다.</p>
     </td>
   </tr>
 </table>
@@ -56,8 +39,8 @@
 
 | 프로젝트 | 작업 내용 |
 | :--- | :--- |
-| [THING](https://seminkong.github.io/SeMinKong_Web/work/thing/) | 손의 21개 랜드마크를 7축 명령으로 바꾸는 텐던 로봇 핸드. 모터 통신과 텐던 기구 통합을 담당했습니다. |
-| [AQIS](https://seminkong.github.io/SeMinKong_Web/work/aqis/) | RealSense와 YOLO 검사 결과를 컨베이어, Dobot, 실시간 관제 화면에 연결한 스마트 팩토리 |
+| [THING](https://seminkong.github.io/SeMinKong_Web/work/thing/) | 손동작을 따라 움직이는 7축 텐던 로봇 핸드 |
+| [AQIS](https://seminkong.github.io/SeMinKong_Web/work/aqis/) | 카메라로 제품을 검사하고 로봇팔로 분류하는 스마트 팩토리 |
 | [Brain Tumor MRI](https://seminkong.github.io/SeMinKong_Web/work/brain-tumor-mri/) | YOLO11 종양 분류·분할과 폴리곤 전처리 |
 | [Alkkagi.io](https://seminkong.github.io/SeMinKong_Web/work/alkkagi/) | 서버가 충돌과 마찰을 판정하는 실시간 멀티플레이 알까기 |
 | [Project Prompt Generator](https://seminkong.github.io/SeMinKong_Web/work/project-prompt-generator/) | LangGraph 기반의 설계 대화와 구현 문서 생성 |
@@ -80,7 +63,7 @@
 
 <p align="center">
   <a href="https://seminkong.github.io/SeMinKong_Web/work/tac-touch/"><img src="./assets/awards/tac-touch.svg" alt="Tac-Touch" height="28" /></a>
-  <a href="https://seminkong.github.io/SeMinKong_Web/work/bondi/"><img src="https://img.shields.io/badge/SSAFY_%ED%8A%B9%ED%99%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-2%EB%93%B1-806000?style=for-the-badge" alt="Bondi · SSAFY 특화프로젝트 2등" height="28" /></a>
+  <a href="https://seminkong.github.io/SeMinKong_Web/work/bondi/"><img src="https://img.shields.io/badge/Bondi_%C2%B7_SSAFY_%ED%8A%B9%ED%99%94-2%EB%93%B1-806000?style=for-the-badge" alt="Bondi · SSAFY 특화프로젝트 2등" height="28" /></a>
   <img src="https://img.shields.io/badge/SSAFY_%EA%B3%B5%ED%86%B5%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-1%EB%93%B1-806000?style=for-the-badge" alt="SSAFY 공통프로젝트 1등" height="28" />
   <img src="https://img.shields.io/badge/2025_%C2%B7_IT%EB%8C%80%ED%95%99_%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4_%EA%B3%B5%EB%AA%A8%EC%A0%84-%EA%B8%88%EC%83%81-806000?style=for-the-badge" alt="2025 · IT대학 소프트웨어 공모전 금상" height="28" />
   <img src="https://img.shields.io/badge/2025_%C2%B7_IT%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%ED%94%84%EB%A1%9C%EB%A6%AC%EA%B7%B8-%EC%9E%A5%EB%A0%A4%EC%83%81-08715A?style=for-the-badge" alt="2025 · IT프로젝트 프로리그 장려상" height="28" />
