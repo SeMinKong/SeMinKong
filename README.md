@@ -3,11 +3,8 @@
 <p align="center">로봇 센서와 3D 인터랙션을 개발합니다.</p>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/hero/sketch-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./assets/hero/sketch-light.svg" />
-    <img src="./assets/hero/sketch-light.svg" width="720" alt="카메라 인식부터 모델과 로봇 동작까지 이어지는 과정을 그린 스케치" />
-  </picture>
+  <a href="https://seminkong.github.io/SeMinKong_Web/work/tac-touch/"><img src="./assets/hero/tac-touch.svg" width="390" alt="Tac-Touch · 그리퍼 촉각 계측. 그리퍼가 닫히면 접촉 신호가 나타나는 도해. 프로젝트 보기" /></a>
+  <a href="https://seminkong.github.io/SeMinKong_Web/work/bondi/"><img src="./assets/hero/bondi.svg" width="390" alt="Bondi · 유물 복원 VR 박물관. 빗살무늬토기에 3D 조각이 맞춰지는 도해. 프로젝트 보기" /></a>
 </p>
 
 <p align="center">
@@ -16,29 +13,22 @@
   <a href="mailto:semin1224@gmail.com">이메일</a>
 </p>
 
-## 대표 프로젝트
+<details>
+  <summary>실제 프로젝트 화면</summary>
+  <table>
+    <tr>
+      <td width="50%" valign="top"><a href="https://seminkong.github.io/SeMinKong_Web/work/tac-touch/"><img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong_Web/main/src/assets/projects/tac-touch/dashboard.webp" width="440" alt="모의 입력으로 양쪽 손끝의 촉각을 표시한 전시 화면" /></a><br />Tac-Touch · 모의 촉각 입력</td>
+      <td width="50%" valign="top"><a href="https://seminkong.github.io/SeMinKong_Web/work/bondi/"><img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong_Web/main/src/assets/projects/bondi/exhibit.webp" width="440" alt="VR 전시실의 손 조작 안내와 빗살무늬토기" /></a><br />Bondi · VR 전시실</td>
+    </tr>
+  </table>
+</details>
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <p><strong><a href="https://seminkong.github.io/SeMinKong_Web/work/tac-touch/">Tac-Touch</a></strong><br />그리퍼 촉각 측정</p>
-      <a href="https://seminkong.github.io/SeMinKong_Web/work/tac-touch/"><img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong_Web/main/src/assets/projects/tac-touch/dashboard.webp" width="480" alt="모의 입력으로 양쪽 손끝의 촉각을 표시한 전시 화면" /></a>
-      <p>센서 펌웨어와 3D 편집기의 MCP 연동을 맡았습니다.</p>
-      <sub>SSAFY 자율프로젝트</sub>
-    </td>
-    <td width="50%" valign="top">
-      <p><strong><a href="https://seminkong.github.io/SeMinKong_Web/work/bondi/">Bondi · 본디</a></strong><br />유물 복원 VR 박물관</p>
-      <a href="https://seminkong.github.io/SeMinKong_Web/work/bondi/"><img src="https://raw.githubusercontent.com/SeMinKong/SeMinKong_Web/main/src/assets/projects/bondi/exhibit.webp" width="480" alt="VR 전시실의 손 조작 안내와 빗살무늬토기" /></a>
-      <p>토기 복원을 실험하고 VR 전시실과 손 조작을 구현했습니다.</p>
-      <sub>SSAFY 특화프로젝트</sub>
-    </td>
-  </tr>
-</table>
-
-### 다른 프로젝트
+## 프로젝트
 
 | 프로젝트 | 작업 내용 |
 | :--- | :--- |
+| [Tac-Touch](https://seminkong.github.io/SeMinKong_Web/work/tac-touch/) | SSAFY 자율 · 그리퍼 센서 펌웨어와 PC 앱의 3D 기구 편집 도구(MCP) 연동 |
+| [Bondi · 본디](https://seminkong.github.io/SeMinKong_Web/work/bondi/) | SSAFY 특화 · 빗살무늬토기 3D 복원 실험, VR 전시실 제작과 손 조작 구현 |
 | [THING](https://seminkong.github.io/SeMinKong_Web/work/thing/) | 손동작을 따라 움직이는 7축 텐던 로봇 핸드 |
 | [AQIS](https://seminkong.github.io/SeMinKong_Web/work/aqis/) | 카메라로 제품을 검사하고 로봇팔로 분류하는 스마트 팩토리 |
 | [Brain Tumor MRI](https://seminkong.github.io/SeMinKong_Web/work/brain-tumor-mri/) | YOLO11 종양 분류·분할과 폴리곤 전처리 |
