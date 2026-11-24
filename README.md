@@ -1,6 +1,4 @@
-<h1 id="공세민--se-min-kong" align="center">
-  공세민 · <a href="https://seminkong.github.io/SeMinKong_Web/"><img src="./assets/profile-signature.svg" width="132" alt="Se Min Kong" /></a>
-</h1>
+<h1 align="center">공세민 · Se Min Kong</h1>
 
 <p align="center"><strong>AI를 딛고 한 걸음 더 나아가는 개발자</strong></p>
 
