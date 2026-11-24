@@ -79,7 +79,7 @@
 ## 수상
 
 <p align="center">
-  <a href="https://seminkong.github.io/SeMinKong_Web/work/tac-touch/"><img src="./assets/awards/tac-touch.svg" alt="SSAFY 자율프로젝트 · Tac-Touch" height="28" /></a>
+  <a href="https://seminkong.github.io/SeMinKong_Web/work/tac-touch/"><img src="./assets/awards/tac-touch.svg" alt="Tac-Touch" height="28" /></a>
   <a href="https://seminkong.github.io/SeMinKong_Web/work/bondi/"><img src="https://img.shields.io/badge/SSAFY_%ED%8A%B9%ED%99%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-2%EB%93%B1-806000?style=for-the-badge" alt="Bondi · SSAFY 특화프로젝트 2등" height="28" /></a>
   <img src="https://img.shields.io/badge/SSAFY_%EA%B3%B5%ED%86%B5%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-1%EB%93%B1-806000?style=for-the-badge" alt="SSAFY 공통프로젝트 1등" height="28" />
   <img src="https://img.shields.io/badge/2025_%C2%B7_IT%EB%8C%80%ED%95%99_%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4_%EA%B3%B5%EB%AA%A8%EC%A0%84-%EA%B8%88%EC%83%81-806000?style=for-the-badge" alt="2025 · IT대학 소프트웨어 공모전 금상" height="28" />
