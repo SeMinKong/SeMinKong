@@ -15,7 +15,7 @@
 <table width="100%">
   <tr>
     <th scope="row" width="144" align="left" valign="top" nowrap><samp>2026.01–현재</samp></th>
-    <td width="840"><strong>SSAFY 15기 로보틱스 트랙</strong></td>
+    <td width="840"><strong>SSAFY 15기 로봇 트랙</strong></td>
   </tr>
   <tr>
     <th scope="row" width="144" align="left" valign="top"><samp>2020.03–2026.02</samp></th>
