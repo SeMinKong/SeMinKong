@@ -22,7 +22,7 @@
 <details id="tac-touchssafy-자율프로젝트">
 <summary><strong>Tac-Touch</strong> — 촉각을 읽는 그리퍼</summary>
 
-<samp>SSAFY 자율프로젝트</samp>
+<samp>SSAFY 자율프로젝트 1등</samp>
 
 - 그리퍼 손끝의 촉각을 수집하는 펌웨어 개발
 - PC 앱의 3D 기구 편집 기능을 MCP에 연동
@@ -34,7 +34,7 @@
 <details id="bondi--본디ssafy-특화프로젝트">
 <summary><strong>Bondi · 본디</strong> — 토기 복원과 VR 전시</summary>
 
-<samp>SSAFY 특화프로젝트</samp>
+<samp>SSAFY 특화프로젝트 2등</samp>
 
 - 빗살무늬토기의 3D 복원 실험
 - 관람자가 손으로 유물을 집고 돌려 볼 수 있는 VR 전시실 제작
@@ -46,7 +46,7 @@
 <details id="thingssafy-공통프로젝트">
 <summary><strong>THING</strong> — 손동작을 따르는 로봇 손</summary>
 
-<samp>SSAFY 공통프로젝트</samp>
+<samp>SSAFY 공통프로젝트 1등</samp>
 
 - 로봇 손의 손가락을 굽히는 텐던 기구 설계
 - ROS 2에서 모터 7개를 동시에 제어하는 통신 구현
@@ -123,9 +123,9 @@ LangGraph로 설계 대화의 상태를 관리하고, 대화에서 정리한 요
 ## 수상
 
 <p>
-  <a href="https://seminkong.github.io/SeMinKong_Web/work/thing/"><img src="https://img.shields.io/badge/SSAFY_%EA%B3%B5%ED%86%B5%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-1%EB%93%B1-806000?style=for-the-badge" alt="SSAFY 공통프로젝트 1등" /></a>
+  <a href="https://seminkong.github.io/SeMinKong_Web/work/tac-touch/"><img src="https://img.shields.io/badge/SSAFY_%EC%9E%90%EC%9C%A8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-1%EB%93%B1-806000?style=for-the-badge" alt="SSAFY 자율프로젝트 1등 · Tac-Touch" /></a>
   <a href="https://seminkong.github.io/SeMinKong_Web/work/bondi/"><img src="https://img.shields.io/badge/SSAFY_%ED%8A%B9%ED%99%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-2%EB%93%B1-806000?style=for-the-badge" alt="SSAFY 특화프로젝트 2등 · Bondi" /></a>
-  <a href="https://seminkong.github.io/SeMinKong_Web/work/tac-touch/"><img src="https://img.shields.io/badge/SSAFY_%EC%9E%90%EC%9C%A8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Tac--Touch-806000?style=for-the-badge" alt="SSAFY 자율프로젝트 · Tac-Touch" /></a>
+  <a href="https://seminkong.github.io/SeMinKong_Web/work/thing/"><img src="https://img.shields.io/badge/SSAFY_%EA%B3%B5%ED%86%B5%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-1%EB%93%B1-806000?style=for-the-badge" alt="SSAFY 공통프로젝트 1등 · THING" /></a>
 </p>
 
 <p>
